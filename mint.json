@@ -1,62 +1,60 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Documentation",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#F24D23",
+    "light": "#FAF6F2",
+    "dark": "#4B4D58",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#F24D23",
+      "to": "#E24118"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
+  "topbarLinks": [],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://inappchat.io/app"
   },
   "tabs": [
+    {
+      "name": "SDK Reference",
+      "url": "sdk-reference"
+    },
     {
       "name": "API Reference",
       "url": "api-reference"
     }
   ],
+  "primaryTab": {
+    "name": "Guides"
+  },
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
       "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "icon": "discord",
+      "url": "https://discord.com/invite/5kwyQCz3zZ"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
+      "name": "What's New",
+      "icon": "rocket",
       "url": "https://mintlify.com/blog"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "1Chatbot Designer",
+      "pages": ["designer/introduction"]
     },
+    { "group": "SDK Documentation", "pages": ["sdk-reference/introduction"] },
     {
       "group": "API Documentation",
       "pages": ["api-reference/introduction"]

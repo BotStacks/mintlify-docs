@@ -1,0 +1,18 @@
+---
+title: "Bot Stack"
+description: "Got lots of bots? Make a stack."
+---
+
+The bot stack node initiates a sub conversation by connecting to a multiple external AI agent providers.
+![Bot Stack Node](/images/bot-stack-node.png)
+
+A bot stack node can be used anywhere within a chain. Once the conversation flow reaches a bot stack node, the underlying
+conversation via the selected third party agent takes over. When the session is ended from the external provider,
+the conversation continues within the flow.
+
+On initially reaching a bot stack node in the conversational flow, a request is sent to each of the external bots listed in the node.
+Upon receiving from each of the bots, the bot with the highest confidence score is chosen and remains the selected agent until the bot
+stack conversation is ended.
+
+- `Bots`: The selected external bots to which to initiate a sub-conversation. The list of available bots is populated from the aggregation
+  of all the external provider bots. See [Connected bots](/designer/connected-bots) for more details.

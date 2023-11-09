@@ -57,7 +57,28 @@
     { "group": "Quickstarts & Tutorials", "pages": ["getting-started"] },
     {
       "group": "1Chatbot Designer",
-      "pages": ["designer/introduction"]
+      "pages": [
+        "designer/introduction",
+        {
+          "group": "Nodes",
+          "pages": [
+            "designer/nodes/start",
+            "designer/nodes/routing",
+            "designer/nodes/llm",
+            "designer/nodes/text",
+            "designer/nodes/response",
+            "designer/nodes/listen",
+            "designer/nodes/bot",
+            "designer/nodes/bot-stack",
+            "designer/nodes/set",
+            "designer/nodes/read",
+            "designer/nodes/end"
+          ]
+        },
+        "designer/intents",
+        "designer/connected-bots",
+        "designer/variables"
+      ]
     },
     { "group": "SDK Documentation", "pages": ["sdk-reference/introduction"] },
     {

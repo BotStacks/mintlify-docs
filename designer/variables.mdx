@@ -1,0 +1,21 @@
+---
+title: "Variables"
+description: "&#x22;Memory is the mother of all wisdom.&#x22; &#x2014;Aeschylus"
+---
+
+Variables are used to store state within a conversation. You can define set and read nodes within the designer workflow.
+
+You can manage variables by going through an existing read or set node. Just select it and click the button "Manage variables" in the panel.
+
+You can create and delete variables here.
+![Manage Variables](/images/manage-variables.png)
+
+### Reserved variables
+
+- `chat_history`: Chat history is automatically set and updated as the conversation progresses.
+
+<Note>
+  We intentionally left the ability to manually set or append to the
+  chat_history variable in a Set node available. Be careful not to set or append
+  to it more than needed, as we are already handling it for you!
+</Note>

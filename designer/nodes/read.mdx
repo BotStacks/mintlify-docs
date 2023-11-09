@@ -1,0 +1,12 @@
+---
+title: "Read"
+description: "&#x22;One man's constant is another man's variable.&#x22; &#x2014;Alan Perlis"
+---
+
+The read node is used to input variables into nodes.
+![Read Node](/images/read-node.png)
+
+A read node does not have any inputs and is used to solely insert variables to be interpolated into the output node.
+The connected node can reference the variable by either the node slug (ex. `read-0`) or the variable name (ex. `last_utterance`)
+
+- `Variable`: The name of the variable to read. You must have already defined a variable. See (Variables)[/designer/variables] for more details.

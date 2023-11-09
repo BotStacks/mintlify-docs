@@ -1,0 +1,18 @@
+---
+title: "LLM"
+description: "&#x22;My idea of good company is the company of clever, well-informed people who have a great deal of conversation; that is what I call good company.&#x22;  &#x2014;Jane Austen"
+---
+
+The llm node utilizes the Large Language Model of your choice, such as ChatGPT, to handle conversational dialogue.
+![Routing Node](/images/llm-node.png)
+
+An llm node can be used anywhere within a chain.
+
+- `Model`: This is a list of available models within the platform.
+- `System`: The system is the "system" message used within the LLM. It is used to define the context of the the LLM.
+- `User`: The user prompt represents the user message. In the most basic form, it can be reference an input node ex. `{listen-0}`.
+- `Temperature`: The temperature of the model. The higher the number, the higher the difference in responses.
+- `Max tokens`: The maximum number of tokens to process. Generation stops once the number of tokens is reached. Used to limit AI token usage.
+- `Top p`: Uses the top p tokens in the response. If a lower value is used, the variety in tokens will be smaller.
+
+<Note>LLM nodes use AI tokens</Note>

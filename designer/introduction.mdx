@@ -1,88 +1,46 @@
 ---
 title: "Introduction"
-description: "Text, title, and styling in standard markdown"
-icon: "text-size"
+description: "Build your AI assistant"
 ---
 
-## Titles
+## What is it?
 
-Best used for section headers.
+The designer is your viewport into building your AI assistant. It consists of:
 
-```md
-## Titles
-```
+<Steps>
+  <Step title="Nodes">
+    Nodes are logic blocks that are responible for taking one or more inputs and
+    transforming them into an output.
+  </Step>
+  <Step title="Channels">
+    Channels are connectors between nodes that represent the flow of an AI
+    workflow
+  </Step>
+</Steps>
 
-### Subtitles
+### Node inputs
 
-Best use to subsection headers.
+Each node is given a slug in the form of `{nodeType}-{index}` that can be referenced from nodes directly next in the chain.
 
-```md
-### Subtitles
-```
+In the example below, we are referencing both the routing node and the read node within the LLM node. The output of each of those nodes (routing-0 and read-0) will be directly interpolated in the user prompt.
+![Node Input Example](/images/node-input-example.png)
 
-<Tip>
+<Note>
+  This is a common use case of passing chat history to chatGPT, given that the
+  read node is using the chat_history variable
+</Note>
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+### Conversation flow
 
-</Tip>
+A conversation flows from node to node via the channels that connect them. For more advanced use-cases, you may have multiple outputs
+for a given node. At the point where a flow diverges, you will have two separate workflows running simultaneously
+in an async manner.
 
-## Text Formatting
+## Publishing
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+When creating your AI assistant within the designer, you are editing a draft version of the assistant. That means that
+any changes you make will not effect your "live" version. In order to commit your changes, you must publish your changes.
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+You can publish your changes by clicking the "Publish" button in the top-right corner of the designer.
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
-
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
-
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
-
-## Linking to Pages
-
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
-
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
-
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
-
-## Blockquotes
-
-### Singleline
-
-To create a blockquote, add a `>` in front of a paragraph.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
-
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+<Note>Using the sandbox will use the draft version of the assistant.</Note>

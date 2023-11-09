@@ -1,0 +1,14 @@
+---
+title: "Bot"
+description: "&#x22;A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.&#x22;  &#x2014;Alan Turing"
+---
+
+The bot node initiates a sub conversation by connecting to a single external AI agent provider.
+![Bot Node](/images/bot-node.png)
+
+A bot node can be used anywhere within a chain. Once the conversation flow reaches a bot node, the underlying
+conversation via the selected third party agent takes over. When the session is ended from the external provider,
+the conversation continues within the flow.
+
+- `Bot`: The selected external bot to which to initiate a sub-conversation. The list of available bots is populated from the aggregation
+  of all the external provider bots. See [Connected bots](/designer/connected-bots) for more details.

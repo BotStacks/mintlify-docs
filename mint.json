@@ -46,7 +46,7 @@
     {
       "name": "What's New",
       "icon": "rocket",
-      "url": "https://mintlify.com/blog"
+      "url": "changelog"
     }
   ],
   "navigation": [
@@ -129,6 +129,10 @@
     {
       "group": "API Documentation",
       "pages": ["api-reference/introduction"]
+    },
+    {
+      "group": "What's new",
+      "pages": ["changelog/launch"]
     }
   ],
   "footerSocials": {

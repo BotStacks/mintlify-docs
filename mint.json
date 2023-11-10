@@ -54,7 +54,10 @@
       "group": "Get Started",
       "pages": ["introduction"]
     },
-    { "group": "Quickstarts & Tutorials", "pages": ["getting-started"] },
+    {
+      "group": "Quickstarts & Tutorials",
+      "pages": ["getting-started", "deploy-assistant"]
+    },
     {
       "group": "1Chatbot Designer",
       "pages": [
@@ -80,7 +83,46 @@
         "designer/variables"
       ]
     },
-    { "group": "SDK Documentation", "pages": ["sdk-reference/introduction"] },
+    {
+      "group": "SDK Documentation",
+      "pages": [
+        "sdk-reference/introduction",
+        {
+          "group": "Javascript",
+          "icon": "js",
+          "pages": [
+            "sdk-reference/javascript/introduction",
+            "sdk-reference/javascript/getting-started",
+            "sdk-reference/javascript/store",
+            "sdk-reference/javascript/subscriptions"
+          ]
+        },
+        {
+          "group": "React UIKit",
+          "icon": "react",
+          "pages": [
+            "sdk-reference/react/introduction",
+            "sdk-reference/react/security/authentication"
+          ]
+        },
+        {
+          "group": "iOS",
+          "icon": "apple",
+          "pages": [
+            "sdk-reference/ios/introduction",
+            "sdk-reference/ios/security/authentication"
+          ]
+        },
+        {
+          "group": "Android",
+          "icon": "android",
+          "pages": [
+            "sdk-reference/android/introduction",
+            "sdk-reference/android/security/authentication"
+          ]
+        }
+      ]
+    },
     {
       "group": "API Documentation",
       "pages": ["api-reference/introduction"]

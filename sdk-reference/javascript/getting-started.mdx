@@ -1,0 +1,31 @@
+---
+title: "Getting started"
+description: "Get your feature-rich chat environment underway"
+---
+
+## Installation
+
+<CodeGroup>
+
+```bash npm
+npm i @inappchat/sdk
+```
+
+```bash yarn
+yarn add @inappchat/sdk
+```
+
+</CodeGroup>
+
+## Initialization
+
+To initialize the sdk, all you need to do is call `init` with your <Tooltip tip="You can get this from the dashboard under Settings -> General">API Key</Tooltip>
+.
+
+```javascript main.js
+import { InAppChat } from "@inappchat/sdk";
+
+...
+
+InAppChat.init(process.env.API_KEY);
+```

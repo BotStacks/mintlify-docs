@@ -1,0 +1,100 @@
+---
+title: "ChatMessage"
+description: "An message bubble for a message"
+---
+
+<Check>This component is data aware</Check>
+
+## Component
+
+The ChatMessage component is a specific message, handling message related functions such as reactions,
+replies, copy message, etc
+
+## API
+
+### Import
+
+```js
+import { ChatMessage } from "@inappchat/react";
+```
+
+### Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>message</td>
+      <td>[IMessage](/sdk-reference/javascript/store#message</td>
+      <td></td>
+      <td>The message to display</td>
+    </tr>
+    <tr>
+      <td>disableReactions</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>Disable to option to add reactions</td>
+    </tr>
+    <tr>
+      <td>disableAvatar</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>Hide the user's avatar</td>
+    </tr>
+    <tr>
+      <td>disableReply</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>Disable to option to reply to a message</td>
+    </tr>
+    <tr>
+      <td>disableExtras</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>Hide the extra options of a message, such as copy, edit, delete</td>
+    </tr>
+    <tr>
+      <td>renderMessage</td>
+      <td>`(message: Message) => void`</td>
+      <td></td>
+      <td>If provided, use this function rather than the baked in UI.</td>
+    </tr>
+    <tr>
+      <td>classNames</td>
+      <td>`object`</td>
+      <td></td>
+      <td>
+        Specific class names to override bubbles. Options are `sender` and
+        `bubble`.
+      </td>
+    </tr>
+    <tr>
+      <td>onReply</td>
+      <td>`(message: Message) => void`</td>
+      <td></td>
+      <td>
+        If provided, show the option to reply to the message and handle
+        callback.
+      </td>
+    </tr>
+    <tr>
+      <td>onEdit</td>
+      <td>`() => void`</td>
+      <td></td>
+      <td>Callback for editing a message</td>
+    </tr>
+    <tr>
+      <td>onDelete</td>
+      <td>`(id: string) => void`</td>
+      <td></td>
+      <td>Callback for deleting a message</td>
+    </tr>
+  </tbody>
+</table>

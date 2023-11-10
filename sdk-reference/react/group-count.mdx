@@ -1,0 +1,52 @@
+---
+title: "GroupCount"
+description: "A badge for group display"
+---
+
+<Note>This component is NOT data aware</Note>
+
+## Component
+
+The GroupCount component displays a grouped avatar image with a count of the number of members
+
+## API
+
+### Import
+
+```js
+import { GroupCount } from "@inappchat/react";
+```
+
+### Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>`number`</td>
+      <td>0</td>
+      <td>Number of members</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>`number`</td>
+      <td>3</td>
+      <td>The maximum number of images to show</td>
+    </tr>
+    <tr>
+      <td>images</td>
+      <td>`image[]`</td>
+      <td>[]</td>
+      <td>A list of images to use for display. Will be capped at
+      `max` prop. These are passed as the `src` to the `<img>` tag.</td>
+    </tr>
+  </tbody>
+</table>

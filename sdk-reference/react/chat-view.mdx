@@ -1,0 +1,57 @@
+---
+title: "ChatView"
+description: "A view for all things chat"
+---
+
+<Check>This component is data aware</Check>
+
+## Component
+
+The ChatView component contains the messages and input for sending a message.
+
+## API
+
+### Import
+
+```js
+import { ChatView } from "@inappchat/react";
+```
+
+### Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>chat</td>
+      <td>[Chat](/sdk-reference/javscript/store#chat)</td>
+      <td></td>
+      <td>The chat object</td>
+    </tr>
+    <tr>
+      <td>showHeader</td>
+      <td>`boolean`</td>
+      <td>true</td>
+      <td>Shows the channel or dm name</td>
+    </tr>
+    <tr>
+      <td>inputProps</td>
+      <td>[InputProps](/sdk-reference/react/chat-input#props)</td>
+      <td></td>
+      <td>Props for the input component</td>
+    </tr>
+    <tr>
+      <td>messageProps</td>
+      <td>[MessageProps](/sdk-reference/react/chat-message#props)</td>
+      <td></td>
+      <td>Props for the message component</td>
+    </tr>
+  </tbody>
+</table>

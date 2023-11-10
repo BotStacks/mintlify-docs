@@ -1,0 +1,194 @@
+---
+title: "InAppChatProvider"
+description: "The provider creates a chat context and is the cornerstone for interacting with InAppChat data"
+---
+
+## Component
+
+The `InAppChatProvider` component must wrap all chat related components. It is used to setup the store and API.
+
+## Theming
+
+The UIKit allows you to define both a light and a dark theme. You can pass both to the themes prop and utilize the
+`darkMode` prop to toggle which theme is used. If you do not pass any themes to the theme prop, the
+[default themes](/sdk-reference/react/inappchatprovider#default-themes) will be used.
+
+### Default Themes
+
+The default themes are defined below:
+
+```json
+{
+  "light": {
+    "100": {
+      "background": "#ffffff",
+      "foreground": "#202020"
+    },
+    "200": {
+      "background": "#ffffff",
+      "foreground": "#727377"
+    },
+    "300": {
+      "background": "#e7e7e7",
+      "foreground": "#727377"
+    },
+    "400": {
+      "background": "#f7f7f7",
+      "foreground": "#202020",
+      "muted": "#9fa0a5"
+    },
+    "primary": {
+      "background": "#4e8bd2",
+      "foreground": "#ffffff"
+    },
+    "secondary": {
+      "background": "#727377",
+      "foreground": "#ffffff",
+      "muted": "#e8e8e8"
+    },
+    "bubble": {
+      "background": "#e7e7e7",
+      "foreground": "#202020"
+    },
+    "botBubble": {
+      "background": "#4e8bd2",
+      "foreground": "#f3f3f3"
+    }
+    "border": "#ededed"
+  },
+  "dark": {
+    "100": {
+      "background": "#f3f3f3",
+      "foreground": "#202020"
+    },
+    "200": {
+      "background": "#9fa0a5",
+      "foreground": "#727377"
+    },
+    "300": {
+      "background": "#ffffff",
+      "foreground": "#727377"
+    },
+    "400": {
+      "background": "#282828",
+      "foreground": "#f3f3f3",
+      "muted": "#7a7a7a"
+    },
+    "primary": {
+      "background": "#4e8bd2",
+      "foreground": "#ffffff"
+    },
+    "secondary": {
+      "background": "#9fa0a5",
+      "foreground": "#2c2c2c",
+      "muted": "#e8e8e8"
+    },
+    "bubble": {
+      "background": "#2c2c2c",
+      "foreground": "#f3f3f3"
+    },
+    "botBubble": {
+      "background": "#4e8bd2",
+      "foreground": "#f3f3f3"
+    }
+    "border": "#2b2b2b"
+  },
+  "borderRadius: "12px"
+}
+```
+
+### Dark mode
+
+If you wish to use only dark theme, you can define it as such:
+
+```tsx
+<InAppChatProvider
+  apiKey={API_KEY}
+  darkMode={true}
+  themes={{
+    dark: { ... }
+  }}
+>
+  {children}
+</InAppChatProvider>
+```
+
+## useChat
+
+Any component wrapped by the `InAppChatProvider` component has access to the store. To create a reference
+in your component, you can use the `useChat` function. For more details on the store and how to use it, check out
+the [SDK documentation](/sdk-reference/javascript/store).
+
+### Import
+
+```js
+import { useChat } from "@inappchat/react";
+```
+
+### Usage
+
+```js
+const MyComponent = observer(() => {
+  const chat = useChat();
+  return <></>;
+});
+```
+
+## API
+
+### Import
+
+```js
+import { InAppChatProvider } from "@inappchat/react";
+```
+
+### Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>`node`</td>
+      <td></td>
+      <td>The content of the app.</td>
+    </tr>
+    <tr>
+      <td>apiKey</td>
+      <td>`string`</td>
+      <td></td>
+      <td>The API Key for the chat project.</td>
+    </tr>
+    <tr>
+      <td>darkMode</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>Set to true to enable dark mode</td>
+    </tr>
+    <tr>
+      <td>assets</td>
+      <td>[Assets](/sdk-reference/react/types#assets)</td>
+      <td>`{}`</td>
+      <td>
+        The object containing various assets to be used. Only applicable when
+        using the `InAppChatUI` component.
+      </td>
+    </tr>
+    <tr>
+      <td>themes</td>
+      <td>[Themes](/sdk-reference/react/types#themes)</td>
+      <td>Default themes</td>
+      <td>
+        The object containing various assets to be used. Only applicable when
+        using the `InAppChatUI` component.
+      </td>
+    </tr>
+  </tbody>
+</table>

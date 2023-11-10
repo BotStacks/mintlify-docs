@@ -102,24 +102,27 @@
           "icon": "react",
           "pages": [
             "sdk-reference/react/introduction",
-            "sdk-reference/react/security/authentication"
+            "sdk-reference/react/types",
+            "sdk-reference/react/inappchatprovider",
+            "sdk-reference/react/inappchatui",
+            "sdk-reference/react/chat-input",
+            "sdk-reference/react/chat-message",
+            "sdk-reference/react/channel-row",
+            "sdk-reference/react/chat-view",
+            "sdk-reference/react/create-group-modal",
+            "sdk-reference/react/group-count",
+            "sdk-reference/react/user-row"
           ]
         },
         {
           "group": "iOS",
           "icon": "apple",
-          "pages": [
-            "sdk-reference/ios/introduction",
-            "sdk-reference/ios/security/authentication"
-          ]
+          "pages": ["sdk-reference/ios/introduction"]
         },
         {
           "group": "Android",
           "icon": "android",
-          "pages": [
-            "sdk-reference/android/introduction",
-            "sdk-reference/android/security/authentication"
-          ]
+          "pages": ["sdk-reference/android/introduction"]
         }
       ]
     },

@@ -1,6 +1,116 @@
 ---
-title: "Introduction"
-description: " right place!"
+title: "Overview"
+description: "Get a jump start creating your chat interface with our beautiful React UIKit!"
 ---
 
-Hi
+## Overview
+
+The ReactUI Kit is a collection of beautiful React components backed by the JavaScript SDK
+that can help engineers build an immersive chat environment.
+
+## How to use these docs
+
+In the navigation, you will see many components exported by the UIKit. Some are data aware and some are not.
+Each component will note which case it is. What that means is:
+
+- Data aware: The component is responsible for managing data. Meaning it fetches/creates/deletes data within
+  the component. It is all already handled.
+- NOT data aware: It is a pure UI component. Most often, these component are used within the data aware components,
+  but we exported them for your use.
+
+## Get started
+
+### Install the UIKit
+
+<CodeGroup>
+
+```bash npm
+npm i @inappchat/react
+```
+
+```bash yarn
+yarn add @inappchat/react
+```
+
+</CodeGroup>
+
+### Add to your project
+
+To use the SDK and, therefore, the data storage and api layer, you need to wrap your chat related code
+with `InAppChatProvider`. It's simplest to put this near the root of your component tree.
+
+In its simplest form, it should look like below
+
+```tsx app.tsx
+import { InAppChatProvider } from '@inappchat/react';
+
+export default const App = () => (
+  <InAppChatProvider apiKey={API_KEY}>
+    <div>The rest of your app goes here...</div>
+    <>
+      <div>Any UIKit components in here will be able to use the store.</div>
+      <ChannelsView />
+    <>
+  </InAppChatProvider>
+);
+```
+
+<Warning>
+  Make sure you only have one `InAppChatProvider`. Having multiple may have
+  unexpected results.
+</Warning>
+
+### Accessing data
+
+The React UIKit extends the JavaScript SDK to create and set up the store for you as part of the `InAppChatProvider`.
+To enable your custom components to be reactive and data aware, you only need to wrap your components with `observer`.
+This allows you to be able to the store.
+
+```jsx
+import { observer } from 'mobx-react-lite';
+import { useChat } from '@inappchat/react';
+
+export const MyCustomChatComponent = observer(() => {
+  const chat = useChat();
+
+  ...
+});
+```
+
+## Quickstart
+
+If you want to use our feature complete UI, including routing or just simply want to give it a test
+run, you can use the `InAppChatUI` component.
+
+Here is a full example, using a hardcoded user to log in.
+
+```jsx
+import React, { useEffect } from "react";
+import { InAppChatProvider, InAppChatUI, useChat } from "@inappchat/react";
+
+const me = {
+  user_id: "1",
+  username: "luna.lovegood",
+  email: "lunalovegood@hogwartz.co.uk",
+  display_name: "Luna Lovegood",
+};
+
+const Chat = () => {
+  const chat = useChat();
+  useEffect(() => {
+    chat.login(me);
+  });
+
+  return <InAppChatUI onLogout={() => {
+    chat.logout();
+  }} />;
+};
+
+export default const App = () => {
+  return (
+    <InAppChatProvider apiKey={API_KEY}>
+      <Chat />
+    </InAppChatProvider>
+  );
+};
+```

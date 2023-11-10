@@ -1,0 +1,80 @@
+---
+title: "ChatInput"
+description: "An input for sending message"
+---
+
+<Check>This component is data aware</Check>
+
+## Component
+
+The ChatInput component is a input for sending messages to a chat.
+
+## API
+
+### Import
+
+```js
+import { ChatInput } from "@inappchat/react";
+```
+
+### Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>onSendMessage</td>
+      <td>`(input: SendMessageInput) => void`</td>
+      <td></td>
+      <td>Callback for sending a message</td>
+    </tr>
+    <tr>
+      <td>onClose</td>
+      <td>`() => void`</td>
+      <td></td>
+      <td>Callback for canceling edit message</td>
+    </tr>
+    <tr>
+      <td>placeholder</td>
+      <td>`string`</td>
+      <td></td>
+      <td>Placeholder text for the input</td>
+    </tr>
+    <tr>
+      <td>disableMediaButton</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>
+        If true, hides the media button for uploading files and adding gifs
+      </td>
+    </tr>
+    <tr>
+      <td>classNames</td>
+      <td>`object`</td>
+      <td></td>
+      <td>
+        Specific class names to override nested components. Options are `input`,
+        `content`, and `send`.
+      </td>
+    </tr>
+    <tr>
+      <td>chatId</td>
+      <td>`string`</td>
+      <td></td>
+      <td>If provided, handles typing indicator for the specified chat</td>
+    </tr>
+    <tr>
+      <td>isEditing</td>
+      <td>`boolean`</td>
+      <td></td>
+      <td>If true, showing editing UI</td>
+    </tr>
+  </tbody>
+</table>

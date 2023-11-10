@@ -1,33 +1,45 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introduction"
+description: "Interace with APIs for a custom solution"
 ---
-
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
 
 ## Welcome
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+We utilize GraphQL for our API layer. All GraphQL API docs can be found in the playground. Find the
+"Docs" and "Schema" tabs to the right edge of the playground.
 
 <Card
-  title="Plant Store Endpoints"
+  title="GraphQL playground"
   icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  href="https://chat.inappchat.io/graphql"
 >
-  View the OpenAPI specification file
+  Peruse the gql schema and send queries and mutations in the playground!
 </Card>
 
-## Authentication
+## Security
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Every request requires an API Key to be passed in the request header. If the query or mutation has a user context,
+you will also need a bearer token passed as the Authorization header.
+
+### API Key
+
+All requests must have the X-Api-Key header. The API Key can be found in the dashboard
+for a particular project.
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+{
+  "X-Api-Key": API_KEY
+}
+```
+
+### Logging in
+
+To log in, use the `login` mutation. A successful login returns an `Auth` object, including the token.
+On subsequent calls that require a user context (which are most), pass the token as the Bearer token in the Authorization
+header.
+
+```json
+{
+  "Authorization": "Bearer your-token-here"
+}
 ```

@@ -44,7 +44,7 @@ In its simplest form, it should look like below
 ```tsx app.tsx
 import { InAppChatProvider } from '@inappchat/react';
 
-export default const App = () => (
+export const App = () => (
   <InAppChatProvider apiKey={API_KEY}>
     <div>The rest of your app goes here...</div>
     <>
@@ -101,12 +101,16 @@ const Chat = () => {
     chat.login(me);
   });
 
-  return <InAppChatUI onLogout={() => {
-    chat.logout();
-  }} />;
+  return (
+    <InAppChatUI
+      onLogout={() => {
+        chat.logout();
+      }}
+    />
+  );
 };
 
-export default const App = () => {
+export const App = () => {
   return (
     <InAppChatProvider apiKey={API_KEY}>
       <Chat />

@@ -18,7 +18,7 @@
   "topbarLinks": [],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://inappchat.io/app"
+    "url": "https://dashboard.botstacks.ai"
   },
   "tabs": [
     {
@@ -59,7 +59,7 @@
       "pages": ["getting-started", "deploy-assistant"]
     },
     {
-      "group": "1Chatbot Designer",
+      "group": "BotStack Designer",
       "pages": [
         "designer/introduction",
         {
@@ -103,8 +103,8 @@
           "pages": [
             "sdk-reference/react/introduction",
             "sdk-reference/react/types",
-            "sdk-reference/react/inappchatprovider",
-            "sdk-reference/react/inappchatui",
+            "sdk-reference/react/botstacksprovider",
+            "sdk-reference/react/botstacksui",
             "sdk-reference/react/chat-input",
             "sdk-reference/react/chat-message",
             "sdk-reference/react/channel-row",

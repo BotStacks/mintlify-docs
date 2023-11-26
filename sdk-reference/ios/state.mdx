@@ -1,0 +1,75 @@
+---
+title: "State"
+description: Manage your state data
+---
+
+### BotStacksChatStore
+
+You can access the chat data via the singleton `BotStacksChatStore.current`.
+
+### API
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>network</td>
+      <td>`ChannelsPager`</td>
+      <td>The pageable object that contains all channels.</td>
+    </tr>
+    <tr>
+      <td>contacts</td>
+      <td>`ContactsPager`</td>
+      <td>The pageable object that contains all users.</td>
+    </tr>
+    <tr>
+      <td>messages</td>
+      <td>`ThreadsPager`</td>
+      <td>The pageable object that contains all users.</td>
+    </tr>
+  </tbody>
+</table>
+
+BotStacksChat as well as all other state objects in the SDK extend ObservableObject.
+BotStacksChat maintains an `@Published isUserLoggedIn` that you can use in your SwiftUI apps as well.
+You can also listen to the Chats object which holds state for the entire BotStacksChat interface.
+
+Listen to BotStacksChat using combine in your view controllers:
+
+```Swift
+BotStacksChat.shared.objectWillChange
+  .makeConnectable()
+  .autoconnect()
+  .sink(receiveValue: {[weak self] _ in
+    DispatchQueue.main.async {
+      // update my chat UI
+    }
+  }).store(in: bag)
+```
+
+Use `@ObservedObject` in your SwiftUI
+
+```Swift
+public struct MyView: View {
+  @ObservedObject var botstackschat = BotStacksChat.shared
+
+  public var body: some View {
+    ZStack {
+      if botstackschat.isUserLoggedIn {
+        // Render BotStacksChat UI
+        BotStacksChatView {
+          // handle logout
+        }
+      } else {
+        MyLoginView()
+      }
+    }
+  }
+}
+```

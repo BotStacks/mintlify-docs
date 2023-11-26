@@ -1,0 +1,51 @@
+---
+title: "BotStacksChatView"
+description: "All encompassing chat experience"
+---
+
+## Component
+
+The BotStacksChatView is a view that renders full chat experience.
+
+## API
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>onLogout</td>
+      <td>`func`</td>
+      <td></td>
+      <td>
+        Callback function that is called after the chat user is logged out
+      </td>
+    </tr>
+    <tr>
+      <td>onDeleteAccount</td>
+      <td>`func`</td>
+      <td></td>
+      <td>
+        Callback function that is called after the logged in account is deleted
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Example
+
+```Swift
+BotStacksChatView(
+  onLogout: {
+    // navigate to login screen
+    navigator.navigate("/login")
+  },
+  onDeleteAccount: {}
+)
+```

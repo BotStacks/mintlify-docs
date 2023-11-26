@@ -1,0 +1,70 @@
+---
+title: "PagerList"
+description: "Helper component for rendering paged lists"
+---
+
+## Component
+
+The PagerList component is a helper function for rendering and loading paged chat data.
+
+## API
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pager</td>
+      <td>`Pager<T>`</td>
+      <td></td>
+      <td>
+        The pageable data. It must extend Pager. Existing entities include `ChannelsPager`, `ThreadsPager`, and `ContactsPager`.
+      </td>
+    </tr>
+    <tr>
+      <td>empty</td>
+      <td>`View`</td>
+      <td></td>
+      <td>The view to display if there is no data</td>
+    </tr>
+    <tr>
+      <td>loadMoreIfEmpty</td>
+      <td>`func`</td>
+      <td></td>
+      <td>
+        If no data, loads the first page
+      </td>
+    </tr>
+     <tr>
+      <td>loadMoreIfNeeded</td>
+      <td>`func`</td>
+      <td></td>
+      <td>
+        If has more data to fetch, loads the next page
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Body
+
+The body contains an iterator of the page results
+
+## Example
+
+```Swift
+PagerList(
+  pager: BotStacksChatStore.current.network,
+  empty: {
+    Text("No data")
+  }
+) { chat in
+  ChannelRow(chat: chat)
+}
+```

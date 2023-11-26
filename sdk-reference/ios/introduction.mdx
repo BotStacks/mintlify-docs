@@ -3,4 +3,42 @@ title: "Introduction"
 description: "Utilize the iOS SDK to integrate chat in your iOS native environment"
 ---
 
-<Note>Coming soon!</Note>
+<Warning>
+  The iOS SDK is still in active development. Check in regularly for updates!
+</Warning>
+
+<Card
+  title="Got any suggestions?"
+  icon="discord"
+  href="https://discord.gg/5kwyQCz3zZ"
+>
+  Come let us know your feedback and/or suggestions regarding the iOS SDK in our
+  discord server.
+</Card>
+
+## Overview
+
+The iOS UIKit is a collection of Swift components crafted to help engineers build a
+feature-rich chat experience.
+
+## Installation
+
+### Cocoapods
+
+This iOS SDK is accessible via Cocoapod as `BotStacksChat`. Simple add to your podfile
+
+```bash
+use_frameworks!
+
+target 'MyApp' do
+  pod 'BotStacksChat'
+end
+```
+
+### Swift package manager
+
+```Swift
+dependencies: [
+    .package(url: "https://github.com/BotStacks/ios-sdk.git", .upToNextMajor(from: "1.0.1"))
+]
+```

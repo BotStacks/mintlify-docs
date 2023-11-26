@@ -1,0 +1,94 @@
+---
+title: "Theming"
+description: "Brand your chat components"
+---
+
+## Overview
+
+You can theme your BotStacksChat UI by passing in a theme to BotStacksChat any time
+before displaying the UI. The theme supports fonts, colors and things like bubble border
+radius and image sizes.
+
+### Provide a Theme to BotStacksChat
+
+```Swift
+BotStacksChat.set(theme: Theme())
+```
+
+### Customize colors
+
+You can provide your own color themes to the theme object with a wide array of parameters.
+The UI kit uses both a light and a dark theme so provide both.
+
+```Swift
+BotStacksChat.set(theme:
+  Theme(
+    light: Colors(
+      primary: .blue,
+      background: .white
+    ),
+    dark: Colors(
+      primary: .blue,
+      background: .black
+    )
+  )
+)
+```
+
+### Customize fonts
+
+The UI kit uses the same Fonts styles as the iOS. You can provide your own Fonts object to customize
+those fonts:
+
+```Swift
+BotStacksChat.set(theme:
+  Theme(
+    fonts: Fonts(
+      title: .app(22, .black),
+      title2: .app(20, .heavy),
+      title2Regular: .app(20),
+      title3: .app(16, .heavy),
+      headline: .app(16, .bold),
+      body: .app(14),
+      caption: .app(12)
+    )
+  )
+)
+```
+
+### Customize assets
+
+There are customizable assets and text that you can use in your UI Kit as well. These are only applicable if
+utilizing `BotStacksChatView`.
+Most importantly is the default image you want to use for groups.
+
+```Swift
+BotStacksChat.set(theme:
+  Theme(
+    assets: Assets(group: Image("my-group-placeholder"))
+  )
+)
+```
+
+To set empty screen images:
+
+```Swift
+BotStacksChat.set(theme:
+    Theme(
+      emptyChannels: EmptyScreenConfig(
+        image: Image("empty-channels"),
+        caption: "You haven't joined any channels yet"),
+      emptyChat: EmptyScreenConfig(
+        image: Image("empty-chat"),
+        caption: "Your friends are ***dying*** to see you"
+      ),
+      emptyThreads: EmptyScreenConfig(
+        image: Image("empty-threads"),
+        caption: "You haven't added to any threads yet"),
+      emptyAllChannels: EmptyScreenConfig(
+        image: Image("empty-all-channels"),
+        caption: "It's dead in here"
+      )
+    )
+  )
+```

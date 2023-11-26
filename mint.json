@@ -117,7 +117,15 @@
         {
           "group": "iOS",
           "icon": "apple",
-          "pages": ["sdk-reference/ios/introduction"]
+          "pages": [
+            "sdk-reference/ios/introduction",
+            "sdk-reference/ios/setup",
+            "sdk-reference/ios/state",
+            "sdk-reference/ios/theming",
+            "sdk-reference/ios/botstacks-chat-view",
+            "sdk-reference/ios/pager-list",
+            "sdk-reference/ios/channel-row"
+          ]
         },
         {
           "group": "Android",

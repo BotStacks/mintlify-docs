@@ -1,0 +1,50 @@
+---
+title: "Setup"
+description: Set up your SDK for user
+---
+
+## Getting Started
+
+In order to display any of the UI components and access chat data, you must first initialize the SDK
+and log in as a chat user.
+
+### Initialization
+
+In your app delegate, or anywhere else you put your startup logic, initialize the BotStacksChat SDK
+
+```Swift
+BotStacksChat.setup(apiKey: apiKey)
+```
+
+Note, you can optionally delay load and later call BotStacksChat.shared.load to load BotStacks in whatever
+load sequence you wish.
+
+### Logging in
+
+Nearly all functionality is within the context of a chat user. That said, you must first be logged in as a chat
+user in order to appropriately display the UI components.
+
+To log in, call the `login` function prior to displaying any UI components. Below is an example of How
+to accomplish this.
+
+```Swift
+@IBAction func loginToBotStacksChat() {
+  self.loading = true
+  Task.detached {
+    do {
+      let loggedIn = try await BotStacksChat.shared.login(
+            accessToken: nil,
+            userId: id,
+            username: nickname,
+            picture: picture,
+            displayName: name
+          )
+      if loggedIn {
+        displayBotStacksChat()
+      }
+    } catch let err {
+      print("error logging in \(err)")
+    }
+  }
+}
+```

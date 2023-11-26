@@ -8,11 +8,11 @@ description: "Get your feature-rich chat environment underway"
 <CodeGroup>
 
 ```bash npm
-npm i @inappchat/sdk
+npm i @botstacks/chat-sdk
 ```
 
 ```bash yarn
-yarn add @inappchat/sdk
+yarn add @botstacks/chat-sdk
 ```
 
 </CodeGroup>
@@ -29,9 +29,9 @@ To initialize the sdk, all you need to do is set up the chat store and initializ
     In the following example, `store` is just a mobx state tree.
 
 ```js
-import { InAppChat } from "@inappchat/sdk";
+import { BotStacksChat } from "@botstacks/chat-sdk";
 
-const store = InAppChat.createChatStore();
+const store = BotStacksChat.createChatStore();
 ```
 
 From here, you can `makeInspectable(store)` with `mobx-devtools-mst` if you desire.
@@ -41,9 +41,11 @@ And go on to make the store observable and create a reactive environment. See [M
   </Step>
   <Step title="Initialize the SDK">
 ```js main.js
-import { InAppChat } from "@inappchat/sdk";
+import { BotStacksChat } from "@botstacks/chat-sdk";
 
-InAppChat.init(process.env.API_KEY);
+BotStacksChat.init(process.env.API_KEY);
+
 ```
   </Step>
 </Steps>
+```

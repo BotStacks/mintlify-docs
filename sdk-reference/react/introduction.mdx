@@ -25,11 +25,11 @@ Each component will note which case it is. What that means is:
 <CodeGroup>
 
 ```bash npm
-npm i @inappchat/react
+npm i @botstacks/chat-react
 ```
 
 ```bash yarn
-yarn add @inappchat/react
+yarn add @botstacks/chat-react
 ```
 
 </CodeGroup>
@@ -37,38 +37,38 @@ yarn add @inappchat/react
 ### Add to your project
 
 To use the SDK and, therefore, the data storage and api layer, you need to wrap your chat related code
-with `InAppChatProvider`. It's simplest to put this near the root of your component tree.
+with `BotStacksChatProvider`. It's simplest to put this near the root of your component tree.
 
 In its simplest form, it should look like below
 
 ```tsx app.tsx
-import { InAppChatProvider } from '@inappchat/react';
+import { BotStacksChatProvider } from '@botstacks/chat-react';
 
 export const App = () => (
-  <InAppChatProvider apiKey={API_KEY}>
+  <BotStacksChatProvider apiKey={API_KEY}>
     <div>The rest of your app goes here...</div>
     <>
       <div>Any UIKit components in here will be able to use the store.</div>
       <ChannelsView />
     <>
-  </InAppChatProvider>
+  </BotStacksChatProvider>
 );
 ```
 
 <Warning>
-  Make sure you only have one `InAppChatProvider`. Having multiple may have
+  Make sure you only have one `BotStacksChatProvider`. Having multiple may have
   unexpected results.
 </Warning>
 
 ### Accessing data
 
-The React UIKit extends the JavaScript SDK to create and set up the store for you as part of the `InAppChatProvider`.
+The React UIKit extends the JavaScript SDK to create and set up the store for you as part of the `BotStacksChatProvider`.
 To enable your custom components to be reactive and data aware, you only need to wrap your components with `observer`.
 This allows you to be able to the store.
 
 ```jsx
 import { observer } from 'mobx-react-lite';
-import { useChat } from '@inappchat/react';
+import { useChat } from '@botstacks/chat-react';
 
 export const MyCustomChatComponent = observer(() => {
   const chat = useChat();
@@ -80,13 +80,17 @@ export const MyCustomChatComponent = observer(() => {
 ## Quickstart
 
 If you want to use our feature complete UI, including routing or just simply want to give it a test
-run, you can use the `InAppChatUI` component.
+run, you can use the `BotStacksChatUI` component.
 
 Here is a full example, using a hardcoded user to log in.
 
 ```jsx
 import React, { useEffect } from "react";
-import { InAppChatProvider, InAppChatUI, useChat } from "@inappchat/react";
+import {
+  BotStacksChatProvider,
+  BotStacksChatUI,
+  useChat,
+} from "@botstacks/chat-react";
 
 const me = {
   user_id: "1",
@@ -102,7 +106,7 @@ const Chat = () => {
   });
 
   return (
-    <InAppChatUI
+    <BotStacksChatUI
       onLogout={() => {
         chat.logout();
       }}
@@ -112,9 +116,9 @@ const Chat = () => {
 
 export const App = () => {
   return (
-    <InAppChatProvider apiKey={API_KEY}>
+    <BotStacksChatProvider apiKey={API_KEY}>
       <Chat />
-    </InAppChatProvider>
+    </BotStacksChatProvider>
   );
 };
 ```

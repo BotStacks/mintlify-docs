@@ -103,8 +103,8 @@
           "pages": [
             "sdk-reference/react/introduction",
             "sdk-reference/react/types",
-            "sdk-reference/react/botstacksprovider",
-            "sdk-reference/react/botstacksui",
+            "sdk-reference/react/botstackschatprovider",
+            "sdk-reference/react/botstackschatui",
             "sdk-reference/react/chat-input",
             "sdk-reference/react/chat-message",
             "sdk-reference/react/channel-row",

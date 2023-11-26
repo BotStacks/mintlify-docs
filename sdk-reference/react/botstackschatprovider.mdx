@@ -1,17 +1,17 @@
 ---
-title: "InAppChatProvider"
-description: "The provider creates a chat context and is the cornerstone for interacting with InAppChat data"
+title: "BotStacksChatProvider"
+description: "The provider creates a chat context and is the cornerstone for interacting with BotStacks data"
 ---
 
 ## Component
 
-The `InAppChatProvider` component must wrap all chat related components. It is used to setup the store and API.
+The `BotStacksChatProvider` component must wrap all chat related components. It is used to setup the store and API.
 
 ## Theming
 
 The UIKit allows you to define both a light and a dark theme. You can pass both to the themes prop and utilize the
 `darkMode` prop to toggle which theme is used. If you do not pass any themes to the theme prop, the
-[default themes](/sdk-reference/react/inappchatprovider#default-themes) will be used.
+[default themes](/sdk-reference/react/botstackschatprovider#default-themes) will be used.
 
 ### Default Themes
 
@@ -102,7 +102,7 @@ The default themes are defined below:
 If you wish to use only dark theme, you can define it as such:
 
 ```tsx
-<InAppChatProvider
+<BotStacksChatProvider
   apiKey={API_KEY}
   darkMode={true}
   themes={{
@@ -110,19 +110,19 @@ If you wish to use only dark theme, you can define it as such:
   }}
 >
   {children}
-</InAppChatProvider>
+</BotStacksChatProvider>
 ```
 
 ## useChat
 
-Any component wrapped by the `InAppChatProvider` component has access to the store. To create a reference
+Any component wrapped by the `BotStacksChatProvider` component has access to the store. To create a reference
 in your component, you can use the `useChat` function. For more details on the store and how to use it, check out
 the [SDK documentation](/sdk-reference/javascript/store).
 
 ### Import
 
 ```js
-import { useChat } from "@inappchat/react";
+import { useChat } from "@botstacks/chat-react";
 ```
 
 ### Usage
@@ -139,7 +139,7 @@ const MyComponent = observer(() => {
 ### Import
 
 ```js
-import { InAppChatProvider } from "@inappchat/react";
+import { BotStacksChatProvider } from "@botstacks/chat-react";
 ```
 
 ### Props
@@ -178,7 +178,7 @@ import { InAppChatProvider } from "@inappchat/react";
       <td>`{}`</td>
       <td>
         The object containing various assets to be used. Only applicable when
-        using the `InAppChatUI` component.
+        using the `BotStacksChatUI` component.
       </td>
     </tr>
     <tr>
@@ -187,7 +187,7 @@ import { InAppChatProvider } from "@inappchat/react";
       <td>Default themes</td>
       <td>
         The object containing various assets to be used. Only applicable when
-        using the `InAppChatUI` component.
+        using the `BotStacksChatUI` component.
       </td>
     </tr>
   </tbody>

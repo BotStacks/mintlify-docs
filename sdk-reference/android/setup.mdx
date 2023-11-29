@@ -1,0 +1,43 @@
+---
+title: "Setup"
+description: Set up your SDK for use
+---
+
+## Getting Started
+
+In order to display any of the UI components and access chat data, you must first initialize the SDK
+and log in as a chat user.
+
+### Initialization
+
+In your Application class, call BotStacksChat.shared.setup with your API key. You can obtain your API key from
+the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don't yet have one, you can [create one for FREE](https://dashboard.botstacks.ai)!
+
+If you don't have an Application class, [create one](https://guides.codepath.com/android/Understanding-the-Android-Application-Class).
+
+```Swift
+BotStacksChat.shared.setup(context, apiKey)
+```
+
+Note, you can optionally delay load and later call BotStacksChat.shared.load to load BotStacks in whatever
+load sequence you wish.
+
+### Logging in
+
+Nearly all functionality is within the context of a chat user. That said, you must first be logged in as a chat
+user in order to appropriately display the UI components.
+
+To log in, call the `login` function prior to displaying any UI components. Below is an example of How
+to accomplish this.
+
+```Kotlin
+fun doLogin() {
+  BotStacksChat.shared.login(accessToken, userId, username, displayName, profilePicture)
+  if (BotStacksChat.shared.isUserLoggedIn) {
+    // handle login view change
+  }
+}
+```
+
+If you do not yet have an `accessToken`, pass nil. This will create a new user.
+You can retrieve the access token via `BotStacksChat.shared.prefs.getString("auth-token", null)`.

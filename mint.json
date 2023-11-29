@@ -130,7 +130,10 @@
         {
           "group": "Android",
           "icon": "android",
-          "pages": ["sdk-reference/android/introduction"]
+          "pages": [
+            "sdk-reference/android/introduction",
+            "sdk-reference/android/setup"
+          ]
         }
       ]
     },

@@ -16,3 +16,35 @@ description: "Utilize the Android SDK to integrate chat in your Android native e
   Come let us know your feedback and/or suggestions regarding the android SDK in
   our discord server.
 </Card>
+
+## Overview
+
+The Android UIKit is a collection of components crafted to help engineers build a
+feature-rich chat experience.
+
+## Installation
+
+### Set up jitpack
+
+Add `jitpack.io` to your repositories in your `settings.gradle`
+
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+### Add BotStacksChat dependency
+
+Add the dependency to your `dependencies` block in build.gradle.
+
+```Gradle
+dependencies {
+  implemementation ('com.github.BotStacks:android-sdk:v1.0.1')
+}
+```

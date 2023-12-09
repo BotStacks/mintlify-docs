@@ -1,0 +1,37 @@
+---
+title: "Code"
+description: "Sometimes you just need to get your hands dirty!"
+---
+
+The code/JavaScript node provides a way to handle more complex logic. It can be used for anything that requires
+a bit of an engineer's touch.
+![Code Node](/images/code-node.png)
+
+### Variables
+
+You can access any variables from the conversation via the variables object. For example, you can do something like below
+to get the number of messages by the user in the current conversation by accessing the chat_history variable.
+`var totalUserMessages = variables.chat_history.match(/User:/g).length;`
+
+<Note>
+  All variables are strings. If you need to do arithmetic on a variable, make
+  sure to wrap your variable in `parseInt`.
+</Note>
+
+<Note>
+  You do NOT need to pass a read node into the JavaScript node. All variables
+  are accessible.
+</Note>
+
+You may need to set a variable within your code. To do this, a custom `saveVariable(variableName: string, value: string)` function is available to you.
+
+### Return paths
+
+By default, you get a "Fallback" and an "Error" route on the node where you can route to different paths
+within the conversation in order to handle responses properly. The "Error" path is used if an exception of any sort occurs
+within the code block i.e. syntax error, reference error, etc. The "Fallback" path is used if the code executes succesfully and reaches
+the end of the code block.
+
+To handle custom routing logic, you can utlize a return statement to specify an alternative route. You must return a string.
+Anytime you change the code to add or remove a return statement, the node on your canvas will update to reflect the possible output paths.
+You can use those to create new channels to whatever node you wish.

@@ -75,6 +75,8 @@
             "designer/nodes/bot-stack",
             "designer/nodes/set",
             "designer/nodes/read",
+            "designer/nodes/code",
+            "designer/nodes/api",
             "designer/nodes/end"
           ]
         },
@@ -143,7 +145,7 @@
     },
     {
       "group": "What's new",
-      "pages": ["changelog/launch"]
+      "pages": ["changelog/designer-v1.1", "changelog/launch"]
     }
   ],
   "footerSocials": {

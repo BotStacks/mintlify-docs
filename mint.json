@@ -145,7 +145,11 @@
     },
     {
       "group": "What's new",
-      "pages": ["changelog/designer-v1.1", "changelog/launch"]
+      "pages": [
+        "changelog/knowledge-base",
+        "changelog/designer-v1.1",
+        "changelog/launch"
+      ]
     }
   ],
   "footerSocials": {

@@ -68,7 +68,7 @@
             "designer/nodes/start",
             "designer/nodes/routing",
             "designer/nodes/llm",
-            "designer/nodes/text-input",
+            "designer/nodes/text",
             "designer/nodes/response",
             "designer/nodes/listen",
             "designer/nodes/bot",

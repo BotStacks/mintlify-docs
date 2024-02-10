@@ -153,8 +153,10 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/botstacks",
+    "github": "https://github.com/BotStacks",
+    "linkedin": "https://www.linkedin.com/company/botstacks",
+    "youtube": "https://www.youtube.com/@BotStacksai/videos",
+    "discord": "https://discord.gg/suMCX9NZSs"
   }
 }

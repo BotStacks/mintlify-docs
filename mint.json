@@ -25,6 +25,23 @@
     "name": "Dashboard",
     "url": "https://dashboard.botstacks.ai"
   },
+  "anchors": [
+    {
+      "name": "What's New",
+      "icon": "rocket",
+      "url": "changelog"
+    },
+    {
+      "name": "Roadmap",
+      "icon": "map",
+      "url": "roadmap"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.com/invite/5kwyQCz3zZ"
+    }
+  ],
   "tabs": [
     {
       "name": "Botstacks Designer",
@@ -46,23 +63,6 @@
   "primaryTab": {
     "name": "Home"
   },
-  "anchors": [
-        {
-      "name": "What's New",
-      "icon": "rocket",
-      "url": "changelog"
-    },
-       {
-      "name": "Roadmap",
-      "icon": "map",
-      "url": "home/roadmap"
-    },
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.com/invite/5kwyQCz3zZ"
-    }
-  ],
   "navigation": [
       {
       "group": "Getting Started",

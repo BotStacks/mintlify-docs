@@ -47,9 +47,6 @@
       "url": "account-management"
     }
   ],
-  "primaryTab": {
-    "name": "Home"
-  },
   "anchors": [
         {
       "name": "Welcome",

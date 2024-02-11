@@ -47,6 +47,11 @@
       "url": "account-management"
     }
   ],
+    "primary-tab": [
+    {
+      "name": "Home"
+    }
+    ],
   "anchors": [
         {
       "name": "Welcome",
@@ -70,6 +75,10 @@
     }
   ],
   "navigation": [
+      {
+      "group": "Home",
+      "pages": ["home"]
+    },
     {
       "group": "BotStack Designer",
       "pages": [
@@ -158,12 +167,12 @@
     {
       "group": "Account Management",
       "pages": [
-        "what-is-org",
-        "what-is-workspace",
-        "creating-and-managing-workspaces",
-        "team-members",
-        "roles-and-permissions",
-        "manage-billing"
+        "account-management/what-is-org",
+        "account-management/what-is-workspace",
+        "account-management/creating-and-managing-workspaces",
+        "account-management/team-members",
+        "account-management/roles-and-permissions",
+        "account-management/manage-billing"
       ]
     }
   ],

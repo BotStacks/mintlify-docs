@@ -29,12 +29,12 @@
     {
       "name": "What's New",
       "icon": "rocket",
-      "url": "roadmap"
+      "url": "https://docs.botstacks.ai/changelog"
     },
     {
       "name": "Roadmap",
       "icon": "map",
-      "url": "roadmaps"
+      "url": "https://docs.botstacks.ai/roadmap"
     },
     {
       "name": "Community",
@@ -67,10 +67,6 @@
       {
       "group": "Getting Started",
       "pages": ["home"]
-    },
-    {
-      "group": "Roadmap",
-      "pages": ["roadmaps"]
     },
     {
       "group": "BotStack Designer",

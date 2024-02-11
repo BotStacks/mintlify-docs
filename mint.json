@@ -61,11 +61,11 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Basics",
       "pages": ["home"]
     },
     {
-      "group": "Quickstarts & Tutorials",
+      "group": "Botstacks Designer",
       "pages": ["getting-started", "deploy-assistant"]
     },
     {
@@ -154,7 +154,31 @@
       "pages": ["api-reference/introduction"]
     },
     {
-      "group": "What's new",
+      "group": "Chat Features",
+      "pages": [
+        "changelog/knowledge-base",
+        "changelog/designer-v1.1",
+        "changelog/launch"
+      ]
+    },
+    {
+      "group": "Integrations & API",
+      "pages": [
+        "changelog/knowledge-base",
+        "changelog/designer-v1.1",
+        "changelog/launch"
+      ]
+    },
+    {
+      "group": "Troubleshooting",
+      "pages": [
+        "changelog/knowledge-base",
+        "changelog/designer-v1.1",
+        "changelog/launch"
+      ]
+    },
+    {
+      "group": "Video Tutorials",
       "pages": [
         "changelog/knowledge-base",
         "changelog/designer-v1.1",

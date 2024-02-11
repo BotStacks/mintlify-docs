@@ -29,12 +29,12 @@
     {
       "name": "What's New",
       "icon": "rocket",
-      "url": "https://docs.botstacks.ai/changelog"
+      "url": "miscellaneous/changelog"
     },
     {
       "name": "Roadmap",
       "icon": "map",
-      "url": "https://docs.botstacks.ai/roadmap"
+      "url": "miscellaneous/roadmap"
     },
     {
       "name": "Community",
@@ -162,6 +162,15 @@
         "account-management/team-members",
         "account-management/roles-and-permissions",
         "account-management/manage-billing"
+      ]
+    },
+    {
+      "group": "Miscellaneous",
+      "pages": [
+        "miscellaneous/tutorials",
+        "miscellaneous/demo",
+        "miscellaneous/roadmap",
+        "miscellaneous/changelog"
       ]
     }
   ],

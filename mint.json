@@ -37,6 +37,10 @@
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Account Management",
+      "url": "account-management"
     }
   ],
   "primaryTab": {
@@ -51,7 +55,7 @@
        {
       "name": "Roadmap",
       "icon": "map",
-      "url": "roadmap"
+      "url": "home/roadmap"
     },
     {
       "name": "Community",

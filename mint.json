@@ -46,12 +46,12 @@
         {
       "name": "What's New",
       "icon": "rocket",
-      "page": "changelog"
+      "url": "changelog"
     },
        {
       "name": "Roadmap",
       "icon": "map",
-      "url": "https://docs.botstacks.ai/roadmap"
+      "url": "roadmap"
     },
     {
       "name": "Community",

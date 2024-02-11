@@ -39,6 +39,10 @@
   ],
   "tabs": [
     {
+      "name": "Home",
+      "url": "overview"
+    },
+    {
       "name": "AI Assistant Designer",
       "url": "designer"
     },

@@ -34,7 +34,7 @@
     {
       "name": "Roadmap",
       "icon": "map",
-      "url": "documentation"
+      "url": "roadmaps"
     },
     {
       "name": "Community",
@@ -67,6 +67,10 @@
       {
       "group": "Getting Started",
       "pages": ["home"]
+    },
+    {
+      "group": "Roadmap",
+      "pages": ["roadmaps"]
     },
     {
       "group": "BotStack Designer",

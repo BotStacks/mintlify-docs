@@ -54,11 +54,6 @@
     ],
   "anchors": [
         {
-      "name": "Welcome",
-      "icon": "sparkles",
-      "url": "home"
-    },
-        {
       "name": "What's New",
       "icon": "rocket",
       "url": "changelog"
@@ -76,7 +71,7 @@
   ],
   "navigation": [
       {
-      "group": "Home",
+      "group": "Getting Started",
       "pages": ["home"]
     },
     {

@@ -41,12 +41,12 @@
         {
       "name": "Welcome",
       "icon": "sparkles",
-      "url": "https://docs.botstacks.ai/home"
+      "url": "home"
     },
         {
       "name": "What's New",
       "icon": "rocket",
-      "url": "https://docs.botstacks.ai/changelog"
+      "page": "changelog"
     },
        {
       "name": "Roadmap",

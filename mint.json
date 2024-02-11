@@ -29,7 +29,7 @@
     {
       "name": "What's New",
       "icon": "rocket",
-      "url": "changelog"
+      "pages": "changelog"
     },
     {
       "name": "Roadmap",

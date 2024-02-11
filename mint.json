@@ -29,12 +29,12 @@
     {
       "name": "What's New",
       "icon": "rocket",
-      "url": "miscellaneous/changelog"
+      "url": "changelog"
     },
     {
       "name": "Roadmap",
       "icon": "map",
-      "url": "miscellaneous/roadmap"
+      "url": "roadmap"
     },
     {
       "name": "Community",

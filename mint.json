@@ -21,21 +21,39 @@
     "url": "https://dashboard.botstacks.ai"
   },
 
+  "tabs": [
+    {
+      "name": "Botstacks Designer",
+      "url": "designer"
+    },
+    {
+      "name": "SDK Reference",
+      "url": "sdk-reference"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "primaryTab": {
+    "name": "Home"
+  },
+
   "anchors": [
         {
       "name": "Welcome",
       "icon": "sparkles",
-      "pages": ["home"]
+      "url": "home"
     },
         {
       "name": "What's New",
       "icon": "rocket",
-      "pages": ["changelog"]
+      "url": "changelog"
     },
        {
       "name": "Roadmap",
       "icon": "map",
-      "pages": ["roadmap"]
+      "url": "roadmap"
     },
     {
       "name": "Community",
@@ -47,10 +65,6 @@
     {
       "group": "Basics",
       "pages": ["home"]
-    },
-    {
-      "group": "Botstacks Designer",
-      "pages": ["getting-started", "deploy-assistant"]
     },
     {
       "group": "BotStack Designer",
@@ -136,30 +150,6 @@
     {
       "group": "API Documentation",
       "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Chat Features",
-      "pages": [
-        "changelog/knowledge-base",
-        "changelog/designer-v1.1",
-        "changelog/launch"
-      ]
-    },
-    {
-      "group": "Integrations & API",
-      "pages": [
-        "changelog/knowledge-base",
-        "changelog/designer-v1.1",
-        "changelog/launch"
-      ]
-    },
-    {
-      "group": "Troubleshooting",
-      "pages": [
-        "changelog/knowledge-base",
-        "changelog/designer-v1.1",
-        "changelog/launch"
-      ]
     },
     {
       "group": "Video Tutorials",

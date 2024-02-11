@@ -20,7 +20,6 @@
     "name": "Dashboard",
     "url": "https://dashboard.botstacks.ai"
   },
-
   "tabs": [
     {
       "name": "Botstacks Designer",
@@ -33,12 +32,15 @@
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "Account Management",
+      "url": "account-management"
     }
   ],
   "primaryTab": {
     "name": "Home"
   },
-
   "anchors": [
         {
       "name": "Welcome",
@@ -66,8 +68,7 @@
       "group": "Getting Started",
       "pages": [
         "home",
-        "tutorials",
-        
+        "tutorials"
     ]
     },
     {

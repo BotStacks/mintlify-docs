@@ -32,11 +32,6 @@
       "url": "miscellaneous"
     },
     {
-      "name": "Roadmap",
-      "icon": "map",
-      "pages": ["roadmap"]
-    },
-    {
       "name": "Community",
       "icon": "discord",
       "url": "https://discord.com/invite/5kwyQCz3zZ"
@@ -44,7 +39,7 @@
   ],
   "tabs": [
     {
-      "name": "Botstacks Designer",
+      "name": "AI Assistant Designer",
       "url": "designer"
     },
     {
@@ -69,8 +64,12 @@
   },
   "navigation": [
       {
-      "group": "Getting Started",
-      "pages": ["home"]
+      "group": "Quick Start",
+      "pages": [
+        "overview",
+        "basics",
+        "build-first-assistant"
+        ]
     },
     {
       "group": "BotStack Designer",
@@ -85,8 +84,7 @@
             "designer/nodes/text",
             "designer/nodes/response",
             "designer/nodes/listen",
-            "designer/nodes/bot",
-            "designer/nodes/bot-stack",
+            "designer/nodes/ai-integration",
             "designer/nodes/set",
             "designer/nodes/read",
             "designer/nodes/code",
@@ -171,10 +169,10 @@
     {
       "group": "Miscellaneous",
       "pages": [
-        "miscellaneous/tutorials",
-        "miscellaneous/demo",
+        "miscellaneous/changelog",
         "miscellaneous/roadmap",
-        "miscellaneous/changelog"
+        "miscellaneous/demo",
+        "miscellaneous/tutorials"
       ]
     }
   ],

@@ -15,12 +15,21 @@
       "to": "#4A75FF"
     }
   },
-  "topbarLinks": [],
+  "topbarLinks": [    
+    {
+      "name": "Contact Us",
+      "url": "mailto:support@botstacks.ai"
+    }
+  ],
   "topbarCtaButton": {
     "name": "Dashboard",
     "url": "https://dashboard.botstacks.ai"
   },
   "tabs": [
+    {
+      "name": "Home",
+      "url": "home"
+    },
     {
       "name": "Botstacks Designer",
       "url": "designer"

@@ -35,18 +35,28 @@
     }
   ],
   "primaryTab": {
-    "name": "Guides"
+    "name": "Home"
   },
   "anchors": [
+        {
+      "name": "Welcome",
+      "icon": "home",
+      "url": "home"
+    },
+        {
+      "name": "What's New",
+      "icon": "rocket",
+      "url": "changelog"
+    },
+       {
+      "name": "Roadmap",
+      "icon": "map",
+      "url": "roadmap"
+    },
     {
       "name": "Community",
       "icon": "discord",
       "url": "https://discord.com/invite/5kwyQCz3zZ"
-    },
-    {
-      "name": "What's New",
-      "icon": "rocket",
-      "url": "changelog"
     }
   ],
   "navigation": [

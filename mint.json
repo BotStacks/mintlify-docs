@@ -63,8 +63,12 @@
   ],
   "navigation": [
     {
-      "group": "Basics",
-      "pages": ["home"]
+      "group": "Getting Started",
+      "pages": [
+        "home",
+        "tutorials",
+        
+    ]
     },
     {
       "group": "BotStack Designer",
@@ -152,11 +156,14 @@
       "pages": ["api-reference/introduction"]
     },
     {
-      "group": "Video Tutorials",
+      "group": "Account Management",
       "pages": [
-        "changelog/knowledge-base",
-        "changelog/designer-v1.1",
-        "changelog/launch"
+        "what-is-org",
+        "what-is-workspace",
+        "creating-and-managing-workspaces",
+        "team-members",
+        "roles-and-permissions",
+        "manage-billing"
       ]
     }
   ],

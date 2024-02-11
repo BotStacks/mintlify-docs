@@ -20,23 +20,7 @@
     "name": "Dashboard",
     "url": "https://dashboard.botstacks.ai"
   },
-  "tabs": [
-    {
-      "name": "Assistant Designer",
-      "url": "designer"
-    },
-    {
-      "name": "SDK Reference",
-      "url": "sdk-reference"
-    },
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "primaryTab": {
-    "name": "Home"
-  },
+
   "anchors": [
         {
       "name": "Welcome",

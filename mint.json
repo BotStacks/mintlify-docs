@@ -40,7 +40,7 @@
   "anchors": [
         {
       "name": "Welcome",
-      "icon": "home",
+      "icon": "sparkles",
       "url": "home"
     },
         {

@@ -41,17 +41,17 @@
         {
       "name": "Welcome",
       "icon": "sparkles",
-      "url": "home"
+      "pages": ["home"]
     },
         {
       "name": "What's New",
       "icon": "rocket",
-      "url": "changelog"
+      "pages": ["changelog"]
     },
        {
       "name": "Roadmap",
       "icon": "map",
-      "url": "roadmap"
+      "pages": ["roadmap"]
     },
     {
       "name": "Community",

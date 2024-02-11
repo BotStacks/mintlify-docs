@@ -34,7 +34,7 @@
     {
       "name": "Roadmap",
       "icon": "map",
-      "pages": ["miscellaneous/roadmap"]
+      "pages": ["roadmap"]
     },
     {
       "name": "Community",

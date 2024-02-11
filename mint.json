@@ -41,17 +41,17 @@
         {
       "name": "Welcome",
       "icon": "sparkles",
-      "url": "home"
+      "url": "https://docs.botstacks.ai/home"
     },
         {
       "name": "What's New",
       "icon": "rocket",
-      "url": "changelog"
+      "url": "https://docs.botstacks.ai/changelog"
     },
        {
       "name": "Roadmap",
       "icon": "map",
-      "url": "roadmap"
+      "url": "https://docs.botstacks.ai/roadmap"
     },
     {
       "name": "Community",

@@ -58,6 +58,10 @@
     {
       "name": "Account Management",
       "url": "account-management"
+    },
+    {
+      "name": "Miscellaneous",
+      "url": "miscellaneous"
     }
   ],
   "primaryTab": {

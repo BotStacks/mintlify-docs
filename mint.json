@@ -39,10 +39,6 @@
   ],
   "tabs": [
     {
-      "name": "Home",
-      "url": "overview"
-    },
-    {
       "name": "AI Assistant Designer",
       "url": "designer"
     },
@@ -70,9 +66,9 @@
       {
       "group": "Quick Start",
       "pages": [
-        "overview",
-        "basics",
-        "build-first-assistant"
+        "quick-start/overview",
+        "quick-start/basics",
+        "quick-start/build-first-assistant"
         ]
     },
     {

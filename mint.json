@@ -66,9 +66,9 @@
       {
       "group": "Resource Center",
       "pages": [
-        "quick-start/overview",
-        "quick-start/basics",
-        "quick-start/build-first-assistant"
+        "resource-center/overview",
+        "resource-center/basics",
+        "resource-center/build-first-assistant"
         ]
     },
     {

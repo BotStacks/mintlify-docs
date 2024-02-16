@@ -67,11 +67,11 @@
         {
           "group": "Build your first Assistant",
           "pages": [
-            "build-first-assistant/1-create-botstack",
-            "build-first-assistant/2-knowledge-base",
-            "build-first-assistant/3-conversation-flow",
-            "build-first-assistant/4-testing",
-            "build-first-assistant/5-deployment"
+            "build-first-assistant/create-botstack",
+            "build-first-assistant/knowledge-base",
+            "build-first-assistant/conversation-flow",
+            "build-first-assistant/testing",
+            "build-first-assistant/deployment"
           ]
         },
         {

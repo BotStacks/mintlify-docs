@@ -68,7 +68,16 @@
       "pages": [
         "resource-center/overview",
         "resource-center/basics",
-        "resource-center/build-first-assistant"
+        {
+          "group": "Build your first Assistant",
+          "pages": [
+            "build-first-assistant/1-create-botstack",
+            "build-first-assistant/2-knowledge-base",
+            "build-first-assistant/3-conversation-flow",
+            "build-first-assistant/4-testing",
+            "build-first-assistant/5-deployment"
+          ]
+        }
         ]
     },
     {

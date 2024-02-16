@@ -21,14 +21,16 @@ Nodes represent individual states or steps within the conversation. Each node ty
 
 Connections specify the pathways through which the conversation moves forward, allowing for branching, looping or other forms of interaction.
 
+<br />
 We have already created an Bot Stack and added our data to the knowledge base, let's build a simple assistant using the nodes and connections.
+
+
+On the AI Assistant Designer you will have the Node Stack on the left side, here you will find all the nodes that you can use in the designer to build your AI Assistant. Each node has it's own purpose and you can learn more about them by clicking [here](/designer/nodes)
 
 <img 
 height="500"  
 src="/images/node-stack.png"
 />
-
-On the AI Assistant Designer you will have the Node Stack on the left side, here you will find all the nodes that you can use in the designer to build your AI Assistant. Each node has it's own purpose and you can learn more about them by clicking [here](/designer/nodes)
 
 For now we will only focus on four nodes
 1. Start Node
@@ -58,9 +60,9 @@ height="500"
 src="/images/build-first-assistant.png"
 />
 
-The conversation flow begins from the Start Node, then transitions to the LLM Node, followed by the Response AI Node, and finally, it moves to the Listen Node. By connecting the Listen Node to the LLM Node, it forms a loop, ensuring that the assistant won't end the conversation but rather continue the flow indefinitely.
+The conversation flow begins from the Start Node, then transitions to the LLM Node, followed by the Response AI Node and finally, it moves to the Listen Node. By connecting the Listen Node to the LLM Node, it forms a loop, ensuring that the assistant won't end the conversation but rather continue the flow indefinitely.
 
 You can copy the settings on LLM Node from the above image. If you want to know more about how the LLM node works, click [here](/designer/nodes/llm)
 
-Now you can proceed to the next chapter, which covers how to test the assistant we just built.
+Now you can proceed to the next chapter, which covers how we can test the assistant that we just built.
 

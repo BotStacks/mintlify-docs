@@ -80,6 +80,14 @@
         }
         ]
     },
+      {
+      "group": "Botstacker's Library",
+      "pages": [
+        "botstackers-library/assistant-design",
+        "botstackers-library/prompt-design",
+        "botstackers-library/prompt-chaining"
+        ]
+    },
     {
       "group": "BotStack Designer",
       "pages": [

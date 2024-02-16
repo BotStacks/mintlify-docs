@@ -1,12 +1,65 @@
 ---
-title: Conversational Flow
+title: Conversation Flow
 sidebarTitle: "Conversation Flow"
-description: "This section serves as your entry point into the world of conversational AI and the Botstacks. Below, you'll find essential information to help you understand the core concepts and components involved."
 ---
 
-## 1. Introduction to Botstacks
+Conversation Flow outlines how the conversation progresses from one point to another, typically organized in a tree-like structure with nodes representing different states or steps in the conversation.
 
-### What is Botstacks?
 
-Botstacks is a user-friendly platform designed for both beginners and skilled developers to create advanced conversational AI applications without needing coding experience. 
-Whether you're interested in building chatbots or AI assistants, Botstacks provides all the tools and resources necessary to turn your ideas into reality.
+
+## Main elements in conversation flow
+
+1. Nodes
+2. Connections
+
+### Nodes
+
+Nodes represent individual states or steps within the conversation. Each node typically corresponds to a specific action, prompt or response.
+
+
+### Connections
+
+Connections specify the pathways through which the conversation moves forward, allowing for branching, looping or other forms of interaction.
+
+
+We have already created an Bot Stack and added our data to the knowledge base, let's build a simple assistant using the nodes and connections.
+
+<img 
+height="500"  
+src="/images/node-stack.png"
+/>
+
+On the AI Assistant Designer you will have the Node Stack on the left side, here you will find all the nodes that you can use in the designer to build your AI Assistant. Each node has it's own purpose and you can learn more about them by clicking [here](/designer/nodes)
+
+For now we will only focus on four nodes
+1. Start Node
+2. LLM Node
+3. Response AI Node
+4. Listen Node
+
+### Start Node
+The start node represents the beginning of the conversation. It is triggered by a mention or from the initial message in a DM. The input provided that initially started the conversation is immediately passed onto all the start nodes outputs.
+
+### LLM Node
+
+The llm node utilizes the Large Language Model of your choice, such as OpenAI GPT, Anthropic Claude to handle conversational dialogue.
+
+### Response Node
+
+The Response AI node takes input from the nodes in the workflow and sends it to the user on chat
+
+### Listen Node
+
+The listen node waits for user input within the chat. Once a message is received, it is immediately passed onto all the Listen nodes outputs.
+
+
+Here we have added the four nodes we mentioned above, and connected them in a sequence
+<img 
+height="500"  
+src="/images/build-first-assistant.png"
+/>
+
+The conversation flow begins from the Start Node, then transitions to the LLM Node, followed by the Response AI Node, and finally, it moves to the Listen Node. By connecting the Listen Node to the LLM Node, it forms a loop, ensuring that the assistant won't end the conversation but rather continue the flow indefinitely.
+
+You can copy the settings on LLM Node from the above image and you can learn more about the LLM node by clicking [here](/designer/nodes/llm)
+

@@ -193,7 +193,8 @@
     "youtube": "https://www.youtube.com/@BotStacksai/videos",
     "discord": "https://discord.gg/suMCX9NZSs"
   },
-  {
-    "thumbsRating": true
+  "feedback": {
+    "thumbsRating": "true"
   }
+}
 }

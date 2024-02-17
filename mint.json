@@ -113,6 +113,17 @@
             "designer/nodes/api",
             "designer/nodes/end"
           ]
+        },
+        {
+          "group": "Designer Interface",
+          "pages": [
+            "designer/interface/designer",
+            "designer/interface/integration",
+            "designer/interface/knowledge-base",
+            "designer/interface/web-widget",
+            "designer/interface/collaboration",
+            "designer/interface/sandbox"
+          ]
         }
       ]
     },

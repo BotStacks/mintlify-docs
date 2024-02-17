@@ -21,11 +21,11 @@ The Assistant Designer in Botstacks is a visual interface that allows users to c
 
 </Steps>
 
-### Nodes
+### 1. Nodes
 
 Nodes are fundamental building blocks within the Assistant Designer.
 
-Each node typically corresponds to a specific action, prompt, or response that the assistant will execute or present during the interaction with the user.
+Each node typically corresponds to a specific action, prompt or response that the assistant will execute or present during the interaction with the user.
 
 <img 
 height="500"  
@@ -35,15 +35,15 @@ src="/images/node-stack.png"
 Nodes can encompass a wide range of functionalities, such as asking a question, providing information, processing user input, making decisions based on context or triggering external actions.
 
 <Tip> 
-    **For example**, You could use a "Text" node to add specific input into the conversation, followed by a "Listen" node to wait for user input. 
+    **For example**, You could use a Text node to add specific input into the conversation, followed by a Listen node to wait for user input. 
 </Tip>
 
 
-### Node Identifiers
+### 2. Node Identifiers
 
 A node identifier, often referred to as a "slug," serves as a unique identifier for each node within Assistant Designer.
 
-This identifier takes the form of `{nodeType}-{index}`, where `{nodeType}` represents the type of node (e.g., routing, read, etc.), and `{index}` denotes the position of the node within its category.
+This identifier takes the form of `{nodeType}-{index}`, where `{nodeType}` represents the type of node (e.g., start, llm, etc.), and `{index}` denotes the position of the node within its category.
 
 <img 
 height="500"  
@@ -51,7 +51,7 @@ src="/images/node-identifier.png"
 />
 
 
-### Connections
+### 3. Connections
 
 Connections specify how nodes are linked together, allowing for branching, looping or other forms of interaction. They dictate the logical flow of the conversation based on user inputs and system responses.
 
@@ -74,12 +74,12 @@ src="/images/connection-example.png"
 </Tip>
 
 
-### Conversation flow
+### 4. Conversation flow
 
 Conversation Flow outlines how the conversation progresses from one point to another, typically organized in a tree-like structure with nodes representing different states or steps in the conversation.
 
 A conversation flows from node to node via the connections that connect them. For more advanced use-cases, you may have multiple outputs for a given node. At the point where a flow diverges, you will have two separate workflows running simultaneously in an async manner.
 
-
-Now, you can proceed to the next chapter, which explains the User Interface (UI) of Assistant Designer.
+<br />
+Now, you can proceed to the next chapter, which explains the User Interface (UI) of the Assistant Designer.
 <Note>Using the sandbox will use the draft version of the assistant.</Note>

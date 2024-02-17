@@ -19,12 +19,12 @@ Conversation Flow outlines how the conversation progresses from one point to ano
 
 </Steps>
 
-### Nodes
+### 1. Nodes
 
 Nodes represent individual states or steps within the conversation. Each node typically corresponds to a specific action, prompt or response.
 
 
-### Connections
+### 2. Connections
 
 Connections specify the pathways through which the conversation moves forward, allowing for branching, looping or other forms of interaction.
 
@@ -45,18 +45,18 @@ For now we will only focus on four nodes
 3. Response AI Node
 4. Listen Node
 
-### Start Node
+### 1. Start Node
 The start node represents the beginning of the conversation. It is triggered by a mention or from the initial message in a DM. The input provided that initially started the conversation is immediately passed onto all the start nodes outputs.
 
-### LLM Node
+### 2. LLM Node
 
 The llm node utilizes the Large Language Model of your choice, such as OpenAI GPT, Anthropic Claude to handle conversational dialogue.
 
-### Response Node
+### 3. Response Node
 
 The Response AI node takes input from the nodes in the workflow and sends it to the user on chat
 
-### Listen Node
+### 4. Listen Node
 
 The listen node waits for user input within the chat. Once a message is received, it is immediately passed onto all the Listen nodes outputs.
 

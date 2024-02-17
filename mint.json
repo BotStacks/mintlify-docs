@@ -96,6 +96,7 @@
       "group": "BotStacks Designer",
       "pages": [
         "designer/introduction",
+        "designer/interface",
         {
           "group": "Nodes",
           "pages": [
@@ -112,10 +113,7 @@
             "designer/nodes/api",
             "designer/nodes/end"
           ]
-        },
-        "designer/intents",
-        "designer/connected-bots",
-        "designer/variables"
+        }
       ]
     },
     {

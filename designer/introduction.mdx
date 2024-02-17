@@ -20,6 +20,12 @@ The Assistant Designer in Botstacks is a visual interface that allows users to c
   <Step title="Conversation Flow">
   </Step>
 
+  <Step title="Intents">
+  </Step>
+
+  <Step title="Variables">
+  </Step>
+
 </Steps>
 
 ### 1. Nodes
@@ -85,6 +91,36 @@ src="/images/conversation-flow.png"
 />
 
 A conversation flows from node to node via the connections that connect them. For more advanced use-cases, you may have multiple outputs for a given node. At the point where a flow diverges, you will have two separate workflows running simultaneously in an async manner.
+
+
+### 5. Intents
+
+Intents represent the user's anticipated goals or actions within the conversation, essential for organizing and directing user inputs effectively. Each Intent is defined by a distinct name and multiple sample utterances, aiding in accurately recognizing and responding to user intents during the interaction flow.
+
+<img 
+height="500"  
+src="/images/intents.png"
+/>
+
+<Tip> 
+  Intents are primarily used within the routing node to classify user input 
+</Tip>
+
+
+### 6. Variables
+
+Variables serve as containers in which data can be stored for future use, enabling easy access and retrieval anywhere in the conversation flow.
+
+
+<img 
+height="500"  
+src="/images/variables.png"
+/>
+
+<Tip> 
+  Variables are commonly utilized for storing various types of information such as names, email addresses etc.
+</Tip>
+
 
 <br />
 Now, you can proceed to the next chapter, which explains the User Interface (UI) of the Assistant Designer.

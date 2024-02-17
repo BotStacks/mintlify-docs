@@ -16,6 +16,9 @@ The Assistant Designer in Botstacks is a visual interface that allows users to c
   <Step title="Connections">
   </Step>
 
+  <Step title="Conversation Flow">
+  </Step>
+
 </Steps>
 
 ### Nodes
@@ -23,6 +26,11 @@ The Assistant Designer in Botstacks is a visual interface that allows users to c
 Nodes are fundamental building blocks within the Assistant Designer.
 
 Each node typically corresponds to a specific action, prompt, or response that the assistant will execute or present during the interaction with the user.
+
+<img 
+height="500"  
+src="/images/node-stack.png"
+/>
 
 Nodes can encompass a wide range of functionalities, such as asking a question, providing information, processing user input, making decisions based on context or triggering external actions.
 
@@ -37,46 +45,41 @@ A node identifier, often referred to as a "slug," serves as a unique identifier 
 
 This identifier takes the form of `{nodeType}-{index}`, where `{nodeType}` represents the type of node (e.g., routing, read, etc.), and `{index}` denotes the position of the node within its category.
 
+<img 
+height="500"  
+src="/images/node-identifier.png"
+/>
 
 
 ### Connections
 
 Connections specify how nodes are linked together, allowing for branching, looping or other forms of interaction. They dictate the logical flow of the conversation based on user inputs and system responses.
 
+<img 
+height="500"  
+src="/images/connections.png"
+/>
+
 By defining connections between nodes, you can create complex conversational structures that adapt dynamically to user interactions and context. 
 
+In the example below, we are referencing both the start node and the listen node within the LLM node. The output of each of those nodes `{start-0}` and `{listen-0}` will be directly interpolated in the user prompt.
 
+<img 
+height="500"  
+src="/images/connection-example.png"
+/>
 
-
-Each node is given a slug in the form of `{nodeType}-{index}` that can be referenced from nodes directly next in the chain.
-
-In the example below, we are referencing both the routing node and the read node within the LLM node. The output of each of those nodes (routing-0 and read-0) will be directly interpolated in the user prompt.
-![Node Input Example](/images/node-input-example.png)
-
-<Note>
-  This is a common use case of passing chat history to chatGPT, given that the
-  read node is using the chat_history variable
-</Note>
-
-
-
-
-
-
-
+<Tip>
+  This is a common use case of passing user input to LLM Models like ChatGPT
+</Tip>
 
 
 ### Conversation flow
 
-A conversation flows from node to node via the channels that connect them. For more advanced use-cases, you may have multiple outputs
-for a given node. At the point where a flow diverges, you will have two separate workflows running simultaneously
-in an async manner.
+Conversation Flow outlines how the conversation progresses from one point to another, typically organized in a tree-like structure with nodes representing different states or steps in the conversation.
 
-## Publishing
+A conversation flows from node to node via the connections that connect them. For more advanced use-cases, you may have multiple outputs for a given node. At the point where a flow diverges, you will have two separate workflows running simultaneously in an async manner.
 
-When creating your AI assistant within the designer, you are editing a draft version of the assistant. That means that
-any changes you make will not effect your "live" version. In order to commit your changes, you must publish your changes.
 
-You can publish your changes by clicking the "Publish" button in the top-right corner of the designer.
-
+Now, you can proceed to the next chapter, which explains the User Interface (UI) of Assistant Designer.
 <Note>Using the sandbox will use the draft version of the assistant.</Note>

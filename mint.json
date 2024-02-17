@@ -79,10 +79,7 @@
         "pages": [
          "account-management/what-is-org",
           "account-management/what-is-workspace",
-          "account-management/creating-and-managing-workspaces",
-          "account-management/team-members",
-          "account-management/roles-and-permissions",
-          "account-management/manage-billing"
+          "account-management/creating-and-managing-workspaces"
         ]
         }
      ]
@@ -195,5 +192,8 @@
     "linkedin": "https://www.linkedin.com/company/botstacks",
     "youtube": "https://www.youtube.com/@BotStacksai/videos",
     "discord": "https://discord.gg/suMCX9NZSs"
+  },
+  {
+    "thumbsRating": true
   }
 }

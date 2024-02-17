@@ -82,7 +82,7 @@
           "account-management/creating-and-managing-workspaces"
         ]
         }
-     ]
+      ]
     },
       {
       "group": "Botstackers Library",
@@ -196,5 +196,4 @@
   "feedback": {
     "thumbsRating": "true"
   }
-}
 }

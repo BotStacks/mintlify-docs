@@ -1,24 +1,52 @@
 ---
-title: "Introduction"
-description: "Build your AI assistant"
+title: "Introduction to AI Assistant Designer"
 ---
+The Assistant Designer in Botstacks is a visual interface that allows users to create conversational flows for AI assistants by defining nodes, representing states or steps in the conversation and connections specifying pathways through which the conversation progresses.
 
-## What is it?
-
-The designer is your viewport into building your AI assistant. It consists of:
+## Main elements in Assistant Designer
 
 <Steps>
+
   <Step title="Nodes">
-    Nodes are logic blocks that are responible for taking one or more inputs and
-    transforming them into an output.
   </Step>
-  <Step title="Channels">
-    Channels are connectors between nodes that represent the flow of an AI
-    workflow
+
+  <Step title="Node Identifiers">
   </Step>
+  
+  <Step title="Connections">
+  </Step>
+
 </Steps>
 
-### Node inputs
+### Nodes
+
+Nodes are fundamental building blocks within the Assistant Designer.
+
+Each node typically corresponds to a specific action, prompt, or response that the assistant will execute or present during the interaction with the user.
+
+Nodes can encompass a wide range of functionalities, such as asking a question, providing information, processing user input, making decisions based on context or triggering external actions.
+
+<Tip> 
+    **For example**, You could use a "Text" node to add specific input into the conversation, followed by a "Listen" node to wait for user input. 
+</Tip>
+
+
+### Node Identifiers
+
+A node identifier, often referred to as a "slug," serves as a unique identifier for each node within Assistant Designer.
+
+This identifier takes the form of `{nodeType}-{index}`, where `{nodeType}` represents the type of node (e.g., routing, read, etc.), and `{index}` denotes the position of the node within its category.
+
+
+
+### Connections
+
+Connections specify how nodes are linked together, allowing for branching, looping or other forms of interaction. They dictate the logical flow of the conversation based on user inputs and system responses.
+
+By defining connections between nodes, you can create complex conversational structures that adapt dynamically to user interactions and context. 
+
+
+
 
 Each node is given a slug in the form of `{nodeType}-{index}` that can be referenced from nodes directly next in the chain.
 
@@ -29,6 +57,14 @@ In the example below, we are referencing both the routing node and the read node
   This is a common use case of passing chat history to chatGPT, given that the
   read node is using the chat_history variable
 </Note>
+
+
+
+
+
+
+
+
 
 ### Conversation flow
 

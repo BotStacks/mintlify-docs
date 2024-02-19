@@ -5,11 +5,27 @@ icon: "code-merge"
 iconType: "solid"
 ---
 
-The routing node is a form of basic intent classification and routing based on said classification.
-![Routing Node](/images/node-routing.png)
+The Routing Node is like a guide that listens to what users say and decides where the conversation should go next.
 
-A routing node has as many outputs as added intents. During processing, a single intent will be chosen, and, thus, will continue down the selected chain.
 
-See [Intents](/designer/intents)
+<img 
+height="500"  
+src="/images/node-routing.png"
+/>
 
-<Note>Routing nodes use AI tokens</Note>
+The user desires are called "**intents**". 
+<Tip>For example, if a user wants to order food, that's an intent.</Tip>
+
+In Botstacks, each intent has a name and examples of how a user might express it, like "I want to order pizza" or "I want to order a burger."
+
+We call these examples `I want to order pizza` as **utterances**. This helps the assistant recognize when users are talking about different things using NLU (Natural Language Understanding).
+
+<br />
+
+The Routing Node works like a traffic signal, directing the conversation flow based on the recognized intent. It has different paths, each one leading to a different action or response based on what the user wants.
+
+When a user sends a message, the assistant tries to match their words to one of the intents. Once it finds the right one, it follows the path connected to that intent, like following a road on a map.
+
+This helps keep conversations organized and ensures that users get the right response to their requests. So, if someone asks to order pizza, the assistant knows to guide them through the pizza ordering process.
+
+<Tip>A routing node has as many outputs as added intents. During processing, a single intent will be chosen.</Tip>

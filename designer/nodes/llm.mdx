@@ -1,20 +1,104 @@
 ---
 title: "LLM"
-description: "&#x22;My idea of good company is the company of clever, well-informed people who have a great deal of conversation; that is what I call good company.&#x22;  &#x2014;Jane Austen"
 icon: "brain"
 iconType: "solid"
 ---
 
-The llm node utilizes the Large Language Model of your choice, such as ChatGPT, to handle conversational dialogue.
-![Routing Node](/images/llm-node.png)
+The LLM (Large Language Model) Node utilizes the Large Language Model of your choice, such as ChatGPT, Claude, for handling natural conversations. 
 
-An llm node can be used anywhere within a chain.
+LLM node can be placed anywhere in the conversation flow and it works by using AI Tokens to generate text, allowing for dynamic and engaging interactions with users. 
 
-- `Model`: This is a list of available models within the platform.
-- `System`: The system is the "system" message used within the LLM. It is used to define the context of the the LLM.
-- `User`: The user prompt represents the user message. In the most basic form, it can be reference an input node ex. `{listen-0}`.
-- `Temperature`: The temperature of the model. The higher the number, the higher the difference in responses.
-- `Max tokens`: The maximum number of tokens to process. Generation stops once the number of tokens is reached. Used to limit AI token usage.
-- `Top p`: Uses the top p tokens in the response. If a lower value is used, the variety in tokens will be smaller.
+Essentially, it's like having a smart assistant that can understand and respond to users in a human-like way. 
 
-<Tip>LLM nodes use AI tokens</Tip>
+
+<img 
+height="500"  
+src="/images/node-llm.png"
+/>
+
+<Note>This node is important for creating conversational experiences that feel natural and intuitive for your users without needing extensive coding knowledge</Note>
+
+## Options in the LLM Node
+
+<Steps>
+
+  <Step title="Model">
+  </Step>
+
+  <Step title="Knowledge Base">
+  </Step>
+  
+  <Step title="Chat History">
+  </Step>
+
+  <Step title="System Prompt">
+  </Step>
+
+  <Step title="User Prompt">
+  </Step>
+
+  <Step title="Temperature">
+  </Step>
+  
+  <Step title="Max Tokens">
+  </Step>
+
+  <Step title="Top P">
+  </Step>
+
+</Steps>
+
+### 1. Model
+The model displays a selection of available options on the platform, allowing you to pick your preferred one for use with the LLM Node. 
+
+<Tip>Currently we have OpenAI GPTs & Anthropic Claude Models.</Tip>
+
+
+### 2. Knowledege Base
+
+Enabling the "**Use Knowledge Base**" option on the LLM Node allows the node to utilize the data you have uploaded to your Knowledge Base
+
+
+### 3.Chat History
+
+Enabling the "**Use Chat History**" option on the LLM Node allows the node to utilize the chat history, enhancing the assistant's understanding and response quality. 
+
+By enabling this option, the assistant becomes aware of previous interactions, enabling it to tailor responses more effectively. 
+
+
+### 4. System Prompt
+
+A **System Prompt** is giving instructions to the Model. It tells the model how to respond to users inputs. 
+
+For Example, if you give system prompt as, "**You are an Expert UI Designer**" the model will generate responses as if it were an expert UI designer. 
+
+The effectiveness of the responses your assistant provides relies heavily on the clarity and specificity of the system prompt you provide. It essentially sets the tone and direction for the interaction between users and your Assistant.
+
+### 5. User Prompt
+
+A **User Prompt** is asking questions to the Model. It is a way for the user to interact with the model by asking questions or providing input.
+
+When using the LLM node, you can reference other nodes in the User Prompt like `listen-0`
+
+For Example, if you reference a listen node in the system prompt, the output of the listen node is sent to the LLM Node as the User Prompt.
+
+
+### 6. Temperature
+
+**Temperature** refers to how creative or varied the responses from the model will be. 
+
+<Tip>A higher temperature means more diverse responses, while a lower temperature leads to more predictable answers.</Tip>
+
+### 7. Max Tokens
+
+**Max Tokens** refers to the maximum number of words the AI can generate in a response. When this limit is reached, the AI stops generating text. 
+
+<Tip>Increasing the max token limit can help ensure that responses are complete and not cut off prematurely, allowing for smoother conversation flow.</Tip>
+
+### 8. Top P
+
+**Top P** refers to selecting the most probable tokens for generating responses. By adjusting the value of "T**op P**", you can control the diversity of tokens in the generated responses.
+
+<Tip>A higher value means more variety, while a lower value results in fewer variations.</Tip>
+
+

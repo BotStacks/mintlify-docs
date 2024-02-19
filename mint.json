@@ -97,7 +97,7 @@
       "pages": [
         "designer/introduction",
         {
-          "group": "Designer Interface",
+          "group": "Interface",
           "pages": [
             "designer/interface/designer",
             "designer/interface/integration",

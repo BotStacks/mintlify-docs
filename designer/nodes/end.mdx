@@ -1,10 +1,18 @@
 ---
 title: "End"
-description: "&#x22;Now this is not the end. It is not even the beginning of the end. But it is, perhaps, the end of the beginning.&#x22; &#x2014;Winston Churchill"
 icon: "circle-stop"
 iconType: "solid"
 ---
 
-Once a flow reaches an end node, the entire conversation context is cleared. The next time a message
-is sent to the assistant from the same user and within the same chat context, the flow restarts at the
-start node.
+The **End Node** marks the conclusion of a conversation flow. 
+
+<img 
+height="500"  
+src="/images/node-end.png"
+/>
+
+When the conversation flow reaches this point, all the information related to the conversation is wiped out. This means that if the same user sends another message to the assistant within the same chat session, the conversation starts anew from the beginning. 
+
+Essentially, the end node acts as a reset button for the conversation, ensuring a fresh start each time. So, users won't carry over any previous conversation history once they reach the end node.
+
+

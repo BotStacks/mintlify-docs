@@ -1,18 +1,42 @@
 ---
 title: "Set"
-description: "&#x22;To be is to be the value of a variable.&#x22; &#x2014;Willard Van Orman Quine"
 icon: "thumbtack"
 iconType: "solid"
 ---
 
-The set node is used to save variables for use later in the conversation.
-![Set Node](/images/set-node.png)
+The **Set** node is used to store information on variables for later use during the conversation. It acts as a way to save variables, which are pieces of data, to be accessed at different points in the conversation. 
 
-A set node does not have any outputs and is processed before any other nodes. For example, if you
-have an llm node you can output to both a set node and a text input node. The set node will always
-be processed first and the variable selected will be set. That means in the text input node, you can immediately
-"read" that variable, avoiding any race conditions.
+<img 
+height="500"  
+src="/images/node-set.png"
+/>
 
-- `Action`: The action is how the variable is set. The two options are "Append" and "Set", which either appends the input to the existing value or overrides any existing value, respectively.
-- `Variable`: The name of the variable to set. You must have already defined a variable. See [Variables](/designer/variables) for more details.
-.
+### Options in Set Node
+
+<Steps>
+
+  <Step title="Set">
+  </Step>
+  
+  <Step title="Append">
+  </Step>
+
+</Steps>
+
+### 1. Set
+
+**Set** will replace any existing value in the variable with a new one
+
+
+### 2. Append
+
+**Append** will add to an existing value in the variable.
+
+<br />
+
+Set Node helps to manage the information flow and prevents conflicts between different parts of the conversation. You must specify the name of the variable you want to set, ensuring clarity and organization in your bot stack. 
+
+By using the set node strategically, you can control how information is stored and retrieved, enhancing the overall user experience. It plays a crucial role in maintaining consistency and coherence in chat applications, enabling smoother interactions for users.
+
+
+

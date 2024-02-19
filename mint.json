@@ -96,24 +96,6 @@
       "group": "BotStacks Designer",
       "pages": [
         "designer/introduction",
-        "designer/interface",
-        {
-          "group": "Nodes",
-          "pages": [
-            "designer/nodes/start",
-            "designer/nodes/routing",
-            "designer/nodes/llm",
-            "designer/nodes/text",
-            "designer/nodes/response",
-            "designer/nodes/listen",
-            "designer/nodes/ai-integration",
-            "designer/nodes/set",
-            "designer/nodes/read",
-            "designer/nodes/code",
-            "designer/nodes/api",
-            "designer/nodes/end"
-          ]
-        },
         {
           "group": "Designer Interface",
           "pages": [
@@ -123,6 +105,23 @@
             "designer/interface/web-widget",
             "designer/interface/collaboration",
             "designer/interface/sandbox"
+          ]
+        },
+        {
+          "group": "Nodes",
+          "pages": [
+            "designer/nodes/introduction",
+            "designer/nodes/start",
+            "designer/nodes/routing",
+            "designer/nodes/llm",
+            "designer/nodes/text",
+            "designer/nodes/response",
+            "designer/nodes/listen",
+            "designer/nodes/ai-integration",
+            "designer/nodes/set",
+            "designer/nodes/code",
+            "designer/nodes/api",
+            "designer/nodes/end"
           ]
         }
       ]

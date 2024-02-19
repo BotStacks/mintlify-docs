@@ -1,20 +1,16 @@
 ---
 title: "AI Integration"
-description: "Got lots of bots? Make a stack."
 icon: "gears"
 iconType: "solid"
 ---
 
-The bot stack node initiates a sub conversation by connecting to a multiple external AI agent providers.
-![Bot Stack Node](/images/bot-stack-node.png)
+The AI Integration Node enables the connection to multiple external AI agents for initiating sub-conversations. 
 
-A bot stack node can be used anywhere within a chain. Once the conversation flow reaches a bot stack node, the underlying
-conversation via the selected third party agent takes over. When the session is ended from the external provider,
-the conversation continues within the flow.
+<img 
+height="500"  
+src="/images/node-aiint.png"
+/>
 
-On initially reaching a bot stack node in the conversational flow, a request is sent to each of the external bots listed in the node.
-Upon receiving from each of the bots, the bot with the highest confidence score is chosen and remains the selected agent until the bot
-stack conversation is ended.
+AI Integration Node can be placed anywhere in the conversation flow. When reached, it hands over the conversation to the selected third-party agent until the session ends, after which the flow resumes. 
 
-- `Bots`: The selected external bots to which to initiate a sub-conversation. The list of available bots is populated from the aggregation
-  of all the external provider bots. See [Connected bots](/designer/connected-bots) for more details..
+Upon encountering the node, requests are sent to each external bot listed, and the one with the highest confidence score is chosen to continue the conversation. The list of available bots comes from all external provider bots.

@@ -97,17 +97,6 @@
       "pages": [
         "designer/introduction",
         {
-          "group": "Interface",
-          "pages": [
-            "designer/interface/designer",
-            "designer/interface/integration",
-            "designer/interface/knowledge-base",
-            "designer/interface/web-widget",
-            "designer/interface/collaboration",
-            "designer/interface/sandbox"
-          ]
-        },
-        {
           "group": "Nodes",
           "pages": [
             "designer/nodes/introduction",
@@ -127,7 +116,7 @@
       ]
     },
     {
-      "group": "SDK Documentation",
+      "group": "Chat Features",
       "pages": [
         "sdk-reference/introduction",
         {

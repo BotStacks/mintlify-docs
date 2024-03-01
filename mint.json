@@ -193,7 +193,19 @@
     "feedback": 
     {
     "thumbsRating": true
+  },
+  "analytics": {
+    "ga4": {
+        "measurementId": "G-WLBVXW3LED"
+    },
+    "analytics": {
+    "hotjar": {
+        "hjid": "3466011",
+        "hjsv": "6"
+     }
+   }
   }
+}
 
 
 }

@@ -200,12 +200,11 @@
     },
     "analytics": {
     "hotjar": {
-        "hjid": "3466011",
-        "hjsv": "6"
+        "hjid": "required",
+        "hjsv": "required"
      }
    }
   }
-}
 
 
 }

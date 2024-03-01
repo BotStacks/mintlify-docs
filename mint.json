@@ -198,13 +198,10 @@
     "ga4": {
         "measurementId": "G-WLBVXW3LED"
     },
-    "analytics": {
     "hotjar": {
         "hjid": "required",
         "hjsv": "required"
      }
-   }
-  }
-
-
+   } 
+}
 }

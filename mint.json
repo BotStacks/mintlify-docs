@@ -112,6 +112,12 @@
             "designer/nodes/api",
             "designer/nodes/end"
           ]
+        },
+                {
+          "group": "Integrations",
+          "pages": [
+            "designer/integration/whatsapp"
+          ]
         }
       ]
     },

@@ -5,8 +5,49 @@ icon: "whatsapp"
 iconType: "solid"
 ---
 
-WhatsApp Integration makes it easy for your AI Assistant to connect with WhatsApp, a popular messaging app. Once set up, people can chat with your AI Assistant by sending messages to your WhatsApp Business Number.
+WhatsApp Integration makes it easy for your AI Assistant to connect with WhatsApp, a popular messaging app. Once set up, people can chat with your AI Assistant by sending messages to your WhatsApp Number.
 
+## Prerequisites
+
+<CardGroup cols={2}>
+
+  <Card title="A Meta Developer Account" icon="meta" iconType="solid" href="https://developers.facebook.com/">
+  </Card>
+
+  <Card title="A Meta Business Account" icon="chart-simple" iconType="solid" href="https://business.facebook.com/">
+  </Card>
+
+</CardGroup>
+
+
+### The WhatsApp integration has the following settings
+
+<Steps>
+
+  <Step title="Webhook Callback URL">
+  WhatsApp uses the webhook callback URL to communicate to BotStacks.
+  </Step>
+  
+  <Step title="Webhook Verify Token">
+  BotStacks checks the webhook verify token to make sure it's the right connection with WhatsApp.
+  </Step>
+
+  <Step title="WhatsApp Token">
+  BotStacks uses the WhatsApp token to confirm with WhatsApp when sending responses from the AI Assistant.
+  </Step>
+  
+  <Step title="WhatsApp Phone Number ID">
+  The WhatsApp phone number ID tells WhatsApp which phone number BotStacks is using to reply to the user.
+  </Step>
+
+</Steps>
+
+
+## Setting up the WhatsApp integration in BotStacks
+
+### Step 1
+
+Visit [developers.facebook.com/apps](https://developers.facebook.com/apps/) and create your app by clicking the `Create App` button
 
 
 <img 
@@ -14,40 +55,80 @@ height="500"
 src="/images/integrations/wa-integration-1.png"
 />
 
+
+### Step 2
+
+Choose `Other` as the use case for your app
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-2.png"
 />
+ 
+
+### Step 3
+
+Choose `Business` as the app type
 
 <img 
 height="500"  
 src="/images/integrations/wa-integration-3.png"
 />
 
+
+### Step 4 
+
+Give a `Name` & `Contact Email` for your app
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-4.png"
 />
+
+
+### Step 5
+
+After you have created your app, you will be taken to the Meta Developer dashboard. From the Dashboard click the `setup` option on **WhatsApp**
 
 <img 
 height="500"  
 src="/images/integrations/wa-integration-5.png"
 />
 
+
+### Step 6
+
+Choose your **Meta Business Account** and click `continue`
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-6.png"
 />
+
+
+### Step 7
+
+Once your have selected your Meta Business Account, you will be taken to the Quickstart page of WhatsApp setup. Click the button `Start using the API`
 
 <img 
 height="500"  
 src="/images/integrations/wa-integration-7.png"
 />
 
+
+### Step 8
+
+After you have clicked the `Start using the API` button, you will be taken to the **Configurations** page. From here you have to **Edit** the Webhook settings by clicking the `Edit` button
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-8.png"
 />
+
+
+### Step 9
+
+On the Webhook Edit menu, you have to enter a `Callback URL` and `Verify Token` which will be found on Integration page on the Botstacks Assistant Designer.
 
 <img 
 height="500"  
@@ -59,41 +140,69 @@ height="500"
 src="/images/integrations/wa-integration-10.png"
 />
 
+
+### Step 10
+
+After you have entered the Callback URL and Verify Token, you have to change your app mode from `Development` to `Live`
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-11.png"
 />
+
+
+### Step 11
+
+Now you have to edit the **Webhook Fields** by clicking the `Manage` button
 
 <img 
 height="500"  
 src="/images/integrations/wa-integration-12.png"
 />
 
+Enable `Messages` by clicking the checkbox. This will make WhatsApp to send the user message to Botstacks.
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-13.png"
 />
+
+### Step 12
+
+Now you have to enter your `WhatsApp Token` and `WhatsApp Phone Number ID` on Botstacks
 
 <img 
 height="500"  
 src="/images/integrations/wa-integration-14.png"
 />
 
+You can find the `Phone Number ID` from the **API Setup** page. 
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-15.png"
 />
+
+<Tip>Phone Number ID is different from your phone number. The phone number ID will be 15 digits and your phone number will be 10 digits</Tip>
+
+You can get your `Permanent WhatsApp Token` from [here](https://developers.facebook.com/docs/whatsapp/business-management-api/get-started#1--acquire-an-access-token-using-a-system-user-or-facebook-login)
 
 <img 
 height="500"  
 src="/images/integrations/wa-integration-16.png"
 />
 
+<Warning> You have to use your `Permanent WhatsApp Token` because the Temporary Token shown on **API Setup** page will expire whenever you refresh your browser tab. </Warning>
+
+Once you have added your `WhatsApp Token` and `WhatsApp Phone Number ID` on Botstacks, it will show you as **Connected** on the Integrations page.
+
+
 <img 
 height="500"  
 src="/images/integrations/wa-integration-17.png"
 />
 
+From now on, your AI Assistant will respond to the messages people sent to your WhatsApp Number.
 
 
 

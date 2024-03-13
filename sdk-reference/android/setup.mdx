@@ -8,9 +8,9 @@ description: Set up your SDK for use
 In order to display any of the UI components and access chat data, you must first initialize the SDK
 and log in as a chat user.
 
-### Initialization
+### Step 1. Initialization
 
-In your Application class, call BotStacksChat.shared.setup with your API key. You can obtain your API key from
+In your Application class, call `BotStacksChat.shared.setup` with your API key. You can obtain your API key from
 the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don't yet have one, you can [create one for FREE](https://dashboard.botstacks.ai)!
 
 If you don't have an Application class, [create one](https://guides.codepath.com/android/Understanding-the-Android-Application-Class).
@@ -40,7 +40,7 @@ BotStacksChat.shared.setup(
 )
 ```
 
-### Logging in
+### Step 2. Logging in
 
 Nearly all functionality is within the context of a chat user. That said, you must first be logged in as a chat
 user in order to appropriately display the UI components.
@@ -61,7 +61,7 @@ composeScope.launch {
 }
 ```
 
-### Render the UI
+### Step 3. Render the UI
 
 The BotStacks UI Kit uses Jetpack Compose. You can add it to any `NavHost` by rendering inside an `BotStacksThemeEngine` and adding the `BotStacksChatController`. Customization controls for the Theme Engine are described below.
 
@@ -87,7 +87,7 @@ BotStacksThemeEngine {
 }
 ```
 
-### Push Notifications (Firebase Cloud Messaging)
+### Step 4. Push Notifications (Firebase Cloud Messaging)
 
 For push notifications via FCM, just pass your push token to BotStacks
 
@@ -95,21 +95,3 @@ For push notifications via FCM, just pass your push token to BotStacks
 BotStacksChat.registerFCMToken(token)
 ```
 
-### Giphy and Google Maps rendering support
-
-If you want Giphy support and/or Google Maps rendering support you will need API keys for those services as well.
-
-<CardGroup cols={2}>
-  <Card title="Giphy" 
-  icon="gif" 
-  href="https://developers.giphy.com/"
-  >
-  </Card>
-
-  <Card title="Google Maps" 
-  icon="map" 
-  href="https://developers.google.com/maps/documentation/android-sdk/get-api-key"
-  >
-  </Card>
-
-</CardGroup>

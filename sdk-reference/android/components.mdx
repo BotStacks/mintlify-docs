@@ -7,21 +7,21 @@ Our SDK at BotStacks also allows for direct component usage in your Jetpack Comp
 
 Outlined below are the components currently available and examples on how to use them.
 
-- Avatar
-- Badge
-- ChannelGroup
-- ChannelRow
-- ChatInput
-- ChatList
-- ChatMessage
-- ChatMessagePreview
-- Header
-- MediaActionSheet
-- MessageActionSheet
-- MessageList
-- Spinner
-- UserProfile
-- UserSelect
+- [Avatar](https://docs.botstacks.ai/sdk-reference/android/components#avatar)
+- [Badge](https://docs.botstacks.ai/sdk-reference/android/components#Badge)
+- [ChannelGroup](https://docs.botstacks.ai/sdk-reference/android/components#ChannelGroup)
+- [ChannelRow](https://docs.botstacks.ai/sdk-reference/android/components#ChannelRow)
+- [ChatInput](https://docs.botstacks.ai/sdk-reference/android/components#ChatInput)
+- [ChatList](https://docs.botstacks.ai/sdk-reference/android/components#ChatList)
+- [ChatMessage](https://docs.botstacks.ai/sdk-reference/android/components#ChatMessage)
+- [ChatMessagePreview](https://docs.botstacks.ai/sdk-reference/android/components#ChatMessagePreview)
+- [Header](https://docs.botstacks.ai/sdk-reference/android/components#Header)
+- [MediaActionSheet](https://docs.botstacks.ai/sdk-reference/android/components#MediaActionSheet)
+- [MessageActionSheet](https://docs.botstacks.ai/sdk-reference/android/components#MessageActionSheet)
+- [MessageList](https://docs.botstacks.ai/sdk-reference/android/components#MessageList)
+- [Spinner](https://docs.botstacks.ai/sdk-reference/android/components#Spinner)
+- [UserProfile](https://docs.botstacks.ai/sdk-reference/android/components#UserProfile)
+- [UserSelect](https://docs.botstacks.ai/sdk-reference/android/components#UserSelect)
 
 ### Avatar
 Our Avatar component renders an image for a given URL in a bordered circle at the specified size. This is utilized in our larger components to render user Avatars (as the component name claims).
@@ -46,7 +46,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### Badge
-Our Badge component renders a `badge` that can either take in a `Int` count or a `String` label. This is utilized in the MessageList component serving as the date separators, in the ChatList component to show unread counts, and in the ChannelSettingsView for displaying admins.
+Our Badge component renders a "badge" that can either take in a `Int` count or a `String` label. This is utilized in the [MessageList](https://docs.botstacks.ai/sdk-reference/android/components#MessageList) component serving as the date separators, in the [ChatList](https://docs.botstacks.ai/sdk-reference/android/components#ChatList) component to show unread counts, and in the [ChannelSettingsView](https://docs.botstacks.ai/sdk-reference/android/views#ChatSettingsView) for displaying admins.
 
 There are a few overload methods for this component dependent on your usage and level of customization needs.
 
@@ -60,7 +60,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### ChannelGroup
-This component renders a given list of `Chat` channels in a `Column`, each chat in its own ChannelRow, with the `Chat.displayName` as the title and the subtitle showing a preview of the members with in it. This is utilized in the UserDetailsView to show channels the current user has in common with any other user.
+This component renders a given list of `Chat` channels in a `Column`, each chat in its own ChannelRow, with the `Chat.displayName` as the title and the subtitle showing a preview of the members with in it. This is utilized in the [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#UserDetailsView)  to show channels the current user has in common with any other user.
 
 ```Kotlin
 ChannelGroup(
@@ -73,7 +73,7 @@ For a more detailed API definition, check out the API docs here.
 ### ChannelRow
 Renders a description of a `Chat` channel in a row format.
 
-This is utilized in the ChannelGroup within UserDetailsView to show channels the current user has in common with any other user.
+This is utilized in the [ChannelGroup](https://docs.botstacks.ai/sdk-reference/android/components#ChannelGroup) within [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#UserDetailsView) to show channels the current user has in common with any other user.
 
 There are a few overload methods for this component dependent on your usage and level of customization needs.
 
@@ -89,7 +89,7 @@ ChannelRow(
 For a more detailed API definition, check out the API docs here.
 
 ### ChatInput
-Text input that handles the sending of messages to a given Chat when the send button is pressed. This is generally used for MessageList as there is handling for an attachment sheet that will present from the callback onMedia.
+Text input that handles the sending of messages to a given Chat when the send button is pressed. This is generally used for [MessageList](https://docs.botstacks.ai/sdk-reference/android/components#MessageList) as there is handling for an attachment sheet that will present from the callback `onMedia`.
 
 ```Kotlin
 ChatInput(chat = chat, onMedia = {})
@@ -99,7 +99,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### ChatList
-Renders a given list of Chat in an infinite scrolling list. Each chat will render a preview of it using ChatMessagePreview.
+Renders a given list of `Chat` in an infinite scrolling list. Each chat will render a preview of it using [ChatMessagePreview](https://docs.botstacks.ai/sdk-reference/android/components#ChatMessagePreview).
 
 ```Kotlin
 ChatList(
@@ -113,7 +113,7 @@ For a more detailed API definition, check out the API docs here.
 ### ChatMessage
 Renders the contents of a given Message from a `Chat`.
 
-This is used by MessageList to form the contents of a conversational chat, by properly aligning messages to left or right depending on sender (left aligned for incoming and right aligned for outgoing).
+This is used by [MessageList](https://docs.botstacks.ai/sdk-reference/android/components#MessageList) to form the contents of a conversational chat, by properly aligning messages to left or right depending on sender (left aligned for incoming and right aligned for outgoing).
 
 There are a few overload methods for this component dependent on your usage and level of customization needs.
 
@@ -127,7 +127,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### ChatMessagePreview
-Renders a `preview` for a given chat. This is based on the last message, if any, that was either sent or received in the chat. Attachments will be rendered as well. This is utilized in ChatList to show previews for all chats that a user is currently a member of.
+Renders a "preview" for a given chat. This is based on the last message, if any, that was either sent or received in the chat. Attachments will be rendered as well. This is utilized in [ChatList](https://docs.botstacks.ai/sdk-reference/android/components#ChatList) to show previews for all chats that a user is currently a member of.
 
 ```Kotlin
 ChatMessagePreview(chat = chat, onClick = {})
@@ -162,7 +162,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### MessageActionSheet
-A modal bottom sheet that allows contextual actions for a given messaged. This is a top level scaffold that is designed to wrap your screen content. This can be utilized in conjunction with MessageList to show contextual actions for the MessageList#onLongPress callback.
+A modal bottom sheet that allows contextual actions for a given messaged. This is a top level scaffold that is designed to wrap your screen content. This can be utilized in conjunction with [MessageList](https://docs.botstacks.ai/sdk-reference/android/components#MessageList) to show contextual actions for the `MessageList#onLongPress` callback.
 
 ```kotlin
 val messageSheetState = rememberMessageActionSheetState()
@@ -191,7 +191,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### UserProfile
-Renders an Avatar and the display name for a given User in a centered Column.
+Renders an [Avatar](https://docs.botstacks.ai/sdk-reference/android/components#Avatar) and the display name for a given User in a centered Column.
 
 ```Kotlin
 UserProfile(user)
@@ -202,7 +202,7 @@ For a more detailed API definition, check out the API docs here.
 ### UserSelect
 A component that renders User's in a horizontally scrolling Row.
 
-This is primarily used in CreateChannelView for showing currently selected Users and allowing the ability to add more if desired.
+This is primarily used in [CreateChannelView](https://docs.botstacks.ai/sdk-reference/android/views#CreateChannelView) for showing currently selected Users and allowing the ability to add more if desired.
 
 ```Kotlin
 UserSelect(selectedUsers = userList, onAdd = {})

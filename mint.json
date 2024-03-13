@@ -130,7 +130,8 @@
           "icon": "android",
           "pages": [
             "sdk-reference/android/introduction",
-            "sdk-reference/android/setup"
+            "sdk-reference/android/setup",
+            "sdk-reference/android/theming"
           ]
         },
         {

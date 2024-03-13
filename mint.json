@@ -122,7 +122,7 @@
       ]
     },
     {
-      "group": "Chat Features",
+      "group": "SDK Reference",
       "pages": [
         "sdk-reference/introduction",
         {

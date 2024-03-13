@@ -131,8 +131,7 @@
           "pages": [
             "sdk-reference/android/introduction",
             "sdk-reference/android/setup",
-            "sdk-reference/android/theming",
-
+            "sdk-reference/android/theming"
           ]
         },
         {

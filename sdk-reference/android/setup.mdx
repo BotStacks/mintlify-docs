@@ -15,12 +15,30 @@ the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don't
 
 If you don't have an Application class, [create one](https://guides.codepath.com/android/Understanding-the-Android-Application-Class).
 
-```Swift
-BotStacksChat.shared.setup(context, apiKey)
+```Kotlin
+class App : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
++       BotStacksChat.shared.setup(
++           context = this,
++           apiKey = "your-api-key"
++       )
+    }
+}
 ```
 
-Note, you can optionally delay load and later call BotStacksChat.shared.load to load BotStacks in whatever
-load sequence you wish.
+Note, you can optionally delay load and later call `BotStacksChat.shared.load` to load BotStacks in whatever load sequence you wish.
+
+If you'd like Giphy support in your chats, send your Giphy API key during `setup`.
+
+```Kotlin
+BotStacksChat.shared.setup(
+    context = this,
+    apiKey = "your_botstacks_api_key",
+    giphyApiKey = "your_giphy_api_key"
+)
+```
 
 ### Logging in
 
@@ -31,12 +49,50 @@ To log in, call the `login` function prior to displaying any UI components. Belo
 to accomplish this.
 
 ```Kotlin
-fun doLogin() {
-  BotStacksChat.shared.login(accessToken, userId, username, displayName, profilePicture)
-  if (BotStacksChat.shared.isUserLoggedIn) {
-    // handle login view change
-  }
+val composeScope = rememberCoroutineScope()
+composeScope.launch {
+    BotStacksChat.shared.login(
+        "user-identifier",
+        "username"
+    ) // optionally pass displayName and picture
+    if (BotStacksChat.shared.isUserLoggedIn) {
+        // handle logged in state change
+    }
 }
+```
+
+### Render the UI
+
+The BotStacks UI Kit uses Jetpack Compose. You can add it to any `NavHost` by rendering inside an `BotStacksThemeEngine` and adding the `BotStacksChatController`. Customization controls for the Theme Engine are described below.
+
+```Kotlin
+BotStacksThemeEngine {
+    NavHost(navController = navController, startDestination = "splash") {
+        val openChat = {
+            navController.navigate("chats")
+        }
+        composable("splash") {
+            Splash(openChat = openChat, openLogin = {
+                navController.navigate("login")
+            })
+        }
+        composable("login") {
+            Login(openChat)
+        }
+
+        composable("chats") {
+           BotStacksChatController(onLogout = { navController.navigate("login") })
+        }
+    }
+}
+```
+
+### Push Notifications (Firebase Cloud Messaging)
+
+For push notifications via FCM, just pass your push token to BotStacks
+
+```Kotlin
+BotStacksChat.registerFCMToken(token)
 ```
 
 ### Giphy and Google Maps rendering support

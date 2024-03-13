@@ -126,6 +126,27 @@
       "pages": [
         "sdk-reference/introduction",
         {
+          "group": "Android",
+          "icon": "android",
+          "pages": [
+            "sdk-reference/android/introduction",
+            "sdk-reference/android/setup"
+          ]
+        },
+        {
+          "group": "iOS",
+          "icon": "apple",
+          "pages": [
+            "sdk-reference/ios/introduction",
+            "sdk-reference/ios/setup",
+            "sdk-reference/ios/state",
+            "sdk-reference/ios/theming",
+            "sdk-reference/ios/botstacks-chat-view",
+            "sdk-reference/ios/pager-list",
+            "sdk-reference/ios/channel-row"
+          ]
+        },
+        {
           "group": "Javascript",
           "icon": "js",
           "pages": [
@@ -150,27 +171,6 @@
             "sdk-reference/react/create-group-modal",
             "sdk-reference/react/group-count",
             "sdk-reference/react/user-row"
-          ]
-        },
-        {
-          "group": "iOS",
-          "icon": "apple",
-          "pages": [
-            "sdk-reference/ios/introduction",
-            "sdk-reference/ios/setup",
-            "sdk-reference/ios/state",
-            "sdk-reference/ios/theming",
-            "sdk-reference/ios/botstacks-chat-view",
-            "sdk-reference/ios/pager-list",
-            "sdk-reference/ios/channel-row"
-          ]
-        },
-        {
-          "group": "Android",
-          "icon": "android",
-          "pages": [
-            "sdk-reference/android/introduction",
-            "sdk-reference/android/setup"
           ]
         }
       ]

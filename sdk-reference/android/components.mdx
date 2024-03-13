@@ -1,6 +1,6 @@
 ---
-title: 'Android Components'
-sidebarTitle:'Components'
+title: Android Components
+sidebarTitle:"Components"
 ---
 
 Our SDK at BotStacks also allows for direct component usage in your Jetpack Compose applications.
@@ -46,7 +46,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### Badge
-Our Badge component renders a "badge" that can either take in a `Int` count or a `String` label. This is utilized in the MessageList component serving as the date separators, in the ChatList component to show unread counts, and in the ChannelSettingsView for displaying admins.
+Our Badge component renders a `badge` that can either take in a `Int` count or a `String` label. This is utilized in the MessageList component serving as the date separators, in the ChatList component to show unread counts, and in the ChannelSettingsView for displaying admins.
 
 There are a few overload methods for this component dependent on your usage and level of customization needs.
 
@@ -127,7 +127,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### ChatMessagePreview
-Renders a "preview" for a given chat. This is based on the last message, if any, that was either sent or received in the chat. Attachments will be rendered as well. This is utilized in ChatList to show previews for all chats that a user is currently a member of.
+Renders a `preview` for a given chat. This is based on the last message, if any, that was either sent or received in the chat. Attachments will be rendered as well. This is utilized in ChatList to show previews for all chats that a user is currently a member of.
 
 ```Kotlin
 ChatMessagePreview(chat = chat, onClick = {})
@@ -173,7 +173,7 @@ MessageActionSheet(state) {
 For a more detailed API definition, check out the API docs here.
 
 ### MessageList
-A conversational component displaying the messages for a given [Chat] in an infinite scrolling list.
+A conversational component displaying the messages for a given `[Chat]` in an infinite scrolling list.
 
 ```Kotlin
 MessageList(chat = chat, header = { Header() }, onPressUser = {}, onLongPress = {})
@@ -182,7 +182,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### Spinner
-Themed spinner, colored with ai.botstacks.sdk.ui.theme.Colors.primary.
+Themed spinner, colored with `ai.botstacks.sdk.ui.theme.Colors.primary`.
 
 ```Kotlin
 Spinner()

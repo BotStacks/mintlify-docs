@@ -12,10 +12,10 @@ They generally can be used for the entire contents on a `screen` and are drop in
 Outlined below are the content views currently available and examples on how to use them.
 
 - [ChannelSettingsView](https://docs.botstacks.ai/sdk-reference/android/views#channelsettingsview)
-- [CreateChannelView](https://docs.botstacks.ai/sdk-reference/android/views#CreateChannelView)
-- [EditProfileView](https://docs.botstacks.ai/sdk-reference/android/views#EditProfileView)
-- [SelectChannelUsersView](https://docs.botstacks.ai/sdk-reference/android/views#SelectChannelUsersView)
-- [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#UserDetailsView)
+- [CreateChannelView](https://docs.botstacks.ai/sdk-reference/android/views#createchannelview)
+- [EditProfileView](https://docs.botstacks.ai/sdk-reference/android/views#editprofileview)
+- [SelectChannelUsersView](https://docs.botstacks.ai/sdk-reference/android/views#selectchannelusersview)
+- [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#userdetailsview)
 
 
 
@@ -33,7 +33,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### CreateChannelView
-A screen content view for creating a new Channel. This has a callback to trigger navigation to selecting users for the channel. The UI for this screen can be found in [SelectChannelUsersView](https://docs.botstacks.ai/sdk-reference/android/views#SelectChannelUsersView).
+A screen content view for creating a new Channel. This has a callback to trigger navigation to selecting users for the channel. The UI for this screen can be found in [SelectChannelUsersView](https://docs.botstacks.ai/sdk-reference/android/views#selectchannelusersview).
 
 To create the channel, call `state.create()`.
 
@@ -59,7 +59,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### SelectChannelUsersView
-This is used in coordination with either a [CreateChannelView](https://docs.botstacks.ai/sdk-reference/android/views#SelectChannelUsersView) or a [ChannelSettingsView](https://docs.botstacks.ai/sdk-reference/android/views#ChannelSettingsView) to set or update the users in a given channel.
+This is used in coordination with either a [CreateChannelView](https://docs.botstacks.ai/sdk-reference/android/views#selectchannelusersview) or a [ChannelSettingsView](https://docs.botstacks.ai/sdk-reference/android/views#channelsettingsview) to set or update the users in a given channel.
 
 ```Kotlin
 val state = remember(chat) { ChannelUserSelectionState(chat) }

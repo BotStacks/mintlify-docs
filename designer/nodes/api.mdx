@@ -5,60 +5,28 @@ icon: "satellite-dish"
 iconType: "solid"
 ---
 
-The API node allows you to connect with external services using RESTful API calls. You can specify the endpoint (URL) of the external service you want to communicate with. 
+The API node allows you to connect with external services using RESTful API calls. You can specify the endpoint (URL) of the external service you want to communicate with.
 
-<img 
-height="500"  
-src="/images/node-api.png"
-/>
+<img height="500" src="/images/node-api.png" />
 
 Additionally, you can include custom headers to provide necessary information for the request. When making POST, PUT, or PATCH requests, you'll have to format the data in JSON within the body section. This enables you to send and receive data seamlessly between Botstacks and external services, facilitating actions like creating bookings or accessing information from third-party platforms.
 
+### Request
 
-## API node supports the following request methods:
+The request section is where you can set your request method and url.
+The available request methods in the API node are `GET`, `POST', `PUT`, `PATCH`, and `DELETE`. The url field is where you will put the url of your REST api request. For example, you would set the request method to `GET`and the url to`https://api.sampleapis.com/coffee/hot` to list receive a list of hot coffee and their ingredients.
 
-<Steps>
+### Headers
 
-  <Step title="GET">
-  </Step>
+It's likely that you will need to add headers to your request, such as the `Authentication` header. You may add as many headers as you need.
 
-  <Step title="POST">
-  </Step>
-  
-  <Step title="PUT">
-  </Step>
+### Body
 
-  <Step title="PATCH">
-  </Step>
-  
-  <Step title="DELETE">
-  </Step>
+In the case where you are calling a POST, PUT, or PATCH endpoint, you may also want to pass along the body. This is in JSON format, so make sure you format it correctly.
 
-</Steps>
+### Interopolation
 
-## Options in the LLM Node
+All the fields in the API node have string interpolation capabilities. This means you can dynamically generate the url, header values, or data within the request body.
 
-<Steps>
-
-  <Step title="Request">
-  </Step>
-
-  <Step title="Headers">
-  </Step>
-  
-  <Step title="Body">
-  </Step>
-
-</Steps>
-
-### 1. Request
-
-You can choose menthod of Request and the Request URL will be the endpoint of your external service.
-
-### 2. Headers
-
-You can add as many headers as needed to fulfill your request
-
-### 3. Body
-This is shown when a POST, PUT, or PATCH request method is selected. This is in JSON format, so make sure you format it correctly.
-
+As an example, if we wanted to get a list of hot or cold coffee options based on what the user wants. There are two public/free REST endpoints `https://api.sampleapis.com/coffee/hot` and `https://api.sampleapis.com/coffee/iced`.
+To handle this we can save the the desired type of coffee as a variable called `coffee_heat`. Then we can use the api node with the request url set to `https://api.sampleapis.com/coffee/{coffee_heat}`.

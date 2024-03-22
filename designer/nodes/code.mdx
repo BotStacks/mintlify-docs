@@ -4,32 +4,64 @@ icon: "code"
 iconType: "solid"
 ---
 
+The JavaScript Node allows you to implement more advanced logic into their AI Assistant. It's useful for handling complex tasks that require programming expertise. The code is executed with the [V8 JavaScript Engine](https://nodejs.org/en/learn/getting-started/the-v8-javascript-engine).
 
-The JavaScript Node allows you to implement more advanced logic into their AI Assistant. It's useful for handling complex tasks that require programming expertise. 
+<img height="500" src="/images/node-js.png" />
 
-<img 
-height="500"  
-src="/images/node-js.png"
-/>
+### Retrieving variables
 
-You can access conversation variables within the JavaScript Node using the `variables` object. 
+You can access conversation variables within the JavaScript Node using the `variables` object.
 
-<Tip>For Example, you can count the number of messages from a user using a simple code snippet.</Tip> 
+<Tip>
+  For Example, you can count the number of messages from a user using a simple
+  code snippet.
+</Tip>
 
-It's important to note that all variables retrieved are in string format, so you should convert them to numbers using `parseInt` for arithmetic operations. 
+It's important to note that all variables retrieved are in string format. If you are expecting another type, it must be handled within the code snippet you provide.
+A common use case for this is numbers. It's possible you may be expecting a number as the value of a variable and wish to perform some arithmentic with that number.
+To handle this you should have something such as
 
-Unlike some other systems, there's no need to explicitly pass variables into the JavaScript Node, they're automatically accessible.
+```
+const { count } = variables;
+const countAsInt = parseInt(count);
+```
 
-Additionally, you can set custom variables within your JavaScript code using the provided **saveVariable** function. 
+If there is an error while executing `parseInt`, the node will resolve to the "Error" path. See more about the [return paths](#return-paths) below.
+
+### Updating variables
+
+Additionally, you can set custom variables within your JavaScript code using the provided **saveVariable** function. Taking the count example above, you can set the new count like the following
+
+```
+const { count } = variables;
+const countAsInt = parseInt(count);
+
+// now increment the count
+// don't forget to handle type conversion back to a string
+saveVariables('count', (++count).toString());
+```
 
 ### Return paths
 
-The JavaScript Node offers default routes like `Fallback` and `Error` to handle different outcomes of the code execution. 
+The JavaScript Node offers default routes called `Fallback` and `Error` to handle different outcomes of the code execution.
 
-The `Error` route handles exceptions like syntax errors, while the `Fallback` route executes if the code runs successfully. 
+- `Error`: The error route is chosen if the code fails to execute successfully. Any error will trigger this route, such as syntax errors, reference errors, runtime errors, etc.
+- `Fallback`: The fallback route is chosen if the code executes successfully, but doesn't hit a return statement.
 
-You can also define custom routing logic by using return statements to specify alternative routes.
+You can also define custom routing logic by using `return` statements to specify alternative routes, which is the most ideal
+way to handle more complex routing.
 
 When you modify the code to include or remove return statements, the node updates on the canvas to reflect the possible output paths. This flexibility allows you to create diverse conversation flows tailored to your application's needs.
 
+The code below expands on our example. If the new count is greater than three, we route to the `too_many` path where we can add the appropriate connection for our use-case. If the count is less than or equal to three, the `Fallback` route will be executed. If the `count` variable is not defined or set, the `Error` route will be chosen.
 
+```
+const { count } = variables;
+const countAsInt = parseInt(count);
+const updatedCount = count++;
+saveVariables('count', updatedCount.toString());
+
+if (updatedCount > 3) {
+  return 'too_many';
+}
+```

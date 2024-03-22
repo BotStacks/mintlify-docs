@@ -30,3 +30,9 @@ All the fields in the API node have string interpolation capabilities. This mean
 
 As an example, if we wanted to get a list of hot or cold coffee options based on what the user wants. There are two public/free REST endpoints `https://api.sampleapis.com/coffee/hot` and `https://api.sampleapis.com/coffee/iced`.
 To handle this we can save the the desired type of coffee as a variable called `coffee_heat`. Then we can use the api node with the request url set to `https://api.sampleapis.com/coffee/{coffee_heat}`.
+
+### Routing
+
+If the response received is `2xx`, the `Success` route will be traversed. The result of the API request is outputted. This means a connected node can reference the results of the api call via `{api-x}` (You can see the nodes slug in the top-right part of the node).
+
+If any other http code is received, the `Error` route will be traversed.

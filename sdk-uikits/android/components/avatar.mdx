@@ -1,0 +1,32 @@
+---
+title: "Avatar"
+description: ""
+icon: "image-portrait"
+iconType: "solid"
+---
+
+<img 
+height="500"  
+width="100%" 
+src="/images/android-sdk/avatar.png"
+/>
+
+Our Avatar component renders an image for a given URL in a bordered circle at the specified size. This is utilized in our larger components to render user Avatars (as the component name claims).
+
+There are a few overload methods for this component dependent on your usage.
+
+```Kotlin
+Avatar(user = message.user)
+Avatar(url = chat.displayImage, size = AvatarSize.Large, chat = true)
+Avatar(type = AvatarType.Channel(listOf(chat.displayImage)))
+Avatar(type = AvatarType.User(user))
+Avatar sizing resolves around two defined sizes, with the ability to define a custom size.
+```
+
+`AvatarSize.Small` - renders at 50 dp
+
+`AvatarSize.Large` - renders at 100 dp
+
+`AvatarSize.Custom(val dp: Dp)` - renders at specified size
+
+For a more detailed API definition, check out the API docs here.

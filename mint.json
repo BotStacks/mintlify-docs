@@ -15,7 +15,7 @@
       "to": "#4A75FF"
     }
   },
-  "topbarLinks": [    
+  "topbarLinks": [
     {
       "name": "Contact Us",
       "url": "mailto:support@botstacks.ai"
@@ -43,8 +43,8 @@
       "url": "designer"
     },
     {
-      "name": "SDK Reference",
-      "url": "sdk-reference"
+      "name": "Chat SDKs & UI Kits",
+      "url": "sdk-uikits"
     },
     {
       "name": "API Reference",
@@ -59,7 +59,7 @@
     "name": "Home"
   },
   "navigation": [
-      {
+    {
       "group": "Resource Center",
       "pages": [
         "resource-center/overview",
@@ -75,22 +75,22 @@
           ]
         },
         {
-        "group": "Account Management",
-        "pages": [
-         "account-management/what-is-org",
-          "account-management/what-is-workspace",
-          "account-management/creating-and-managing-workspaces"
-        ]
+          "group": "Account Management",
+          "pages": [
+            "account-management/what-is-org",
+            "account-management/what-is-workspace",
+            "account-management/creating-and-managing-workspaces"
+          ]
         }
       ]
     },
-      {
+    {
       "group": "Botstackers Library",
       "pages": [
         "botstackers-library/assistant-design",
         "botstackers-library/prompt-design",
         "botstackers-library/multilingual-assistant"
-        ]
+      ]
     },
     {
       "group": "BotStacks Designer",
@@ -113,68 +113,202 @@
             "designer/nodes/end"
           ]
         },
-                {
+        {
           "group": "Integrations",
+          "pages": ["designer/integrations/whatsapp"]
+        }
+      ]
+    },
+    {
+      "group": "",
+      "pages": ["sdk-uikits/overview"]
+    },
+    {
+      "group": "Android SDK / UI Kit",
+      "pages": [
+        {
+          "group": "Getting Started",
+          "icon": "star",
           "pages": [
-            "designer/integrations/whatsapp"
+            "sdk-uikits/android/getting-started/overview",
+            "sdk-uikits/android/getting-started/installation",
+            "sdk-uikits/android/getting-started/customization",
+            "sdk-uikits/android/getting-started/support"
+          ]
+        },
+        {
+          "group": "Components",
+          "icon": "clone",
+          "pages": [
+            "sdk-uikits/android/components/all-components",
+            "sdk-uikits/android/components/avatar",
+            "sdk-uikits/android/components/badge",
+            "sdk-uikits/android/components/channel-group",
+            "sdk-uikits/android/components/channel-row",
+            "sdk-uikits/android/components/chat-message-preview",
+            "sdk-uikits/android/components/chat-message",
+            "sdk-uikits/android/components/header",
+            "sdk-uikits/android/components/media-action-sheet",
+            "sdk-uikits/android/components/message-action-sheet",
+            "sdk-uikits/android/components/message-list",
+            "sdk-uikits/android/components/spinner",
+            "sdk-uikits/android/components/user-profile",
+            "sdk-uikits/android/components/user-select"
+          ]
+        },
+        {
+          "group": "Component API",
+          "icon": "circle-nodes",
+          "pages": [
+            "sdk-uikits/android/components-apis/avatar",
+            "sdk-uikits/android/components-apis/badge",
+            "sdk-uikits/android/components-apis/channel-group",
+            "sdk-uikits/android/components-apis/channel-row",
+            "sdk-uikits/android/components-apis/chat-message-preview",
+            "sdk-uikits/android/components-apis/chat-message",
+            "sdk-uikits/android/components-apis/header",
+            "sdk-uikits/android/components-apis/media-action-sheet",
+            "sdk-uikits/android/components-apis/message-action-sheet",
+            "sdk-uikits/android/components-apis/message-list",
+            "sdk-uikits/android/components-apis/spinner",
+            "sdk-uikits/android/components-apis/user-profile",
+            "sdk-uikits/android/components-apis/user-select"
+          ]
+        },
+        {
+          "group": "Views",
+          "icon": "layer-group",
+          "pages": [
+            "sdk-uikits/android/views/all-views",
+            "sdk-uikits/android/views/channel-settings",
+            "sdk-uikits/android/views/create-channel",
+            "sdk-uikits/android/views/edit-profile",
+            "sdk-uikits/android/views/select-channel-users",
+            "sdk-uikits/android/views/user-details"
           ]
         }
       ]
     },
     {
-      "group": "SDK Reference",
+      "group": "iOS SDK / UI Kit",
       "pages": [
-        "sdk-reference/introduction",
         {
-          "group": "Android",
-          "icon": "android",
+          "group": "Getting Started",
+          "icon": "star",
           "pages": [
-            "sdk-reference/android/introduction",
-            "sdk-reference/android/setup",
-            "sdk-reference/android/compose-setup",
-            "sdk-reference/android/theming",
-            "sdk-reference/android/views",
-            "sdk-reference/android/components"
+            "sdk-uikits/ios/getting-started/overview",
+            "sdk-uikits/ios/getting-started/installation",
+            "sdk-uikits/ios/getting-started/customization",
+            "sdk-uikits/ios/getting-started/support"
           ]
         },
         {
-          "group": "iOS",
-          "icon": "apple",
+          "group": "Components",
+          "icon": "clone",
           "pages": [
-            "sdk-reference/ios/introduction",
-            "sdk-reference/ios/setup",
-            "sdk-reference/ios/state",
-            "sdk-reference/ios/theming",
-            "sdk-reference/ios/botstacks-chat-view",
-            "sdk-reference/ios/pager-list",
-            "sdk-reference/ios/channel-row"
+            "sdk-uikits/ios/components/all-components",
+            "sdk-uikits/ios/components/avatar",
+            "sdk-uikits/ios/components/badge",
+            "sdk-uikits/ios/components/channel-group",
+            "sdk-uikits/ios/components/channel-row",
+            "sdk-uikits/ios/components/chat-message-preview",
+            "sdk-uikits/ios/components/chat-message",
+            "sdk-uikits/ios/components/header",
+            "sdk-uikits/ios/components/media-action-sheet",
+            "sdk-uikits/ios/components/message-action-sheet",
+            "sdk-uikits/ios/components/message-list",
+            "sdk-uikits/ios/components/spinner",
+            "sdk-uikits/ios/components/user-profile",
+            "sdk-uikits/ios/components/user-select"
           ]
         },
         {
-          "group": "Javascript",
-          "icon": "js",
+          "group": "Component API",
+          "icon": "circle-nodes",
           "pages": [
-            "sdk-reference/javascript/introduction",
-            "sdk-reference/javascript/getting-started",
-            "sdk-reference/javascript/store",
-            "sdk-reference/javascript/subscriptions"
+            "sdk-uikits/ios/components-apis/avatar",
+            "sdk-uikits/ios/components-apis/badge",
+            "sdk-uikits/ios/components-apis/channel-group",
+            "sdk-uikits/ios/components-apis/channel-row",
+            "sdk-uikits/ios/components-apis/chat-message-preview",
+            "sdk-uikits/ios/components-apis/chat-message",
+            "sdk-uikits/ios/components-apis/header",
+            "sdk-uikits/ios/components-apis/media-action-sheet",
+            "sdk-uikits/ios/components-apis/message-action-sheet",
+            "sdk-uikits/ios/components-apis/message-list",
+            "sdk-uikits/ios/components-apis/spinner",
+            "sdk-uikits/ios/components-apis/user-profile",
+            "sdk-uikits/ios/components-apis/user-select"
           ]
         },
         {
-          "group": "React UIKit",
-          "icon": "react",
+          "group": "Views",
+          "icon": "layer-group",
           "pages": [
-            "sdk-reference/react/introduction",
-            "sdk-reference/react/types",
-            "sdk-reference/react/botstackschatprovider",
-            "sdk-reference/react/botstackschatui",
-            "sdk-reference/react/chat-input",
-            "sdk-reference/react/chat-message",
-            "sdk-reference/react/channel-row",
-            "sdk-reference/react/chat-view",
-            "sdk-reference/react/create-group-modal",
-            "sdk-reference/react/group-count",
-            "sdk-reference/react/user-row"
+            "sdk-uikits/ios/views/channel-settings",
+            "sdk-uikits/ios/views/create-channel",
+            "sdk-uikits/ios/views/edit-profile",
+            "sdk-uikits/ios/views/select-channel-users",
+            "sdk-uikits/ios/views/user-details"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "JavaScript SDK",
+      "pages": [
+        "sdk-uikits/javascript/introduction",
+        "sdk-uikits/javascript/getting-started",
+        "sdk-uikits/javascript/store",
+        "sdk-uikits/javascript/subscriptions"
+      ]
+    },
+    {
+      "group": "React UI Kit",
+      "pages": [
+        {
+          "group": "Getting Started",
+          "icon": "star",
+          "pages": [
+            "sdk-uikits/react/getting-started/overview",
+            "sdk-uikits/react/getting-started/installation",
+            "sdk-uikits/react/getting-started/customization",
+            "sdk-uikits/react/getting-started/support",
+            "sdk-uikits/react/getting-started/botstackschatprovider",
+            "sdk-uikits/react/getting-started/types"
+          ]
+        },
+        {
+          "group": "Components",
+          "icon": "clone",
+          "pages": [
+            "sdk-uikits/react/components/all-components",
+            "sdk-uikits/react/components/avatar",
+            "sdk-uikits/react/components/badge",
+            "sdk-uikits/react/components/channel-group",
+            "sdk-uikits/react/components/channel-row",
+            "sdk-uikits/react/components/chat-message-preview",
+            "sdk-uikits/react/components/chat-message",
+            "sdk-uikits/react/components/header",
+            "sdk-uikits/react/components/media-action-sheet",
+            "sdk-uikits/react/components/message-action-sheet",
+            "sdk-uikits/react/components/message-list",
+            "sdk-uikits/react/components/spinner",
+            "sdk-uikits/react/components/user-profile",
+            "sdk-uikits/react/components/user-select"
+          ]
+        },
+        {
+          "group": "Component API",
+          "icon": "circle-nodes",
+          "pages": [
+            "sdk-uikits/react/components-apis/botstackschatprovider",
+            "sdk-uikits/react/components-apis/botstackschatui",
+            "sdk-uikits/react/components-apis/channel-row",
+            "sdk-uikits/react/components-apis/chat-message",
+            "sdk-uikits/react/components-apis/chat-view",
+            "sdk-uikits/react/components-apis/create-group-modal",
+            "sdk-uikits/react/components-apis/user-row"
           ]
         }
       ]
@@ -200,18 +334,16 @@
     "youtube": "https://www.youtube.com/@BotStacksai/videos",
     "discord": "https://discord.gg/suMCX9NZSs"
   },
-    "feedback": 
-    {
+  "feedback": {
     "thumbsRating": true
   },
   "analytics": {
     "ga4": {
-        "measurementId": "G-WLBVXW3LED"
+      "measurementId": "G-WLBVXW3LED"
     },
     "hotjar": {
-        "hjid": "required",
-        "hjsv": "required"
-     }
-   }
-
+      "hjid": "required",
+      "hjsv": "required"
+    }
+  }
 }

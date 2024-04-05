@@ -1,0 +1,49 @@
+---
+title: "Customization"
+description: ""
+icon: "comments"
+iconType: "solid"
+---
+
+You can theme your BotStacks UI kit by modifying the defaults of the `BotStacksThemeEngine`. The theme supports fonts, colors, assets, and dimensions. Configure it like this:
+
+
+```Kotlin
+BotStacksThemeEngine(
+    // true or false to force theming one way (default follows system)
+    useDarkTheme = isSystemInDarkTheme(),
+    // color scheme for light mode
+    lightColorScheme = lightBotStacksColors(
+        primary = Purple40,
+        onPrimary = Color.White,
+    ),
+    // color scheme for dark mode
+    darkColorScheme = darkBotStacksColors(
+        primary = Purple80,
+        onPrimary = Color.Black
+    ),
+    // fonts to utilize for Text within components
+    fonts = with(Typography.bodyLarge) {
+        botstacksFonts(
+            body1 = FontStyle(
+                size = fontSize,
+            )
+        )
+    },
+    // assets for empty state and logo (in header)
+    assets = Assets(
+        logo = R.drawable.inappchat_icon,
+        emptyChat = EmptyScreenConfig.Messages(
+            caption = "No messages yet."
+        )
+    ),
+    // shape definitions for components
+    shapes = ShapeDefinitions(
+        small = 4.dp,
+        medium = 10.dp,
+        large = 16.dp
+    )
+) {
+    // content code here (components, Controller)
+}
+```

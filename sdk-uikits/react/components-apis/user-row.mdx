@@ -1,0 +1,65 @@
+---
+title: "UserRow"
+description: ""
+icon: "arrows-left-right"
+iconType: "solid"
+---
+
+## API
+
+### Import
+
+```js
+import { UserRow } from "@botstacks/chat-react";
+```
+
+### Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>className</td>
+      <td>`string`</td>
+      <td></td>
+      <td>Custom classes</td>
+    </tr>
+    <tr>
+      <td>user</td>
+      <td>[IUser](/sdk-reference/javascript/store#user)</td>
+      <td></td>
+      <td>The user object to display</td>
+    </tr>
+    <tr>
+      <td>isActive</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>If true, uses `primary` theme to style</td>
+    </tr>
+    <tr>
+      <td>isSelectable</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>If true, allows row to be selectable</td>
+    </tr>
+    <tr>
+      <td>isSelected</td>
+      <td>`boolean`</td>
+      <td>false</td>
+      <td>If true, adds a check mark to the row</td>
+    </tr>
+    <tr>
+      <td>onClick</td>
+      <td>`() => void`</td>
+      <td></td>
+      <td>Click callback function</td>
+    </tr>
+  </tbody>
+</table>

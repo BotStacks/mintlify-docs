@@ -1,0 +1,25 @@
+---
+title: "Chat Message"
+description: ""
+icon: "comments"
+iconType: "solid"
+---
+
+<img 
+height="500"  
+width="100%" 
+src="/images/android-sdk/chat-message.png"
+/>
+Renders the contents of a given Message from a `Chat`.
+
+This is used by [MessageList](#messagelist) to form the contents of a conversational chat, by properly aligning messages to left or right depending on sender (left aligned for incoming and right aligned for outgoing).
+
+There are a few overload methods for this component dependent on your usage and level of customization needs.
+
+```Kotlin
+ChatMessage(message = message, onLongPress = { })
+ChatMessage(message = message, onLongPress = { }, onClick = { })
+ChatMessage(message = message, onLongPress = { }, shape = RoundedCornerShape(20.dp))
+ChatMessage(message = message, onLongPress = { }, showAvatar = true, showTimestamp = false)
+```
+For a more detailed API definition, check out the API docs here.

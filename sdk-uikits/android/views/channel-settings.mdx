@@ -1,0 +1,21 @@
+---
+title: "Channel Settings"
+description: ""
+icon: "gear"
+iconType: "solid"
+---
+
+<img 
+height="500"  
+width="100%"
+src="/images/android-sdk/channel-settings-view.png"
+/>
+A screen content view for displaying settings and details for a given Chat channel. This relies on the `ChannelSettingsState`.
+
+To persist changes to the channel settings, call `state.update()`.
+
+```Kotlin
+val state = remember(chat) { ChannelSettingsState(chat) }
+ChannelSettingsView(state)
+```
+For a more detailed API definition, check out the API docs here.

@@ -1,0 +1,862 @@
+---
+title: "Store"
+description: "State management"
+---
+
+## Overview
+
+Behind the scenes, we use [mobx-state-tree (MST)](https://www.npmjs.com/package/mobx-state-tree) for our data store.
+You can access data via either direct model access or [views](https://mobx-state-tree.js.org/concepts/views) and fetch or save data with [actions](https://mobx-state-tree.js.org/concepts/actions)
+
+## Root Store
+
+The root store consists of the following structure:
+
+- `user_repo`: Users
+- `chat_repo`: Chats
+- `message_repo`: Messages
+
+### Actions
+
+There are a few actions that exist on the root store.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Arguments</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`login`</td>
+      <td>`input: LoginInput`</td>
+      <td>
+        Logs the provided user into the chat server. If the user doesn't yet
+        exist, a new one is created. If the user does exist, the initially
+        provided `uid` is used for authentication. The `uid` should be the
+        unique and persisted identifier of the user within your user management
+        solution.
+      </td>
+    </tr>
+    <tr>
+      <td>`logout`</td>
+      <td>N/A</td>
+      <td>
+        Logs the current user out of the chat server and resets the store.
+      </td>
+    </tr>
+    <tr>
+      <td>`load`</td>
+      <td>N/A</td>
+      <td>Gets the current user's details</td>
+    </tr>
+  </tbody>
+</table>
+
+### Views
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Arguments</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`user`</td>
+      <td></td>
+      <td>The current logged in user</td>
+    </tr>
+    <tr>
+      <td>`isLoggedIn`</td>
+      <td>N/A</td>
+      <td>Returns true if you are logged into the chat server</td>
+    </tr>
+  </tbody>
+</table>
+
+## Models
+
+### Users
+
+The Users model type is used to store all the chat users.
+
+<Tabs>
+  <Tab title="Schema">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Data type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`byId`</td>
+          <td>`{ [userId: string]: User }`</td>
+          <td>A map of all fetched users by id</td>
+        </tr>
+        <tr>
+          <td>`fetching`</td>
+          <td>`boolean`</td>
+          <td>True if currently fetching users</td>
+        </tr>
+        <tr>
+          <td>`current`</td>
+          <td>IUser</td>
+          <td>The current logged in chat user</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Views">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`get`</td>
+          <td>`id: string` - the user id</td>
+          <td>Get a specific user by their user id</td>
+        </tr>
+        <tr>
+          <td>`all`</td>
+          <td>N/A</td>
+          <td>Get all users as an array</td>
+        </tr>
+        <tr>
+          <td>`others`</td>
+          <td>N/A</td>
+          <td>Get all users except the current user</td>
+        </tr>
+        <tr>
+          <td>`fetch`</td>
+          <td>`id: string` - the user id to fetch from the api</td>
+          <td>
+            Fetch the user via the API. If the user is already in the store, that
+            user is returned and no API call is made.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Actions">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`createOrUpdate`</td>
+          <td>`data: FUserFragment` - the user to create or update (store only)</td>
+          <td>
+            Updates the user in the store. If user doesn't exist, a new one is
+            created. NOTE: this does not create the user in the database.
+          </td>
+        </tr>
+        <tr>
+          <td>`reset`</td>
+          <td>N/A</td>
+          <td>Resets store to initial state</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+</Tabs>
+
+### User
+
+The User model type defines a single instance of a user
+
+<Tabs>
+  <Tab title="Schema">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Data type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`id`</td>
+          <td>`string`</td>
+          <td>The unique user id</td>
+        </tr>
+        <tr>
+          <td>`username`</td>
+          <td>`string`</td>
+          <td>User's username</td>
+        </tr>
+        <tr>
+          <td>`display_name`</td>
+          <td>`string|undefined`</td>
+          <td>User's display name</td>
+        </tr>
+        <tr>
+          <td>`description`</td>
+          <td>`string|undefined`</td>
+          <td>User's bio and/or details</td>
+        </tr>
+        <tr>
+          <td>`created_at`</td>
+          <td>`Date`</td>
+          <td>The date the user was created</td>
+        </tr>
+        <tr>
+          <td>`updated_at`</td>
+          <td>`Date`</td>
+          <td>The date the user was last updated</td>
+        </tr>
+        <tr>
+          <td>`image`</td>
+          <td>`string|undefined`</td>
+          <td>URL or base64 encoded string of the user's avatar</td>
+        </tr>
+        <tr>
+          <td>`last_seen`</td>
+          <td>`Date`</td>
+          <td>The last time a user was active</td>
+        </tr>
+        <tr>
+          <td>`status`</td>
+          <td>OnlineStatus</td>
+          <td>The current status of the user</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Views">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`dun`</td>
+          <td>N/A</td>
+          <td>
+            Display name of the user. Uses `display_name`, but falls back to
+            `username` if undefined.
+          </td>
+        </tr>
+        <tr>
+          <td>`isCurrent`</td>
+          <td>N/A</td>
+          <td>Returns true if the user is the current logged in user</td>
+        </tr>
+        <tr>
+          <td>`blocked`</td>
+          <td>N/A</td>
+          <td>Returns true if the user is blocked</td>
+        </tr>
+        <tr>
+          <td>`lastSeenFormat`</td>
+          <td>N/A</td>
+          <td>
+            Helper function for returning the last seen date in a string format
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+</Tabs>
+
+### Chats
+
+The Chats model type is used to store all the chats: dms and channels
+
+<Tabs>
+  <Tab title="Schema">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Data type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`byId`</td>
+          <td>`{ [chatId: string]: Chat }`</td>
+          <td>A map of all fetched chats by id</td>
+        </tr>
+        <tr>
+          <td>`fetching`</td>
+          <td>`boolean`</td>
+          <td>True if currently fetching chats</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Views">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`get`</td>
+          <td>`id: string` - chat id</td>
+          <td>Get a specific chat by the chat id</td>
+        </tr>
+        <tr>
+          <td>`fetch`</td>
+          <td>`id: string` - the chat id to fetch from the api</td>
+          <td>
+            Fetch the chat via the API. If the chat already exists in the store,
+            that chat is returned and no API call is made.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Actions">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`createOrUpdate`</td>
+          <td>`data: FChatFragment` - the chat to create or update (store only)</td>
+          <td>
+            Updates the chat in the store. If chat doesn't exist, a new one is
+            created. NOTE: this does not create the chat in the database.
+          </td>
+        </tr>
+        <tr>
+          <td>`create`</td>
+          <td>`input: CreateGroupInput` - group chat to create</td>
+          <td>Sends api request to create a new group or channel</td>
+        </tr>
+        <tr>
+          <td>`reset`</td>
+          <td>N/A</td>
+          <td>Resets store to initial state</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+</Tabs>
+
+### Chat
+
+The Chat model type is used to define a specific chat, whether dm or channel
+
+<Tabs>
+  <Tab title="Schema">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Data type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`id`</td>
+          <td>`string`</td>
+          <td>The unique chat id</td>
+        </tr>
+        <tr>
+          <td>`created_at`</td>
+          <td>`Date`</td>
+          <td>The date the chat was created</td>
+        </tr>
+        <tr>
+          <td>`updated_at`</td>
+          <td>`Date`</td>
+          <td>The date the chat was last updated</td>
+        </tr>
+        <tr>
+          <td>`members`</td>
+          <td>Member[]</td>
+          <td>A list of members that belong to the chat</td>
+        </tr>
+        <tr>
+          <td>`kind`</td>
+          <td>ChatType</td>
+          <td>The type of chat</td>
+        </tr>
+        <tr>
+          <td>`name`</td>
+          <td>`string|undefined`</td>
+          <td>The name of chat</td>
+        </tr>
+        <tr>
+          <td>`description`</td>
+          <td>`string|undefined`</td>
+          <td>The description of chat</td>
+        </tr>
+        <tr>
+          <td>`image`</td>
+          <td>`string|undefined`</td>
+          <td>URL or base64 encoded string of the chat</td>
+        </tr>
+        <tr>
+          <td>`_private`</td>
+          <td>`boolean`</td>
+          <td>
+            True if a private chat. If false, any user can join the channel.
+          </td>
+        </tr>
+        <tr>
+          <td>`last_message`</td>
+          <td>Message|undefined</td>
+          <td>The last sent message of the chat</td>
+        </tr>
+        <tr>
+          <td>`joining`</td>
+          <td>`boolean|undefined`</td>
+          <td>True if current user is in the process of joining the chat</td>
+        </tr>
+        <tr>
+          <td>`unread_count`</td>
+          <td>`number`</td>
+          <td>The number of unread messages by the user of this chat</td>
+        </tr>
+        <tr>
+          <td>`users_typing`</td>
+          <td>`User[]`</td>
+          <td>The users that are currently typing</td>
+        </tr>
+        <tr>
+          <td>`messages`</td>
+          <td>MessageList</td>
+          <td>List of messages</td>
+        </tr>
+        <tr>
+          <td>`outgoing`</td>
+          <td>Message[]|undefined</td>
+          <td>Messages that are currently being sent</td>
+        </tr>
+        <tr>
+          <td>`invites`</td>
+          <td>User[]|undefined</td>
+          <td>
+            Users that have been invited to the channel, but not yet joined
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Views">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`membership`</td>
+          <td>N/A</td>
+          <td>
+            Returns the IMember object of the current user if the current user
+            is a member of this chat.
+          </td>
+        </tr>
+        <tr>
+          <td>`is_member`</td>
+          <td>N/A</td>
+          <td>Returns true if the current user is a member of this chat</td>
+        </tr>
+        <tr>
+          <td>`friend`</td>
+          <td>N/A</td>
+          <td>Returns the `dun` of the other user if this is a DM.</td>
+        </tr>
+        <tr>
+          <td>`display_name`</td>
+          <td>N/A</td>
+          <td>
+            Returns the name of the chat if a `Group` chat or the other user's
+            `dun` if a `DM`
+          </td>
+        </tr>
+        <tr>
+          <td>`initials`</td>
+          <td>N/A</td>
+          <td>Returns the initials of the `display_name`</td>
+        </tr>
+        <tr>
+          <td>`isGroup`</td>
+          <td>N/A</td>
+          <td>Returns true if this chat is a group</td>
+        </tr>
+        <tr>
+          <td>`isDM`</td>
+          <td>N/A</td>
+          <td>Returns true if this chat is a DM</td>
+        </tr>
+        <tr>
+          <td>`activeMembers`</td>
+          <td>N/A</td>
+          <td>Returns the list of members in this chat</td>
+        </tr>
+        <tr>
+          <td>`typing`</td>
+          <td>N/A</td>
+          <td>
+            Returns a user friendly string representing currently typing users
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Actions">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`toggleJoin`</td>
+          <td>N/A</td>
+          <td>
+            If the current user is not a member, they are added as a member of
+            the chat. Otherwise, they are removed. (store-only)
+          </td>
+        </tr>
+        <tr>
+          <td>`join`</td>
+          <td>N/A</td>
+          <td>Adds the current user to chat and persists</td>
+        </tr>
+        <tr>
+          <td>`leave`</td>
+          <td>N/A</td>
+          <td>Removes the current user from the chat and persists</td>
+        </tr>
+        <tr>
+          <td>`markRead`</td>
+          <td>N/A</td>
+          <td>
+            Mark all the messages in the chat to read for the current user
+          </td>
+        </tr>
+        <tr>
+          <td>`sendMessage`</td>
+          <td>SendMessageInput</td>
+          <td>Send a message as the current message</td>
+        </tr>
+        <tr>
+          <td>`addInvite`</td>
+          <td>IUser</td>
+          <td>Adds an invite to the store</td>
+        </tr>
+        <tr>
+          <td>`addMember`</td>
+          <td>IMember</td>
+          <td>Adds a member to the store</td>
+        </tr>
+        <tr>
+          <td>`startTyping`</td>
+          <td>N/A</td>
+          <td>Sends indicator to chat server to initiate typing status</td>
+        </tr>
+        <tr>
+          <td>`finishTyping`</td>
+          <td>N/A</td>
+          <td>Sends indicator to chat server to complete typing status</td>
+        </tr>
+        <tr>
+          <td>`deleteMessage`</td>
+          <td>`id: string`</td>
+          <td>Deletes a message permanently</td>
+        </tr>
+        <tr>
+          <td>`updateMessage`</td>
+          <td>`message: IMessage, input: SendMessageInput`</td>
+          <td>Updates a message</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+</Tabs>
+
+### Messages
+
+The Messages model type is used to store all the messages
+
+<Tabs>
+  <Tab title="Schema">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Data type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`byId`</td>
+          <td>`{ [chatId: string]: Message }`</td>
+          <td>A map of all fetched messages by id</td>
+        </tr>
+        <tr>
+          <td>`fetching`</td>
+          <td>`boolean`</td>
+          <td>True if currently fetching messages</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Views">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`get`</td>
+          <td>`id: string` - message id</td>
+          <td>Get a specific message by the message id</td>
+        </tr>
+        <tr>
+          <td>`fetch`</td>
+          <td>`id: string` - id of the message to fetch from the api</td>
+          <td>
+            Fetch the message via the API. If the message already exists in the
+            store, that message is returned and no API call is made.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Actions">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`createOrUpdate`</td>
+          <td>`data: FMessageFragment` - the message to create or update (store only)</td>
+          <td>
+            Updates the message in the store. If message doesn't exist, a new one is
+            created. NOTE: this does not create the message in the database.
+          </td>
+        </tr>
+        <tr>
+          <td>`reset`</td>
+          <td>N/A</td>
+          <td>Resets store to initial state</td>
+        </tr>
+
+        <tr>
+          <td>`remove`</td>
+          <td>`id: string` - id of message to be removed</td>
+          <td>Removes the message from the store</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </Tab>
+</Tabs>
+
+### Message
+
+The Message model type is used to define a specific message
+
+<Tabs>
+  <Tab title="Schema">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Data type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`id`</td>
+          <td>`string`</td>
+          <td>The unique message id</td>
+        </tr>
+        <tr>
+          <td>`created_at`</td>
+          <td>`Date`</td>
+          <td>The date the message was created</td>
+        </tr>
+        <tr>
+          <td>`updated_at`</td>
+          <td>`Date`</td>
+          <td>The date the message was last updated</td>
+        </tr>
+        <tr>
+          <td>`text`</td>
+          <td>`string|undefined`</td>
+          <td>The textual portion of the message</td>
+        </tr>
+        <tr>
+          <td>`user`</td>
+          <td>User</td>
+          <td>The sender</td>
+        </tr>
+        <tr>
+          <td>`parent_id`</td>
+          <td>`string|undefined`</td>
+          <td>
+            The id of the parent message in the event this message is within a
+            thread
+          </td>
+        </tr>
+        <tr>
+          <td>`chat_id`</td>
+          <td>`string`</td>
+          <td>Id of the chat</td>
+        </tr>
+        <tr>
+          <td>`replies`</td>
+          <td>Message[]|undefined</td>
+          <td>The array of replies to this message</td>
+        </tr>
+        <tr>
+          <td>`reply_count`</td>
+          <td>`number`</td>
+          <td>Number of replies</td>
+        </tr>
+        <tr>
+          <td>`reactions`</td>
+          <td>`string[]|undefined`</td>
+          <td>Message reactions and the users they belong to</td>
+        </tr>
+        <tr>
+          <td>`attachments`</td>
+          <td>Attachment[]|undefined</td>
+          <td>The attachments sent with the message</td>
+        </tr>
+        <tr>
+          <td>`mentions`</td>
+          <td>Mention[]|undefined</td>
+          <td>The message mentions</td>
+        </tr>
+        <tr>
+          <td>`status`</td>
+          <td>`string|undefined`</td>
+          <td>`sending` or `sent`</td>
+        </tr>
+        <tr>
+          <td>`favorite`</td>
+          <td>`boolean`</td>
+          <td>True if current user marked as favorite</td>
+        </tr>
+        <tr>
+          <td>`system`</td>
+          <td>SystemMessageType|undefined</td>
+          <td>System message type</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Views">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`displayTimestamp`</td>
+          <td>N/A</td>
+          <td>
+            User friendly string interpretation of timestamp using the
+            `created_at` field
+          </td>
+        </tr>
+        <tr>
+          <td>`markdown`</td>
+          <td>N/A</td>
+          <td>Get the text parsed as markdown</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+  <Tab title="Actions">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Arguments</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>`react`</td>
+          <td>`string` - the reaction string</td>
+          <td>Add a reaction from the current user</td>
+        </tr>
+        <tr>
+          <td>`toggleFavorite`</td>
+          <td>N/A</td>
+          <td>
+            Mark message as favorite for the current user if not already
+            favorited. Otherwise, unfavorite.
+          </td>
+        </tr>
+        <tr>
+          <td>`fetchReplies`</td>
+          <td>N/A</td>
+          <td>Fetch all the replies for this message</td>
+        </tr>
+        <tr>
+          <td>`addReply`</td>
+          <td>N/A</td>
+          <td>Add a new reply to the the replies (store-only)</td>
+        </tr>
+      </tbody>
+    </table>
+  </Tab>
+</Tabs>

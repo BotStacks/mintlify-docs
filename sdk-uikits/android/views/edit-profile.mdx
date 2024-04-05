@@ -1,0 +1,21 @@
+---
+title: "Edit Profile"
+description: ""
+icon: "user-pen"
+iconType: "solid"
+---
+
+<img 
+height="500" 
+width="100%" 
+src="/images/android-sdk/edit-profile-view.png"
+/>
+A screen content view for editing the current user.
+
+To trigger an update once modifications are done within the view, simply call `state.update()`.
+
+```Kotlin
+val state = remember { EditProfileState() }
+EditProfileView(state)
+```
+For a more detailed API definition, check out the API docs here.

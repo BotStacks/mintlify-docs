@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: BotStacks Assistant API
+  description: test
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+paths:
+  /assistant/{botstackId}/message:
+    post:
+      description: Send a message to a botstack assistant
+      parameters:
+        - in: path
+          name: botstackId
+          schema:
+            type: string
+          required: true
+          description: UUID of the botstack assistant
+      requestBody:
+        description: Hey so...
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                  description: The message to send to the assistant
+                userId:
+                  type: string
+                  description: The current user ID. This is used to maintain a the chat conversation. If not provided, it is treated as a new conversation.
+
+      responses:
+        "200":
+          description: Successful response
+        "400":
+          description: Bad request

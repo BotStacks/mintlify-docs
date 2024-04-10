@@ -58,6 +58,14 @@
   "primaryTab": {
     "name": "Home"
   },
+  "openapi": ["/openapi.yml"],
+  "api": {
+    "baseUrl": "https://chat.botstacks.ai/",
+    "auth": {
+      "method": "key",
+      "name": "x-api-key"
+    }
+  },
   "navigation": [
     {
       "group": "Resource Center",
@@ -315,7 +323,16 @@
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/introduction",
+        {
+          "group": "Assistant API",
+          "pages": [
+            "api-reference/assistant-api/overview",
+            "api-reference/assistant-api/message"
+          ]
+        }
+      ]
     },
     {
       "group": "Miscellaneous",

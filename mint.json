@@ -265,10 +265,31 @@
     {
       "group": "JavaScript SDK",
       "pages": [
-        "sdk-uikits/javascript/introduction",
-        "sdk-uikits/javascript/getting-started",
-        "sdk-uikits/javascript/store",
-        "sdk-uikits/javascript/subscriptions"
+        {
+          "group": "Getting Started",
+          "icon": "star",
+          "pages": [
+            "sdk-uikits/javascript/getting-started/overview",
+            "sdk-uikits/javascript/getting-started/installation",
+            "sdk-uikits/javascript/getting-started/support"
+          ]
+        },
+        {
+          "group": "Store",
+          "icon": "hashnode",
+          "pages": [
+            "sdk-uikits/javascript/store/overview",
+            "sdk-uikits/javascript/store/root",
+            "sdk-uikits/javascript/store/models"
+          ]
+        },
+        {
+          "group": "Subscriptions",
+          "icon": "diagram-project",
+          "pages": [
+            "sdk-uikits/javascript/subscriptions/overview"
+          ]
+        }
       ]
     },
     {
@@ -281,9 +302,9 @@
             "sdk-uikits/react/getting-started/overview",
             "sdk-uikits/react/getting-started/installation",
             "sdk-uikits/react/getting-started/customization",
-            "sdk-uikits/react/getting-started/support",
             "sdk-uikits/react/getting-started/botstackschatprovider",
-            "sdk-uikits/react/getting-started/types"
+            "sdk-uikits/react/getting-started/types",
+            "sdk-uikits/react/getting-started/support"
           ]
         },
         {

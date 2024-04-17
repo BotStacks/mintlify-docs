@@ -1,0 +1,52 @@
+---
+title: "Installation"
+description: "Get your feature-rich chat environment underway"
+icon: "bolt"
+iconType: "solid"
+---
+
+
+<CodeGroup>
+
+```bash npm
+npm i @botstacks/chat-sdk
+```
+
+```bash yarn
+yarn add @botstacks/chat-sdk
+```
+
+</CodeGroup>
+
+## Initialization
+
+To initialize the sdk, all you need to do is set up the chat store and initialize the sdk.
+
+<Steps>
+  <Step title="Set up the store">
+    This is separte from the initialization so that you can choose how to manage
+    the store, depending on your tools and libraries.
+
+    In the following example, `store` is just a mobx state tree.
+
+```js
+import { BotStacksChat } from "@botstacks/chat-sdk";
+
+const store = BotStacksChat.createChatStore();
+```
+
+From here, you can `makeInspectable(store)` with `mobx-devtools-mst` if you desire.
+And go on to make the store observable and create a reactive environment. See [MobX docs for more details](https://mobx.js.org/observable-state.html)
+.
+
+  </Step>
+  <Step title="Initialize the SDK">
+```js main.js
+import { BotStacksChat } from "@botstacks/chat-sdk";
+
+BotStacksChat.init(process.env.API_KEY);
+
+```
+  </Step>
+</Steps>
+```

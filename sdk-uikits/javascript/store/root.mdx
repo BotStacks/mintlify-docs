@@ -1,0 +1,75 @@
+---
+title: "Root Store"
+sidebarTitle: "Root"
+icon: "arrows-to-dot"
+iconType: "solid"
+---
+
+The root store consists of the following structure:
+
+- `user_repo`: Users
+- `chat_repo`: Chats
+- `message_repo`: Messages
+
+### Actions
+
+There are a few actions that exist on the root store.
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Arguments</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`login`</td>
+      <td>`input: LoginInput`</td>
+      <td>
+        Logs the provided user into the chat server. If the user doesn't yet
+        exist, a new one is created. If the user does exist, the initially
+        provided `uid` is used for authentication. The `uid` should be the
+        unique and persisted identifier of the user within your user management
+        solution.
+      </td>
+    </tr>
+    <tr>
+      <td>`logout`</td>
+      <td>N/A</td>
+      <td>
+        Logs the current user out of the chat server and resets the store.
+      </td>
+    </tr>
+    <tr>
+      <td>`load`</td>
+      <td>N/A</td>
+      <td>Gets the current user's details</td>
+    </tr>
+  </tbody>
+</table>
+
+### Views
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Arguments</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`user`</td>
+      <td></td>
+      <td>The current logged in user</td>
+    </tr>
+    <tr>
+      <td>`isLoggedIn`</td>
+      <td>N/A</td>
+      <td>Returns true if you are logged into the chat server</td>
+    </tr>
+  </tbody>
+</table>

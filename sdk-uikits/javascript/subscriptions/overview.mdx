@@ -1,0 +1,21 @@
+---
+title: "Overview"
+icon: "square-poll-vertical"
+iconType: "solid"
+---
+
+
+In order to create a seamless chat experience, we utilize `graphql-ws` under the hood to
+set up websocket transport.
+
+The subscriptions are initiated upon a successful login and torn down on logout.
+The two subscriptions are:
+
+- `core`: This event will contain any chat related updates. This includes any changes to groups/dms,
+  users, memberships, messages, and more.
+- `me`: This event occurs if the current user details changes
+
+<Note>
+  As of this time, this is purely informational. There is not yet any way to
+  extend functionality.
+</Note>

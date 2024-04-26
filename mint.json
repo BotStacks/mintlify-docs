@@ -123,7 +123,10 @@
         },
         {
           "group": "Integrations",
-          "pages": ["designer/integrations/whatsapp"]
+          "pages": [
+            "designer/integrations/whatsapp",
+            "designer/integrations/discord"
+        ]
         }
       ]
     },

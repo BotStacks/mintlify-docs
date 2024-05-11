@@ -1,0 +1,164 @@
+---
+title: "Slack Integration"
+sidebarTitle: "Slack"
+icon: "slack"
+iconType: "solid"
+---
+
+Slack Integration makes it easy for your AI Assistant to connect with Slack, a popular messaging app. 
+
+Once set up, people can chat with your AI Assistant by sending messages on a slack channel on your workspace.
+
+### Prerequisites
+<CardGroup cols={1}>
+  <Card title="A Slack Workspace" icon="slack" iconType="solid" href="https://slack.com/intl/en-in/help/articles/206845317-Create-a-Slack-workspace">
+  </Card>
+</CardGroup>
+
+
+To setup Slack Integration you will need 2 pieces of information from the Slack API Dashboard:
+
+
+<img 
+height="500"  
+src="/images/integrations/Slack/1.png"
+/>
+
+<Steps>
+  <Step title="Bot Token">
+  Bot tokens represent a bot associated with an app installed in a workspace. Unlike user tokens, they're not tied to a user's identity — they're only tied to your app. 
+  </Step>
+  
+  <Step title="Signing Secret">
+  Slack signs its requests using a secret that's unique to your app. With the help of signing secrets, your app can more confidently verify whether requests from Slack.
+  </Step>
+</Steps>
+
+
+## Setting up the Slack integration
+
+### 1) Create an App
+Visit [api.slack.com/apps](https://api.slack.com/apps) and create your app by clicking the `Create an App` button
+
+
+<img 
+height="500"  
+src="/images/integrations/Slack/2.png"
+/>
+
+Choose the option `From Scratch`
+
+<img 
+height="500"  
+src="/images/integrations/Slack/3.png"
+/>
+
+
+### 2) Customize your App
+Customize your App by giving it a `Name` and choose the `workspace` that you want to add the app
+
+<img 
+height="500"  
+src="/images/integrations/Slack/4.png"
+/>
+
+
+### 3) Add OAuth Scopes
+Go to **OAuth & Permissions** page from the left side menu and Add the following scopes to your bot
+
+<Steps>
+  <Step title="app_mention:read"></Step>
+  <Step title="chat:write"></Step>
+</Steps>
+
+<img 
+height="500"  
+src="/images/integrations/Slack/5.png"
+/>
+
+
+### 4) Install your App to Workspace
+<img 
+height="500"  
+src="/images/integrations/Slack/6.png"
+/>
+
+<img 
+height="500"  
+src="/images/integrations/Slack/7.png"
+/>
+
+
+### 5) Add your Bot OAuth Token to Botstacks
+After you have installed your App on your Workspace slack will show you the OAuth token for you Bot. Add this Token on Botstacks integrations page
+
+<img 
+height="500"  
+src="/images/integrations/Slack/8.png"
+/>
+
+<img 
+height="500"  
+src="/images/integrations/Slack/9.png"
+/>
+
+<Warning>Do not share this token with anyone else. Whoever has access to this token can login to your App and do anything they want</Warning>
+
+### 6) Add your Signing Secret to Botstacks
+Go to **Basic information** page from the left side menu and Copy the Signing Secret then paste it on Botstacks integrations page
+
+<img 
+height="500"  
+src="/images/integrations/Slack/10.png"
+/>
+
+<img 
+height="500"  
+src="/images/integrations/Slack/11.png"
+/>
+
+### 7) Subscribe to Bot Events
+Go to **Event Subscriptions** page from the left side menu and Enable Events.
+
+Once you have enabled the events, Subscribe to the following bot events:
+
+<Steps>
+  <Step title="message.im"></Step>
+  <Step title="app_mention"></Step>
+</Steps>
+
+<img 
+height="500"  
+src="/images/integrations/Slack/12.png"
+/>
+
+
+### 8) Add Botstacks Webhook to your Slack App
+Copy the **Webhook Callback URL** from Botstacks integration page and paste it on `Request URL` field on Slack Event Subscriptions page.
+
+<img 
+height="500"  
+src="/images/integrations/Slack/13.png"
+/>
+
+<img 
+height="500"  
+src="/images/integrations/Slack/14.png"
+/>
+
+<Warning>After you save changes on this page, it will ask you to re-install the App. Follow the prompts to re-install the App</Warning>
+
+### 9) Invite your App to your channel
+Mention your app on the channel you want to chat with it and Slack will show you an option to invite your app to the channel.
+
+Click on `Invite Them` to invite your app to the channel
+<img 
+height="500"  
+src="/images/integrations/Slack/15.png"
+/>
+
+Now you can chat with your App (:
+<img 
+height="500"  
+src="/images/integrations/Slack/16.png"
+/>

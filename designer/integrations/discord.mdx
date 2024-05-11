@@ -30,32 +30,26 @@ src="/images/integrations/discord/1.png"
 />
 
 <Steps>
-
   <Step title="Discord Client ID">
   Client ID is a unique snowflake identifier for your application in the developer portal.
   </Step>
-  
+
   <Step title="Discord App Token">
   App Token is an authorization token allows Botstacks to control your Discord App (sending messages, listening to user messages etc..)
   </Step>
-
 </Steps>
+
 
 ## Setting up the Discord integration
 
-
-### Step 1
-
+### 1) Create an App
 Visit [discord.com/developers/applications](https://discord.com/developers/applications/) and create your app by clicking the `New Application` button
-
 
 <img 
 height="500"  
 src="/images/integrations/discord/2.png"
 />
 
-
-### Step 2
 
 Enter a Name for your App and click on `create`
 
@@ -66,8 +60,7 @@ src="/images/integrations/discord/3.png"
 
 <Tip>You can change this name later</Tip>
 
-### Step 3
-
+### 2) Customize your App
 Customize your App by giving it a `description` and `profile picture`
 
 <img 
@@ -76,8 +69,7 @@ src="/images/integrations/discord/4.png"
 />
 
 
-### Step 4
-
+### 3) Obtain your App Token
 Obtain your App Token by going to the `Bot` page from the left sidebar.
 
 Discord won't show the token for the first time so you have to click on `Reset Token` to access your token
@@ -86,10 +78,6 @@ Discord won't show the token for the first time so you have to click on `Reset T
 height="500"  
 src="/images/integrations/discord/5.png"
 />
-
-
-
-### Step 5
 
 After you have reset your token, discord will show the app token. 
 
@@ -101,16 +89,17 @@ src="/images/integrations/discord/6.png"
 
 <Warning>Do not share this token with anyone else. Whoever has access to this token can login to your App and do anything they want</Warning>
 
-### Step 6
 
+### 4) Add your App Token to Botstacks
 Paste your `App Token` on Botstacks Dashboard Integrations page.
+
 <img 
 height="500"  
 src="/images/integrations/discord/7.png"
 />
 
-### Step 7
 
+### 5) Obtain your Client ID
 Copy your `Client ID` by going to the `OAuth2` page from the left sidebar.
 
 <img 
@@ -118,52 +107,43 @@ height="500"
 src="/images/integrations/discord/8.png"
 />
 
-### Step 8
 
+### 6) Add your Client ID to Botstacks
 Paste your `Client ID` on Botstacks Dashboard Integrations page.
+
 <img 
 height="500"  
 src="/images/integrations/discord/9.png"
 />
 
-### Step 9
 
+### 7) Enable Privileged Gateway Intents
 On `Bot` page, enable all 3 intents shown on the **Privileged Gateway Intents**
+
 <img 
 height="500"  
 src="/images/integrations/discord/10.png"
 />
 
-### Step 10
-
+### 8) Generate your OAuth2 URL
 On `OAuth2` page, enable the option `Bot` on the category **OAuth2 URL Generator**
+
 <img 
 height="500"  
 src="/images/integrations/discord/11.png"
 />
 
-### Step 11
-
-On `OAuth2` page, enable the following options on the category **Bot Permissions**
+Enable the following options on the category **Bot Permissions**
 
 <Steps>
-
   <Step title="Send Messages"></Step>
-  
   <Step title="Send Messages in Threads"></Step>
-
   <Step title="Embed Links"></Step>
-  
   <Step title="Attach Files"></Step>
-
   <Step title="Read Message History"></Step>
-  
   <Step title="Use External Emojis"></Step>
-
   <Step title="Use External Stickers"></Step>
-  
   <Step title="Add Reactions"></Step>
-
 </Steps>
 
 <img 
@@ -175,33 +155,31 @@ src="/images/integrations/discord/12.png"
 You can simply enable the `Administrator` option instead of manually enabling the options mentioned above, but this is not recommended as it may cause more damage to your server if your app gets compromised
 </Tip>
 
-### Step 12
 
+### 9) Invite your App to your Server
 On `OAuth2` page, copy the `Generated URL` and paste it on a new tab on your browser. This is the invite link to your App.
+
 <img 
 height="500"  
 src="/images/integrations/discord/13.png"
 />
 
-### Step 13
-
 Choose the server you want to add your App and click on `Continue`
+
 <img 
 height="500"  
 src="/images/integrations/discord/14.png"
 />
 
-### Step 14
-
 Enable all the options shown on the popup and click on `Authorize`
+
 <img 
 height="500"  
 src="/images/integrations/discord/15.png"
 />
 
-### Step 16
-
 After you click on `Authorize`, your App will join your server and anyone can interact with your App (your AI Assistant) by pinging it or sending a Direct message.
+
 <img 
 height="500"  
 src="/images/integrations/discord/16.png"

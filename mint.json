@@ -110,6 +110,7 @@
             "designer/nodes/introduction",
             "designer/nodes/start",
             "designer/nodes/routing",
+            "designer/nodes/condition",
             "designer/nodes/llm",
             "designer/nodes/text",
             "designer/nodes/response",

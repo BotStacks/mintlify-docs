@@ -109,17 +109,16 @@
           "pages": [
             "designer/nodes/introduction",
             "designer/nodes/start",
-            "designer/nodes/routing",
-            "designer/nodes/condition",
+            "designer/nodes/response",
             "designer/nodes/llm",
             "designer/nodes/text",
-            "designer/nodes/response",
-            "designer/nodes/listen",
-            "designer/nodes/ai-integration",
+            "designer/nodes/intent-classify",
             "designer/nodes/set",
-            "designer/nodes/code",
+            "designer/nodes/listen",
+            "designer/nodes/condition",
+            "designer/nodes/end",
             "designer/nodes/api",
-            "designer/nodes/end"
+            "designer/nodes/code"
           ]
         },
         {

@@ -1,15 +1,15 @@
 ---
-title: "Routing"
-icon: "code-merge"
+title: "Intent Classify"
+icon: "code-compare"
 iconType: "solid"
 ---
 
-The Routing Node is like a guide that listens to what users say and decides where the conversation should go next.
+The Intent Classify Node is like a guide that listens to what users say and decides where the conversation should go next.
 
 
 <img 
 height="500"  
-src="/images/node-routing.png"
+src="/images/node-intent-classify.png"
 />
 
 The user desires are called "**intents**". 
@@ -21,10 +21,10 @@ We call these examples `I want to order pizza` as **utterances**. This helps the
 
 <br />
 
-The Routing Node works like a traffic signal, directing the conversation flow based on the recognized intent. It has different paths, each one leading to a different action or response based on what the user wants.
+The Intent Classify Node works like a traffic signal, directing the conversation flow based on the recognized intent. It has different paths, each one leading to a different action or response based on what the user wants.
 
 When a user sends a message, the assistant tries to match their words to one of the intents. Once it finds the right one, it follows the path connected to that intent, like following a road on a map.
 
 This helps keep conversations organized and ensures that users get the right response to their requests. So, if someone asks to order pizza, the assistant knows to guide them through the pizza ordering process.
 
-<Tip>A routing node has as many outputs as added intents. During processing, a single intent will be chosen.</Tip>
+<Tip>A Intent Classify node has as many outputs as added intents. During processing, a single intent will be chosen.</Tip>

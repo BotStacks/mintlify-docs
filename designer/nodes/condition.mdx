@@ -1,0 +1,141 @@
+---
+title: "Condition"
+icon: "code-merge"
+iconType: "solid"
+---
+
+The Condition Node allows you to create different paths in a conversation based on specific conditions. 
+
+This means you can make your assistant respond differently depending on the situation.
+
+<img 
+height="500"  
+src="/images/node-condition.png"
+/>
+
+Think of conditions like a cause and effect: "**If** this happens, **then** do that."
+
+
+<Tip>
+Example:
+- **If** I wake up early, **then** I will go to the gym. 
+- **If** I am hungry, **then** I will eat.
+</Tip>
+
+## Adding Conditional Paths
+The Condition Node can have multiple condition paths. These paths let your assistant handle various scenarios. 
+
+To create a new path, click on the **+ Add Condition** option.
+
+<img 
+height="500"  
+src="/images/condition-add.png"
+/>
+
+
+### Why Use Conditional Paths?
+Using conditional paths makes your assistant more dynamic and responsive. 
+
+Instead of giving the same response every time, your assistant can provide tailored replies based on the user's input or other variables. 
+
+Additionally, conditional paths allow you to route to alternate paths or flows within your conversation
+
+<Tip>
+Example:
+**If** user sent x messages, **then** ask for contact details.
+</Tip>
+
+
+## Building a Condition
+Building a condition involves setting up rules that determine which path the conversation will take. 
+
+The Condition Node gives you the flexibility to check multiple criteria using two main elements:
+- Variable
+- Logic Group
+
+<img 
+height="500"  
+src="/images/condition-elements.png"
+/>
+
+
+### Variable
+A variable is a piece of information that your assistant knows or collects during the conversation. 
+You can use variables to check against specific values and determine the next step in the conversation.
+
+<img 
+height="500"  
+src="/images/condition-variable.png"
+/>
+
+Here’s how to work with variables:
+1. **Select a Variable:** Choose a variable from your variables list
+2. **Set the Condition:** Select a condition to check (e.g., contains, greater than, less than).
+3. **Define the Value:** Input the value you want to compare against the variable. (This value is plain text you define, on the above image you can see we have entered the value as **18**).
+
+<Tip>
+Example:
+- **Variable:** time_of_day
+- **Condition:** is
+- **Value:** morning
+
+This setup will check if the variable **time_of_day** is equal to morning.
+</Tip>
+
+
+### Logic Group
+A Logic Group allows you to combine multiple conditions using logical operators **AND** and **OR**. This helps create more complex and specific conditions.
+
+- **AND**: All conditions in the group must be true for the path to be taken.
+- **OR**: If any condition in the group is true, the path will be taken.
+
+<img 
+height="500"  
+src="/images/condition-logic.png"
+/>
+
+<Tip>
+
+**Condition 1:** time_of_day is morning
+
+**Condition 2:** weather is sunny
+
+Using **AND**, both conditions must be true.
+
+Using **OR**, either condition can be true.
+</Tip>
+
+
+## Evaluation
+When the Condition Node is reached, it evaluates the set conditions against the variables. 
+If the variable matches the defined value according to the condition, the corresponding path is activated.
+
+<Tip>
+Example:
+- **Variable**: day
+- **Condition**: is
+- **Value**: monday
+
+If the day is monday, the path designed for monday responses will be followed.
+</Tip>
+
+
+## Otherwise Path
+The Condition Node includes a default "**Otherwise Path**". This path is used when none of the specified conditions are met. 
+It ensures that your assistant always has a response, even if the conditions you set aren’t fulfilled.
+
+<img 
+height="500"  
+src="/images/condition-otherwise.png"
+/>
+
+
+### Why Use the Otherwise Path?
+The Otherwise Path provides a fallback option, ensuring that your assistant doesn't get stuck without a response. 
+It makes your assistant more robust and able to handle unexpected situations gracefully.
+
+<Tip>
+Example:
+
+If no conditions are met, the assistant might say, "**I didn't quite understand that. Can you tell me more?**"
+</Tip>

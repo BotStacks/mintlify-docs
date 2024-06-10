@@ -4,7 +4,7 @@ icon: "code-merge"
 iconType: "solid"
 ---
 
-The Condition Node  allows you to create different paths in a conversation based on specific conditions. 
+The Condition Node allows you to create different paths in a conversation based on specific conditions. 
 
 This means you can make your assistant respond differently depending on the situation.
 
@@ -35,7 +35,15 @@ src="/images/condition-add.png"
 
 ### Why Use Conditional Paths?
 Using conditional paths makes your assistant more dynamic and responsive. 
-Instead of giving the same response every time, your assistant can provide tailored replies based on the user's input or other variables.
+
+Instead of giving the same response every time, your assistant can provide tailored replies based on the user's input or other variables. 
+
+Additionally, conditional paths allow you to route to alternate paths or flows within your conversation
+
+<Tip>
+Example:
+**If** user sent x messages, **then** ask for contact details.
+</Tip>
 
 
 ## Building a Condition
@@ -61,7 +69,7 @@ src="/images/condition-variable.png"
 />
 
 Here’s how to work with variables:
-1. **Define a Variable:** Choose a variable from your variables list
+1. **Select a Variable:** Choose a variable from your variables list
 2. **Set the Condition:** Select a condition to check (e.g., contains, greater than, less than).
 3. **Define the Value:** Input the value you want to compare against the variable. (This value is plain text you define, on the above image you can see we have entered the value as **18**).
 

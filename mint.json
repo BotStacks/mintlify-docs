@@ -125,6 +125,7 @@
           "group": "Integrations",
           "pages": [
             "designer/integrations/whatsapp",
+            "designer/integrations/messenger",
             "designer/integrations/discord",
             "designer/integrations/slack"
         ]

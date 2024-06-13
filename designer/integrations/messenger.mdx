@@ -1,0 +1,182 @@
+---
+title: "Facebook Messenger Integration"
+sidebarTitle: "Facebook"
+icon: "facebook"
+iconType: "solid"
+---
+
+Facebook Messenger Integration makes it easy for your AI Assistant to connect with Messenger. 
+
+Once set up, your Facebook audience can chat with your Assistant just by sending messages to your Facebook Page.
+
+## Prerequisites
+
+<CardGroup cols={2}>
+
+  <Card title="A Meta Developer Account" icon="meta" iconType="solid" href="https://developers.facebook.com/">
+  </Card>
+
+</CardGroup>
+
+
+To setup Messenger Integration you will need 3 pieces of information
+
+<Steps>
+
+  <Step title="Webhook Callback URL">
+  Messenger uses the webhook callback URL to communicate to BotStacks.
+  </Step>
+  
+  <Step title="Webhook Verify Token">
+  BotStacks checks the webhook verify token to make sure it's the right connection with Messenger.
+  </Step>
+
+  <Step title="Messenger Access Token">
+  BotStacks uses the Access token to confirm with Messenger when sending responses from the AI Assistant.
+  </Step>
+
+</Steps>
+
+
+## Setting up the Messenger integration
+
+
+### 1) Create an App
+
+Visit [developers.facebook.com/apps](https://developers.facebook.com/apps/) and create your app by clicking the `Create App` button
+
+
+<img 
+height="500"  
+src="/images/integrations/messenger/1.png"
+/>
+
+
+Choose `Other` as the use case for your app
+
+<img 
+height="500"  
+src="/images/integrations/messenger/2.png"
+/>
+ 
+
+Choose `Business` as the app type
+
+<img 
+height="500"  
+src="/images/integrations/messenger/3.png"
+/>
+
+
+Give a `Name` and `Contact Email` for your app
+
+<img 
+height="500"  
+src="/images/integrations/messenger/4.png"
+/>
+
+
+### 2) Setup Messenger
+
+After you have created your app, you will be taken to the Meta Developer dashboard. From the dashboard click the `setup` option on **messenger**
+
+<img 
+height="500"  
+src="/images/integrations/messenger/5.png"
+/>
+
+
+Navigate to **Messenger API Settings** and click `configure`
+
+<img 
+height="500"  
+src="/images/integrations/messenger/6.png"
+/>
+
+
+Once you have clicked the configure button, you will be asked to enter `Callback URL` & `Verify Token`
+
+<img 
+height="500"  
+src="/images/integrations/messenger/7.png"
+/>
+
+
+On BotStacks dashboard, go to the integrations page and copy the `Callback URL` & `Verify Token` and enter it on Meta Dashboard
+
+<img 
+height="500"  
+src="/images/integrations/messenger/8.png"
+/>
+
+
+Once you have entered the data on Meta Dashboard, you can see the `Continue` button.
+<img 
+height="500"  
+src="/images/integrations/messenger/9.png"
+/>
+
+
+### 3) Connect your Facebook page
+
+Connect your Facebook page, this is the facebook page your assistant will be active on
+
+<img 
+height="500"  
+src="/images/integrations/messenger/10.png"
+/>
+
+
+### 4) Generate Access Token
+
+Click on `Add Subscription` button to add subscriptions to the webhook
+
+<img 
+height="500"  
+src="/images/integrations/messenger/11.png"
+/>
+
+
+Select the option `messages` and click `confirm`
+
+<img 
+height="500"  
+src="/images/integrations/messenger/12.png"
+/>
+
+Click the `Generate` button to generate your Access Token
+
+<img 
+height="500"  
+src="/images/integrations/messenger/13.png"
+/>
+
+
+Copy the `Access Token` and paste it on BotStacks integrations page
+
+<img 
+height="500"  
+src="/images/integrations/messenger/14.png"
+/>
+
+<Warning> DO NOT share this Token with anyone </Warning>
+
+<img 
+height="500"  
+src="/images/integrations/messenger/15.png"
+/>
+
+
+From now on, your AI Assistant will respond to the messages people send to your Facebook Page.
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,29 +1,27 @@
 ---
 title: "Introduction"
-description: "Interface with APIs for a custom solution"
+description: " Explore custom solutions through API interactions."
 ---
 
 ## Welcome
 
-We utilize GraphQL for our API layer. All GraphQL API docs can be found in the playground. Find the
-"Docs" and "Schema" tabs to the right edge of the playground.
+Our API layer relies on GraphQL. You can access all GraphQL API documentation in the playground. Look for the “Docs” and “Schema” tabs on the right edge of the playground.
 
 <Card
   title="GraphQL playground"
   icon="leaf"
   href="https://chat.botstacks.ai/graphql"
 >
-  Peruse the gql schema and send queries and mutations in the playground!
+  Browse the GraphQL schema and execute queries and mutations right in the playground!
 </Card>
 
 ## Security
 
-Every request requires an API Key to be passed in the request header. If the query or mutation has a user context,
-you will also need a bearer token passed as the Authorization header.
+For every request, an API Key must be included in the request header. If your query or mutation requires a user context, you’ll also need a bearer token passed as the Authorization header.
 
 ### API Key
 
-All requests must have the X-Api-Key header. The API Key can be found in the dashboard
+All requests must include the X-Api-Key header. The API Key can be found in the dashboard
 for a particular project.
 
 ```json
@@ -34,8 +32,8 @@ for a particular project.
 
 ### Logging in
 
-To log in, use the `login` mutation. A successful login returns an `Auth` object, including the token.
-On subsequent calls that require a user context (which are most), pass the token as the Bearer token in the Authorization
+To log in, use the `login` mutation. A successful login returns an `Auth` object containing the token.
+For subsequent calls that require a user context (which is most cases), pass the token as the Bearer token in the Authorization
 header.
 
 ```json

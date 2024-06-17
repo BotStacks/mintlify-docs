@@ -28,50 +28,51 @@ Nodes represent individual states or steps within the conversation. Each node ty
 
 ### 2. Connections
 
-Connections specify the pathways through which the conversation moves forward, allowing for branching, looping or other forms of interaction.
+Connections specify the pathways through which the conversation advances, allowing for branching, looping or other forms of interaction.
 
-<br />
-You have already created an Bot Stack and added your data to the knowledge base, let's build a simple assistant using the nodes and connections.
+Now that you've already created a BotStack and added your data to the knowledge base, let's build a simple assistant using the nodes and connections.
 
 
-On the AI Assistant Designer you will have the Node Stack on the left side, here you will find all the nodes that you can use in the designer to build your AI Assistant. Each node has it's own purpose and you can learn more about them by clicking [here](/designer/nodes)
+In the AI Assistant Designer, you will find the Node Stack on the left side. This section contains all the nodes available for building your AI Assistant. Each node has its own specific purpose, and you can learn more about them by clicking [here](/designer/nodes).
 
 <img 
 height="500"  
 src="/images/build-first-assistant/node-stack.png"
 />
 
-For now we will only focus on four nodes
+For now, we will only focus on four nodes:
 1. Start Node
 2. LLM Node
 3. Response AI Node
 4. Listen Node
 
 ### 1. Start Node
-The start node represents the beginning of the conversation. It is triggered by a mention or from the initial message in a DM. The input provided that initially started the conversation is immediately passed onto all the start nodes outputs.
+The start node represents the beginning of the conversation. It is triggered by a mention or the initial message in a DM. The input provided to start the conversation is immediately passed to all the start node's outputs.
 
 ### 2. LLM Node
 
-The llm node utilizes the Large Language Model of your choice, such as OpenAI GPT, Anthropic Claude to handle conversational dialogue.
+The LLM node utilizes the Large Language Model of your choice, such as OpenAI Chat-GPT, Anthropic Claude, or Google Gemini to handle conversational dialogue.
 
 ### 3. Response Node
 
-The Response AI node takes input from the nodes in the workflow and sends it to the user on chat
+The Response node takes input from the other nodes in the workflow and sends it to the user in the chat.
 
 ### 4. Listen Node
 
-The listen node waits for user input within the chat. Once a message is received, it is immediately passed onto all the Listen nodes outputs.
+The listen node waits for user input within the chat. Once a message is received, it is immediately passed onto all the Listen node's outputs.
 
 
-Here we have added the four nodes we mentioned above, and connected them in a sequence
+Here, we have added the four nodes we mentioned above and connected them in a sequence
 <img 
 height="500"  
 src="/images/build-first-assistant/simple-conversation-flow.png"
 />
 
-The conversation flow begins from the Start Node, then transitions to the LLM Node, followed by the Response AI Node and finally, it moves to the Listen Node. By connecting the Listen Node to the LLM Node, it forms a loop, ensuring that the assistant won't end the conversation but rather continue the flow indefinitely.
+The conversation flow begins with the Start Node, then transitions to the LLM Node, followed by the Response AI Node, and finally, moves to the Listen Node. 
 
-You can copy the settings on LLM Node from the above image. If you want to know more about how the LLM node works, click [here](/designer/nodes/llm)
+By connecting the Listen Node to the LLM Node, it forms a loop, ensuring that the assistant won't end the conversation but rather continue the flow indefinitely.
 
-Now you can proceed to the next chapter, which covers how you can test the assistant that you just built.
+You can copy the settings on LLM Node from the image above. If you want to know more about how the LLM node works, click [here](/designer/nodes/llm).
+
+Now you can proceed to the next chapter, which covers how to test the assistant you just built.
 

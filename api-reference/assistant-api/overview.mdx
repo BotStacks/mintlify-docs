@@ -1,15 +1,14 @@
 ---
 title: "Overview"
-description: "Talk to your assistant with our REST API"
+description: "Talk to your assistant with our REST API."
 ---
 
 ## Overview
 
-The assistant API allows any application to chat with an AI assistant created on the BotStacks platform using HTTP calls.
+The BotStacks assistant API allows any application to use HTTP calls to interact with an AI assistant created on the BotStacks platform.
 
 ## Conversation state
 
-The state of the conversation is maintained and persisted within BotStacks via the unique botstack assistant ID and user ID combination.
-Due to the nature of the assistant conversation and the need to maintain the conversations state, this HTTP endpoint is not a stateless endpoint.
+The conversation state is maintained and persisted within BotStacks through a unique combination of the botstack assistant ID and user ID. Due to the nature of assistant conversations and the need to preserve state, this HTTP endpoint is not stateless.
 
-In order to start a new conversation, simply omit the userId property from the request body. This will begin a new conversation as a new user and return the userId as part of the response.
+To initiate a new conversation, simply exclude the user ID property from the request body. This will start a fresh conversation as a new user and return the user ID as part of the response.

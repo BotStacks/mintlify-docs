@@ -55,7 +55,7 @@ kotlin {
 
 ### Step 2: Add Build Phase to XCode
 
-Per the documentation from Moko [here](https://github.com/icerockdev/moko-resources?tab=readme-ov-file#with-orgjetbrainskotlinnativecocoapods) we need to add a Run Script Build Phase, with the following script:
+Per the documentation from Moko [here](https://github.com/icerockdev/moko-resources?tab=readme-ov-file#with-orgjetbrainskotlinnativecocoapods), we need to add a Run Script Build Phase with the following script:
 
 ```shell
 cd "$SRCROOT/.."
@@ -129,7 +129,7 @@ In order to display any of the UI components and access chat data, you must firs
 
 ### Step 1: Initialize the SDK
 
-In each platform (android/ios), call BotStacksChat.shared.setup with your API key. You can obtain your API key from the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don’t yet have one, you can [create one for FREE](https://dashboard.botstacks.ai/)!
+In each platform (Android/iOS), call BotStacksChat.shared.setup with your API key. You can obtain your API key from the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don’t yet have an account, you can [create one for FREE](https://dashboard.botstacks.ai/)!
 
 #### Android
 ```kotlin
@@ -184,7 +184,7 @@ If you'd like Giphy support in your chats, send your Giphy API key during `setup
 
 Nearly all functionality is within the context of a chat user. That said, you must first be logged in as a chat user in order to appropriately display the UI components.
 
-To log in, call the login function prior to displaying any UI components. Below is an example of How to accomplish this.
+To log in, call the login function prior to displaying any UI components. Below is an example of how to accomplish this.
 
 ```kotlin
 val composeScope = rememberCoroutineScope()
@@ -203,7 +203,7 @@ composeScope.launch {
 
 The BotStacks UI Kit uses Jetpack Compose (Multiplatform). There are a plethora of navigation protocols for Compose Multiplatform, so pick whatever one works best for your app.
 
-Our Sample uses [Voyager](https://voyager.adriel.cafe), so we simply make a screen for the controller, drop it in and navigate to it. Our sample makes use of a commonized approach to give iOS and Android both platform specific bottom sheet implementations to keep apps respective of the platform they are on.
+Our Sample uses [Voyager](https://voyager.adriel.cafe), so we simply make a screen for the controller, drop it in and navigate to it. Our sample makes use of a commonized approach to give both iOS and Android platforms specific bottom sheet implementations to keep apps, respective of the platform they are on.
 
 ```kotlin
 data class ChatScreen: Screen {

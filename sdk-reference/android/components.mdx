@@ -56,7 +56,7 @@ src="/images/android-sdk/badge.png"
 />
 Our Badge component renders a "badge" that can either take in a `Int` count or a `String` label. This is utilized in the [MessageList](#messagelist) component serving as the date separators, in the [ChatList](#chatlist) component to show unread counts, and in the [ChannelSettingsView](https://docs.botstacks.ai/sdk-reference/android/views#chatsettingsview) for displaying admins.
 
-There are a few overload methods for this component dependent on your usage and level of customization needs.
+There are a few overload methods for this component dependening on your usage and level of customization needed.
 
 ```Kotlin
 Badge(count = 1) // renders a Badge with the number 1
@@ -64,7 +64,7 @@ Badge(count = 101) // renders a Badge with 99+
 Badge(label = "Admin")
 Badge(label = "Power User", backgroundColor = Color.Green)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### ChannelGroup
@@ -72,14 +72,14 @@ For a more detailed API definition, check out the API docs here.
 height="500"  
 src="/images/android-sdk/channel-group.png"
 />
-This component renders a given list of `Chat` channels in a `Column`, each chat in its own ChannelRow, with the `Chat.displayName` as the title and the subtitle showing a preview of the members with in it. This is utilized in the [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#userdetailsview)  to show channels the current user has in common with any other user.
+This component renders a given list of `Chat` channels in a `Column`, each chat in its own ChannelRow, with the `Chat.displayName` as the title and the subtitle showing a preview of the members in it. This is utilized in the [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#userdetailsview)  to show common channels shared by users.
 
 ```Kotlin
 ChannelGroup(
     channels = listOf(yourChannels),
 )
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### ChannelRow
@@ -91,7 +91,7 @@ Renders a description of a `Chat` channel in a row format.
 
 This is utilized in the [ChannelGroup](#channelgroup) within [UserDetailsView](https://docs.botstacks.ai/sdk-reference/android/views#userdetailsview) to show channels the current user has in common with any other user.
 
-There are a few overload methods for this component dependent on your usage and level of customization needs.
+There are a few overload methods for this component dependent on your usage and level of customization needed.
 
 ```Kotlin
 ChannelRow(chat = channel)
@@ -102,7 +102,7 @@ ChannelRow(
     onClick = { }
 )
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 ### ChatInput
 <img 
@@ -115,7 +115,7 @@ Text input that handles the sending of messages to a given Chat when the send bu
 ChatInput(chat = chat, onMedia = {})
 ```
 
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### ChatList
@@ -131,7 +131,7 @@ ChatList(
     onChatClicked = { }
 )
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### ChatMessage
@@ -143,7 +143,7 @@ Renders the contents of a given Message from a `Chat`.
 
 This is used by [MessageList](#messagelist) to form the contents of a conversational chat, by properly aligning messages to left or right depending on sender (left aligned for incoming and right aligned for outgoing).
 
-There are a few overload methods for this component dependent on your usage and level of customization needs.
+There are a few overload methods for this component dependent on your usage and customization needs.
 
 ```Kotlin
 ChatMessage(message = message, onLongPress = { })
@@ -151,7 +151,7 @@ ChatMessage(message = message, onLongPress = { }, onClick = { })
 ChatMessage(message = message, onLongPress = { }, shape = RoundedCornerShape(20.dp))
 ChatMessage(message = message, onLongPress = { }, showAvatar = true, showTimestamp = false)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### ChatMessagePreview
@@ -164,7 +164,7 @@ Renders a "preview" for a given chat. This is based on the last message, if any,
 ```Kotlin
 ChatMessagePreview(chat = chat, onClick = {})
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### Header
@@ -174,7 +174,7 @@ src="/images/android-sdk/header.png"
 />
 A top bar that can be utilized together with a content view to create a screen.
 
-There are a few overload methods for this component dependent on your usage and level of customization needs.
+There are a few overload methods for this component dependent on your usage and customization needs.
 
 ```Kotlin
 Header()
@@ -182,7 +182,7 @@ Header(onBackClicked = { })
 Header(title = "Create a Channel", onBackClicked = { })
 Header(title = "Edit Profile", endAction = { HeaderDefaults.SaveAction { } })
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### MediaActionSheet
@@ -198,7 +198,7 @@ For a more detailed API definition, check out the API docs here.
 
 
 ### MessageActionSheet
-A modal bottom sheet that allows contextual actions for a given messaged. This is a top level scaffold that is designed to wrap your screen content. This can be utilized in conjunction with [MessageList](#messagelist) to show contextual actions for the `MessageList#onLongPress` callback.
+A modal bottom sheet that allows contextual actions for a given message. This is a top level scaffold that is designed to wrap your screen content. This can be utilized in conjunction with [MessageList](#messagelist) to show contextual actions for the `MessageList#onLongPress` callback.
 
 ```kotlin
 val messageSheetState = rememberMessageActionSheetState()
@@ -206,7 +206,7 @@ MessageActionSheet(state) {
     // your screen content
 }
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 ### MessageList
 <img 
@@ -218,7 +218,7 @@ A conversational component displaying the messages for a given `[Chat]` in an in
 ```Kotlin
 MessageList(chat = chat, header = { Header() }, onPressUser = {}, onLongPress = {})
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### Spinner
@@ -227,7 +227,7 @@ Themed spinner, colored with `ai.botstacks.sdk.ui.theme.Colors.primary`.
 ```Kotlin
 Spinner()
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### UserProfile
@@ -240,7 +240,7 @@ Renders an [Avatar](#avatar) and the display name for a given User in a centered
 ```Kotlin
 UserProfile(user)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### UserSelect
@@ -255,7 +255,7 @@ This is primarily used in [CreateChannelView](https://docs.botstacks.ai/sdk-refe
 ```Kotlin
 UserSelect(selectedUsers = userList, onAdd = {})
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 

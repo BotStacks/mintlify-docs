@@ -1,6 +1,6 @@
 ---
 title: "State"
-description: Manage your state data
+description: Manage your state data.
 ---
 
 ### BotStacksChatStore
@@ -31,12 +31,12 @@ You can access the chat data via the singleton `BotStacksChatStore.current`.
     <tr>
       <td>messages</td>
       <td>`ThreadsPager`</td>
-      <td>The pageable object that contains all users.</td>
+      <td>The pageable object that contains all threads.</td>
     </tr>
   </tbody>
 </table>
 
-BotStacksChat as well as all other state objects in the SDK extend ObservableObject.
+BotStacksChat, as well as all other state objects in the SDK, extends ObservableObject.
 BotStacksChat maintains an `@Published isUserLoggedIn` that you can use in your SwiftUI apps as well.
 You can also listen to the Chats object which holds state for the entire BotStacksChat interface.
 

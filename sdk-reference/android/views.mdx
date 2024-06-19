@@ -32,7 +32,7 @@ To persist changes to the channel settings, call `state.update()`.
 val state = remember(chat) { ChannelSettingsState(chat) }
 ChannelSettingsView(state)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 
@@ -41,7 +41,7 @@ For a more detailed API definition, check out the API docs here.
 height="500"  
 src="/images/android-sdk/create-channel-view.png"
 />
-A screen content view for creating a new Channel. This has a callback to trigger navigation to selecting users for the channel. The UI for this screen can be found in [SelectChannelUsersView](https://docs.botstacks.ai/sdk-reference/android/views#selectchannelusersview).
+This is a screen content view for creating a new Channel. It has a callback to trigger navigation selecting users for the channel. The UI for this screen can be found in [SelectChannelUsersView](https://docs.botstacks.ai/sdk-reference/android/views#selectchannelusersview).
 
 To create the channel, call `state.create()`.
 
@@ -51,7 +51,7 @@ CreateChannelView(state) {
     // go to pick users
 }
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### EditProfileView
@@ -67,7 +67,7 @@ To trigger an update once modifications are done within the view, simply call `s
 val state = remember { EditProfileState() }
 EditProfileView(state)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 ### SelectChannelUsersView
@@ -81,7 +81,7 @@ This is used in coordination with either a [CreateChannelView](https://docs.bots
 val state = remember(chat) { ChannelUserSelectionState(chat) }
 SelectChannelUsersView(state = state)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 ### UserDetailsView
 <img 
@@ -93,7 +93,7 @@ src="/images/android-sdk/user-details-view.png"
 val state = remember(user) { UserDetailsState(user) }
 UserDetailsView(state = state)
 ```
-For a more detailed API definition, check out the API docs here.
+For a more detailed API definition, check out the API docs [here](https://docs.botstacks.ai/api-reference/introduction).
 
 
 

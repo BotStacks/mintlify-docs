@@ -1,26 +1,22 @@
 ---
 title: "Overview"
-description: "Get a jump start creating your chat interface with our beautiful React UIKit!"
+description: "Get a head start on creating your chat interface with our beautiful React UI Kit!"
 ---
 
 ## Overview
 
-The React UIKit is a collection of beautiful React components backed by the JavaScript SDK
-that can help engineers build an immersive chat environment.
+The React UI Kit is a collection of elegant React components backed by the JavaScript SDK. These components empower engineers to build an immersive chat environment.
 
 ## How to use these docs
 
-In the navigation, you will see many components exported by the UIKit. Some are data aware and some are not.
-Each component will note which case it is. What that means is:
+In the navigation, you’ll find various components exported by the UI Kit. Each component falls into one of two categories: 
 
-- Data aware: The component is responsible for managing data. Meaning it fetches/creates/deletes data within
-  the component. It is all already handled.
-- NOT data aware: It is a pure UI component. Most often, these component are used within the data aware components,
-  but we exported them for your use.
+- Data aware: These components manage data, including fetching, creating, and deleting data within the component. All of this functionality is already handled.
+- NOT data aware: These components are purely UI-based. While they are often used within data-aware components, we’ve exported them separately for your convenience.
 
 ## Get started
 
-### Install the UIKit
+### Install the UI Kit
 
 <CodeGroup>
 
@@ -36,10 +32,11 @@ yarn add @botstacks/chat-react
 
 ### Add to your project
 
-To use the SDK and, therefore, the data storage and api layer, you need to wrap your chat related code
-with `BotStacksChatProvider`. It's simplest to put this near the root of your component tree.
+To utilize the SDK and its data storage and API layer, wrap your chat-related code with `BotStacksChatProvider`.  It’s best to place this provider near the root of your component tree. 
 
-In its simplest form, it should look like below
+Here’s a simple example: 
+
+
 
 ```tsx app.tsx
 import { BotStacksChatProvider } from '@botstacks/chat-react';
@@ -56,15 +53,16 @@ export const App = () => (
 ```
 
 <Warning>
-  Make sure you only have one `BotStacksChatProvider`. Having multiple may have
-  unexpected results.
+  Make sure you only have one `BotStacksChatProvider`. Having multiple may give unexpected results.
 </Warning>
 
 ### Accessing data
 
-The React UIKit extends the JavaScript SDK to create and set up the store for you as part of the `BotStacksChatProvider`.
+The React UI Kit extends the JavaScript SDK to create and set up the store automatically within the `BotStacksChatProvider`.
 To enable your custom components to be reactive and data aware, you only need to wrap your components with `observer`.
-This allows you to be able to the store.
+
+
+This allows your components to interact with the store:
 
 ```jsx
 import { observer } from 'mobx-react-lite';
@@ -79,10 +77,10 @@ export const MyCustomChatComponent = observer(() => {
 
 ## Quickstart
 
-If you want to use our feature complete UI, including routing or just simply want to give it a test
+If you want to use our feature-complete UI, including routing or just simply want to give it a test
 run, you can use the `BotStacksChatUI` component.
 
-Here is a full example, using a hardcoded user to log in.
+Here is a full example, using a hardcoded user to log in:
 
 ```jsx
 import React, { useEffect } from "react";

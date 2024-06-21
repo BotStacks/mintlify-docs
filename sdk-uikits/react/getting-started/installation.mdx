@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-description: This SDK integrates a fully serviced chat experience on the [BotStacks](https://www.botstacks.ai/) platform.
+description: This SDK integrates a fully serviced chat experience on the BotStacks platform.
 icon: "bolt"
 iconType: "solid"
 ---
@@ -21,10 +21,10 @@ yarn add @botstacks/chat-react
 
 ### Add to your project
 
-To use the SDK and, therefore, the data storage and api layer, you need to wrap your chat related code
+To use the SDK and, therefore, the data storage and API layer, you need to wrap your chat related code
 with `BotStacksChatProvider`. It's simplest to put this near the root of your component tree.
 
-In its simplest form, it should look like below
+In its simplest form, it should look like this:
 
 ```tsx app.tsx
 import { BotStacksChatProvider } from '@botstacks/chat-react';
@@ -33,7 +33,7 @@ export const App = () => (
   <BotStacksChatProvider apiKey={API_KEY}>
     <div>The rest of your app goes here...</div>
     <>
-      <div>Any UIKit components in here will be able to use the store.</div>
+      <div>Any UI Kit components in here will be able to use the store.</div>
       <ChannelsView />
     <>
   </BotStacksChatProvider>
@@ -41,15 +41,14 @@ export const App = () => (
 ```
 
 <Warning>
-  Make sure you only have one `BotStacksChatProvider`. Having multiple may have
+  Make sure you only have one `BotStacksChatProvider`. Having multiple may yield
   unexpected results.
 </Warning>
 
 ### Accessing data
 
-The React UIKit extends the JavaScript SDK to create and set up the store for you as part of the `BotStacksChatProvider`.
-To enable your custom components to be reactive and data aware, you only need to wrap your components with `observer`.
-This allows you to be able to the store.
+The React UI Kit extends the JavaScript SDK to create and set up the store for you as part of the `BotStacksChatProvider`.
+To enable your custom components to be reactive and data aware, you only need to wrap your components with `observer`, thus granting you access to the store.
 
 ```jsx
 import { observer } from 'mobx-react-lite';

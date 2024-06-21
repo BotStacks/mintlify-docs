@@ -6,7 +6,7 @@ description: "State management"
 ## Overview
 
 Behind the scenes, we use [mobx-state-tree (MST)](https://www.npmjs.com/package/mobx-state-tree) for our data store.
-You can access data via either direct model access or [views](https://mobx-state-tree.js.org/concepts/views) and fetch or save data with [actions](https://mobx-state-tree.js.org/concepts/actions)
+You can access data via either direct model access or [views](https://mobx-state-tree.js.org/concepts/views) and fetch or save data with [actions](https://mobx-state-tree.js.org/concepts/actions).
 
 ## Root Store
 
@@ -99,7 +99,7 @@ The Users model type is used to store all the chat users.
         <tr>
           <td>`byId`</td>
           <td>`{ [userId: string]: User }`</td>
-          <td>A map of all fetched users by id</td>
+          <td>A map of all fetched users by ID</td>
         </tr>
         <tr>
           <td>`fetching`</td>
@@ -126,8 +126,8 @@ The Users model type is used to store all the chat users.
       <tbody>
         <tr>
           <td>`get`</td>
-          <td>`id: string` - the user id</td>
-          <td>Get a specific user by their user id</td>
+          <td>`id: string` - the user ID</td>
+          <td>Get a specific user by their user ID</td>
         </tr>
         <tr>
           <td>`all`</td>
@@ -141,7 +141,7 @@ The Users model type is used to store all the chat users.
         </tr>
         <tr>
           <td>`fetch`</td>
-          <td>`id: string` - the user id to fetch from the api</td>
+          <td>`id: string` - the user ID to fetch from the API</td>
           <td>
             Fetch the user via the API. If the user is already in the store, that
             user is returned and no API call is made.
@@ -196,7 +196,7 @@ The User model type defines a single instance of a user
         <tr>
           <td>`id`</td>
           <td>`string`</td>
-          <td>The unique user id</td>
+          <td>The unique user ID</td>
         </tr>
         <tr>
           <td>`username`</td>
@@ -299,7 +299,7 @@ The Chats model type is used to store all the chats: dms and channels
         <tr>
           <td>`byId`</td>
           <td>`{ [chatId: string]: Chat }`</td>
-          <td>A map of all fetched chats by id</td>
+          <td>A map of all fetched chats by ID</td>
         </tr>
         <tr>
           <td>`fetching`</td>
@@ -321,12 +321,12 @@ The Chats model type is used to store all the chats: dms and channels
       <tbody>
         <tr>
           <td>`get`</td>
-          <td>`id: string` - chat id</td>
-          <td>Get a specific chat by the chat id</td>
+          <td>`id: string` - chat ID</td>
+          <td>Get a specific chat by the chat ID</td>
         </tr>
         <tr>
           <td>`fetch`</td>
-          <td>`id: string` - the chat id to fetch from the api</td>
+          <td>`id: string` - the chat ID to fetch from the API</td>
           <td>
             Fetch the chat via the API. If the chat already exists in the store,
             that chat is returned and no API call is made.
@@ -356,7 +356,7 @@ The Chats model type is used to store all the chats: dms and channels
         <tr>
           <td>`create`</td>
           <td>`input: CreateGroupInput` - group chat to create</td>
-          <td>Sends api request to create a new group or channel</td>
+          <td>Sends API request to create a new group or channel</td>
         </tr>
         <tr>
           <td>`reset`</td>
@@ -370,7 +370,7 @@ The Chats model type is used to store all the chats: dms and channels
 
 ### Chat
 
-The Chat model type is used to define a specific chat, whether dm or channel
+The Chat model type is used to define a specific chat, whether DM or Channel
 
 <Tabs>
   <Tab title="Schema">
@@ -386,7 +386,7 @@ The Chat model type is used to define a specific chat, whether dm or channel
         <tr>
           <td>`id`</td>
           <td>`string`</td>
-          <td>The unique chat id</td>
+          <td>The unique chat ID</td>
         </tr>
         <tr>
           <td>`created_at`</td>
@@ -502,7 +502,7 @@ The Chat model type is used to define a specific chat, whether dm or channel
           <td>`display_name`</td>
           <td>N/A</td>
           <td>
-            Returns the name of the chat if a `Group` chat or the other user's
+            Returns the name of the chat if a `Group` chat or the other users
             `dun` if a `DM`
           </td>
         </tr>
@@ -629,7 +629,7 @@ The Messages model type is used to store all the messages
         <tr>
           <td>`byId`</td>
           <td>`{ [chatId: string]: Message }`</td>
-          <td>A map of all fetched messages by id</td>
+          <td>A map of all fetched messages by ID</td>
         </tr>
         <tr>
           <td>`fetching`</td>
@@ -652,11 +652,11 @@ The Messages model type is used to store all the messages
         <tr>
           <td>`get`</td>
           <td>`id: string` - message id</td>
-          <td>Get a specific message by the message id</td>
+          <td>Get a specific message by the message ID</td>
         </tr>
         <tr>
           <td>`fetch`</td>
-          <td>`id: string` - id of the message to fetch from the api</td>
+          <td>`id: string` - ID of the message to fetch from the API</td>
           <td>
             Fetch the message via the API. If the message already exists in the
             store, that message is returned and no API call is made.
@@ -691,7 +691,7 @@ The Messages model type is used to store all the messages
 
         <tr>
           <td>`remove`</td>
-          <td>`id: string` - id of message to be removed</td>
+          <td>`id: string` - ID of message to be removed</td>
           <td>Removes the message from the store</td>
         </tr>
 
@@ -719,7 +719,7 @@ The Message model type is used to define a specific message
         <tr>
           <td>`id`</td>
           <td>`string`</td>
-          <td>The unique message id</td>
+          <td>The unique message ID</td>
         </tr>
         <tr>
           <td>`created_at`</td>
@@ -745,7 +745,7 @@ The Message model type is used to define a specific message
           <td>`parent_id`</td>
           <td>`string|undefined`</td>
           <td>
-            The id of the parent message in the event this message is within a
+            The ID of the parent message in the event this message is within a
             thread
           </td>
         </tr>

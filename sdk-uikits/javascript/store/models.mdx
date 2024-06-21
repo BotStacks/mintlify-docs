@@ -6,7 +6,7 @@ iconType: "solid"
 
 ### Users
 
-The Users model type is used to store all the chat users.
+The Users model type is used to store all chat users.
 
 <Tabs>
   <Tab title="Schema">
@@ -22,7 +22,7 @@ The Users model type is used to store all the chat users.
         <tr>
           <td>`byId`</td>
           <td>`{ [userId: string]: User }`</td>
-          <td>A map of all fetched users by id</td>
+          <td>A map of all fetched users by ID</td>
         </tr>
         <tr>
           <td>`fetching`</td>
@@ -206,7 +206,7 @@ The User model type defines a single instance of a user
 
 ### Chats
 
-The Chats model type is used to store all the chats: dms and channels
+The Chats model type is used to store all the chats: DMs and Channels
 
 <Tabs>
   <Tab title="Schema">
@@ -222,7 +222,7 @@ The Chats model type is used to store all the chats: dms and channels
         <tr>
           <td>`byId`</td>
           <td>`{ [chatId: string]: Chat }`</td>
-          <td>A map of all fetched chats by id</td>
+          <td>A map of all fetched chats by ID</td>
         </tr>
         <tr>
           <td>`fetching`</td>
@@ -245,7 +245,7 @@ The Chats model type is used to store all the chats: dms and channels
         <tr>
           <td>`get`</td>
           <td>`id: string` - chat id</td>
-          <td>Get a specific chat by the chat id</td>
+          <td>Get a specific chat by the chat ID</td>
         </tr>
         <tr>
           <td>`fetch`</td>
@@ -293,7 +293,7 @@ The Chats model type is used to store all the chats: dms and channels
 
 ### Chat
 
-The Chat model type is used to define a specific chat, whether dm or channel
+The Chat model type is used to define a specific chat, whether DM or channel
 
 <Tabs>
   <Tab title="Schema">
@@ -425,7 +425,7 @@ The Chat model type is used to define a specific chat, whether dm or channel
           <td>`display_name`</td>
           <td>N/A</td>
           <td>
-            Returns the name of the chat if a `Group` chat or the other user's
+            Returns the name of the chat if a `Group` chat or the other users
             `dun` if a `DM`
           </td>
         </tr>
@@ -552,7 +552,7 @@ The Messages model type is used to store all the messages
         <tr>
           <td>`byId`</td>
           <td>`{ [chatId: string]: Message }`</td>
-          <td>A map of all fetched messages by id</td>
+          <td>A map of all fetched messages by ID</td>
         </tr>
         <tr>
           <td>`fetching`</td>
@@ -575,11 +575,11 @@ The Messages model type is used to store all the messages
         <tr>
           <td>`get`</td>
           <td>`id: string` - message id</td>
-          <td>Get a specific message by the message id</td>
+          <td>Get a specific message by the message ID</td>
         </tr>
         <tr>
           <td>`fetch`</td>
-          <td>`id: string` - id of the message to fetch from the api</td>
+          <td>`id: string` - ID of the message to fetch from the api</td>
           <td>
             Fetch the message via the API. If the message already exists in the
             store, that message is returned and no API call is made.

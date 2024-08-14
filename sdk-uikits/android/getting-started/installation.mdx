@@ -3,17 +3,14 @@ title: "Installation"
 description: This SDK integrates a fully serviced chat experience on BotStacks.
 icon: "bolt"
 iconType: "solid"
+"og:title": "Android UIKit - Installation | BotStacks"
 ---
 
-<img 
-src="https://img.shields.io/maven-central/v/ai.botstacks/chat-sdk"
-/>
-
+<img src="https://img.shields.io/maven-central/v/ai.botstacks/chat-sdk" />
 
 ### Android Installation
 
 If you are only targeting Android the dependency is:
-
 
 ```Gradle
 dependencies {
@@ -22,6 +19,7 @@ dependencies {
     [...]
 }
 ```
+
 <Note> To setup android click [here](/sdk-reference/android/setup)</Note>
 
 ### Compose Multiplatform Installation
@@ -37,13 +35,18 @@ val commonMain by getting {
     }
 }
 ```
-<Note> To setup Compose Multiplatform click [here](/sdk-reference/android/compose-setup)</Note>
 
-## Initialization Compose Multiplatform 
+<Note>
+  {" "}
+  To setup Compose Multiplatform click [here](/sdk-reference/android/compose-setup)
+</Note>
+
+## Initialization Compose Multiplatform
+
 In order to display any of the UI components and access chat data, you must first initialize the SDK
 and log in as a chat user.
 
-### Step 1. Initialization 
+### Step 1. Initialization
 
 In your Application class, call `BotStacksChat.shared.setup` with your API key. You can obtain your API key from
 the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don't yet have one, you can [create one for FREE](https://dashboard.botstacks.ai)!
@@ -129,9 +132,6 @@ For push notifications via FCM, just pass your push token to BotStacks.
 BotStacksChat.registerFCMToken(token)
 ```
 
-
-
-
 ## Compose Multiplatform Environment Setup
 
 Our Chat SDK uses [Moko Resources](https://github.com/icerockdev/moko-resources) to include the internal assets in the SDK for iOS.
@@ -166,7 +166,7 @@ kotlin {
 +       val iosX64Main by getting
 +       val iosArm64Main by getting
 +       val iosSimulatorArm64Main by getting
-            
+
         iosMain {
 +           dependsOn(commonMain.get())
 +           iosX64Main.dependsOn(this)
@@ -253,12 +253,12 @@ kotlin {
 
 ## Android Initialization
 
-
 ### Step 1: Initialize the SDK
 
 In each platform (Android/iOS), call BotStacksChat.shared.setup with your API key. You can obtain your API key from the [Botstacks Dashboard](https://dashboard.botstacks.ai/settings). If you don’t yet have one, you can [create one for FREE](https://dashboard.botstacks.ai/)!
 
 #### Android
+
 ```kotlin
 main.android.kt
 
@@ -274,6 +274,7 @@ fun MainView() {
 ```
 
 #### iOS
+
 ```kotlin
 main.ios.kt
 
@@ -347,7 +348,6 @@ data class ChatScreen: Screen {
 ### Step 4: Theming
 
 You can theme your BotStacks UI kit by modifying the defaults of the `BotStacksThemeEngine`. The theme supports fonts, colors, assets, and dimensions. Configure it like this:
-
 
 ```kotlin
 BotStacksThemeEngine(

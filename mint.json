@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentation",
+  "name": "BotStacks Doveloper",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -128,7 +128,7 @@
             "designer/integrations/messenger",
             "designer/integrations/discord",
             "designer/integrations/slack"
-        ]
+          ]
         }
       ]
     },
@@ -291,9 +291,7 @@
         {
           "group": "Subscriptions",
           "icon": "diagram-project",
-          "pages": [
-            "sdk-uikits/javascript/subscriptions/overview"
-          ]
+          "pages": ["sdk-uikits/javascript/subscriptions/overview"]
         }
       ]
     },
@@ -324,8 +322,6 @@
             "sdk-uikits/react/components/chat-message-preview",
             "sdk-uikits/react/components/chat-message",
             "sdk-uikits/react/components/header",
-            "sdk-uikits/react/components/media-action-sheet",
-            "sdk-uikits/react/components/message-action-sheet",
             "sdk-uikits/react/components/message-list",
             "sdk-uikits/react/components/spinner",
             "sdk-uikits/react/components/user-profile",

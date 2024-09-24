@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "BotStacks Doveloper",
+  "name": "BotStacks Developer",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -39,8 +39,8 @@
   ],
   "tabs": [
     {
-      "name": "Botstacks Designer",
-      "url": "designer"
+      "name": "Sequence Studio",
+      "url": "sequence-studio"
     },
     {
       "name": "Chat SDKs & UI Kits",
@@ -101,33 +101,33 @@
       ]
     },
     {
-      "group": "BotStacks Designer",
+      "group": "Sequence Studio",
       "pages": [
-        "designer/introduction",
+        "sequence-studio/introduction",
         {
           "group": "Nodes",
           "pages": [
-            "designer/nodes/introduction",
-            "designer/nodes/start",
-            "designer/nodes/response",
-            "designer/nodes/llm",
-            "designer/nodes/text",
-            "designer/nodes/intent-classify",
-            "designer/nodes/set",
-            "designer/nodes/listen",
-            "designer/nodes/condition",
-            "designer/nodes/end",
-            "designer/nodes/api",
-            "designer/nodes/code"
+            "sequence-studio/nodes/introduction",
+            "sequence-studio/nodes/start",
+            "sequence-studio/nodes/response",
+            "sequence-studio/nodes/llm",
+            "sequence-studio/nodes/text",
+            "sequence-studio/nodes/intent-classify",
+            "sequence-studio/nodes/set",
+            "sequence-studio/nodes/listen",
+            "sequence-studio/nodes/condition",
+            "sequence-studio/nodes/end",
+            "sequence-studio/nodes/api",
+            "sequence-studio/nodes/code"
           ]
         },
         {
           "group": "Integrations",
           "pages": [
-            "designer/integrations/whatsapp",
-            "designer/integrations/messenger",
-            "designer/integrations/discord",
-            "designer/integrations/slack"
+            "sequence-studio/integrations/whatsapp",
+            "sequence-studio/integrations/messenger",
+            "sequence-studio/integrations/discord",
+            "sequence-studio/integrations/slack"
           ]
         }
       ]

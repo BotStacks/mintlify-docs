@@ -1,0 +1,39 @@
+---
+title: "Start"
+icon: "flag"
+iconType: "solid"
+---
+
+The Start Node marks the beginning of a conversation. It gets activated when someone mentions or sends the first message in a direct message (DM). 
+
+When triggered, the Start Node passes the input it receives to all its outputs right away.
+
+## There are two paths associated with the Start Node:
+
+<Steps>
+
+  <Step title="On Trigger">
+  </Step>
+  
+  <Step title="On Message">
+  </Step>
+
+</Steps>
+
+<img 
+height="500"  
+src="/images/node-start.png"
+/>
+
+### 1. On Trigger
+
+The On Trigger path activates when the user opens the chat widget or DM, making it suitable for sending a greeting message before the user says anything
+
+
+### 2. On Message
+
+The On Message path activates when the user sends the first message in the chat, allowing the user to initiate the conversation. 
+
+**For Example**, `On Message` path can be used to create a bot like ChatGPT, where the bot remains silent until the user sends the first message to start the conversation
+
+Overall, the Start Node creates the foundation for interaction, determining the path to follow based on how the conversation begins.

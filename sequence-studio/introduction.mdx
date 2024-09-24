@@ -1,12 +1,12 @@
 ---
-title: "Introduction to AI Assistant Designer"
-sidebarTitle: "Intro to Designer"
+title: "Introduction to Sequence Studio"
+sidebarTitle: "Intro to Sequence Studio"
 icon: "star"
 iconType: "solid"
 ---
-The Assistant Designer in Botstacks is a visual interface that allows users to create conversational flows for AI assistants by defining nodes, representing states or steps in the conversation and connections specifying pathways through which the conversation progresses.
+The Sequence Studio in Botstacks is a visual interface that allows users to create conversational flows for AI assistants by defining nodes, representing states or steps in the conversation and connections specifying pathways through which the conversation progresses.
 
-## Main elements in Assistant Designer
+## Main elements in Sequence Studio
 
 <Steps>
 
@@ -32,7 +32,7 @@ The Assistant Designer in Botstacks is a visual interface that allows users to c
 
 ### 1. Nodes
 
-Nodes are fundamental building blocks within the Assistant Designer.
+Nodes are fundamental building blocks within the studio.
 
 Each node typically corresponds to a specific action, prompt or response that the assistant will execute or present during the interaction with the user.
 
@@ -50,7 +50,7 @@ Nodes can encompass a wide range of functionalities, such as asking a question, 
 
 ### 2. Node Identifiers
 
-A node identifier, often referred to as a "slug," serves as a unique identifier for each node within Assistant Designer.
+A node identifier, often referred to as a "slug," serves as a unique identifier for each node within Sequence Studio.
 
 This identifier takes the form of `{nodeType}-{index}`, where `{nodeType}` represents the type of node (e.g., start, llm, etc.), and `{index}` denotes the position of the node within its category.
 
@@ -69,7 +69,7 @@ height="500"
 src="/images/connections.png"
 />
 
-By defining connections between nodes, you can create complex conversational structures that adapt dynamically to user interactions and context. 
+By defining connections between nodes, you can create complex conversational structures that adapt dynamically to user interactions and context. Some nodes have a single output while others may have multiple outputs, allowing for branching or conditional paths.
 
 In the example below, we are referencing both the start node and the listen node within the LLM node. The output of each of those nodes `{start-0}` and `{listen-0}` will be directly interpolated in the user prompt.
 
@@ -125,4 +125,4 @@ src="/images/variables.png"
 
 
 <br />
-Now, you can proceed to the next chapter, which explains the User Interface (UI) of the Assistant Designer.
+Now, you can proceed to the next chapter, which explains the User Interface (UI) of the Sequence Studio in more detail.

@@ -127,7 +127,8 @@
             "sequence-studio/integrations/whatsapp",
             "sequence-studio/integrations/messenger",
             "sequence-studio/integrations/discord",
-            "sequence-studio/integrations/slack"
+            "sequence-studio/integrations/slack",
+            "sequence-studio/integrations/crisp"
           ]
         }
       ]

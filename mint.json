@@ -118,7 +118,8 @@
             "sequence-studio/nodes/condition",
             "sequence-studio/nodes/end",
             "sequence-studio/nodes/api",
-            "sequence-studio/nodes/code"
+            "sequence-studio/nodes/code",
+            "sequence-studio/nodes/captureUserData"
           ]
         },
         {

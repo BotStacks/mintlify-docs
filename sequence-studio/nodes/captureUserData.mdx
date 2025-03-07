@@ -1,0 +1,59 @@
+---
+title: "Capture User Data"
+description: ""
+---
+
+The Capture User Data Node allows you to build a custom form and display the form as a bot message in the chat window. You can connect it to an API node to send the user-filled form data to an external service you want the data in.
+
+<img height="500" src="/images/node-captureUserData.png" />
+
+### Features
+
+- Supports multiple input types:
+
+  1. Text
+
+  2. Email
+
+  3. Date
+
+  4. Phone
+
+  5. Password
+
+  6. Radio buttons
+
+  7. Checkboxes
+
+- Customizable form fields
+
+- Seamless integration with API Node for data transmission
+
+- User-friendly configuration
+
+## Configuration
+
+<Steps>
+  <Step title="Defining Form Fields">
+    You can define the required form fields using the node panel UI. Fields can
+    be added with the plus sign on top right of the panel. Select an input type
+    and give a label to the field. For radio and checkboxes, you can add the
+    options with the plus sign right against them.
+    <img height="500" src="/images/node-captureUserData-definingFields.png" />
+  </Step>
+
+<Step title="Transmitting Data">
+  Once the form is configured, it can be connected to the API Node for data
+  transmission. <br />
+  API Node Configuration
+  <br />
+  - Endpoint URL: The URL where the data should be sent. - Request Method: POST (required)
+  - Body: User Data (required) - Data Retrieval format: JSON
+  <img height="500" src="/images/node-captureUserData-apiIntegration.png" />
+</Step>
+
+  <Step title="Testing in DIRTBox">
+    The form can be tested in the DIRTBox. It will be visible as a bot message, which the users can interact with. Once the users fill their data and hit the save button, the data will be sent to the API node for sending it to the required external services via RESTfull API calls.
+    <img height="500" src="/images/node-captureUserData-testForm.png" />
+  </Step>
+</Steps>

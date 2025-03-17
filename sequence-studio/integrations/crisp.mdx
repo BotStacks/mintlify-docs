@@ -4,26 +4,33 @@ sidebarTitle: "Crisp"
 icon: "discord"
 iconType: "solid"
 ---
-
-Crisp Integration allows your AI Assistant to seamlessly connect with Crisp, a powerful customer messaging platform.
+Crisp Integration allows your AI Assistant to seamlessly connect with Crisp, a powerful customer messaging platform. 
 
 Once set up, users can interact with your AI Assistant via live chat on your website or through messages on Crisp's messaging interface.
 
 ### Prerequisites
 
 <CardGroup cols={2}>
+
   <Card title="A Crisp Account" icon="discord" iconType="solid" href="https://crisp.chat/en/">
   </Card>
-  <Card title="Access to Crisp Marketplace" icon="code" iconType="solid" href="https://marketplace.crisp.chat/"> 
+
+  <Card title="Access to Crisp Marketplace" icon="code" iconType="solid" href="https://marketplace.crisp.chat/">
   </Card>
+
 </CardGroup>
+
 
 To setup Crisp Integration you will need 3 pieces of information:
 
-<img height="500" src="/images/integrations/crisp/image.png"/>
+
+<img 
+height="500"  
+src="/images/integrations/crisp/image.png"
+/>
 
 <Steps>
-  <Step title="Crisp API Identifier and API key">
+   <Step title="Crisp API Identifier and API key">
     A Crisp API identifier and Crisp API key are a pair of authentication credentials used to access and interact with the Crisp API, similar to a username and password. These are two values that form a token keypair used for authentication when making requests to the Crisp REST API. 
   </Step>
   <Step title="Crisp  Website ID">
@@ -31,85 +38,89 @@ To setup Crisp Integration you will need 3 pieces of information:
   </Step>
 </Steps>
 
+
 ## Setting up the Crisp integration
 
 ### 1) Get Website ID from Crisp
+Login to your account at https://crisp.chat/en/ and navigate to Settings -> Workspace Settings -> Setup & Integrations. There you can get the Crisp Website ID
+and use it on Botstacks.
 
-Login to your account at <https://crisp.chat/en/> and navigate to Settings -> Workspace Settings -> Setup & Integrations. There you can get the Crisp Website ID and use it on Botstacks.
-
-<img
-  height="500"
-  src="/images/integrations/crisp/image1.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image1.png"
 />
+
 
 ### 2) Creating a plugin on Marketplace
 
-Log in to your account at <https://marketplace.crisp.chat/>, navigate to the "Plugins" section, and click on "New Plugin" to create your plugin, providing a name and description.
+Log in to your account at https://marketplace.crisp.chat/, navigate to the "Plugins" section, and click on "New Plugin" to create your plugin, providing a name and description.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image2.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image2.png"
 />
+
 
 ### 3) Obtaining Indentifier and Key.
-
 Copy and paste the identifier and key into their corresponding fields in BotStacks.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image3.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image3.png"
 />
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image4.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image4.png"
 />
 
 Hit the save button and copy the Live Chat Webhook URL.
 
 ### 4) Add webHook to Crisp Plugin
-
 Go to the created plugin on Crisp Marketplace and navigate to settings tab.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image5.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image5.png"
 />
 
-Scroll down to the "Event" section, paste the webhook copied in Step 3 into the "Development Webhook" field,
+Scroll down to the "Event" section, paste the webhook copied in Step 3 into the "Development Webhook" field, 
 and click the "Create Web Hook" button to complete the setup.
 
 Toggle all the switches that are necessary and hit the create button.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image6.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image6.png"
 />
+
+
+
 
 ### 5) Add Website ID to trusted workspace.
 
-Navigate to <https://marketplace.crisp.chat/settings/> and click on Add trusted workspace.
+Navigate to https://marketplace.crisp.chat/settings/ and click on Add trusted workspace.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image7.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image7.png"
 />
 
 Provide the Website ID from Step 1 in the Website ID field and click on next.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image8.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image8.png"
 />
 
-Provide the email and password that were used to login to <https://app.crisp.chat/>. If a third party service like Google was used to create a Crisp account,
-you can change your password by navigating to <https://app.crisp.chat/settings/account/information/>.
+Provide the email and password that were used to login to https://app.crisp.chat/. If a third party service like Google was used to create a Crisp account, 
+you can change your password by navigating to https://app.crisp.chat/settings/account/information/.
 
 Click on Add Trusted Workspace.
 
-<img
-  height="500"
-  src="/images/integrations/crisp/image9.png"
+<img 
+height="500"  
+src="/images/integrations/crisp/image9.png"
 />
 
 Now you can chat with your App using Crisp :)

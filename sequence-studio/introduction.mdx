@@ -4,30 +4,30 @@ sidebarTitle: "Intro to Sequence Studio"
 icon: "star"
 iconType: "solid"
 ---
+
 The Sequence Studio in Botstacks is a visual interface that allows users to create conversational flows for AI assistants by defining nodes, representing states or steps in the conversation and connections specifying pathways through which the conversation progresses.
 
 ## Main elements in Sequence Studio
 
 <Steps>
-
   <Step title="Nodes">
+    
   </Step>
-
   <Step title="Node Identifiers">
+    
   </Step>
-  
   <Step title="Connections">
+    
   </Step>
-
   <Step title="Conversation Flow">
+    
   </Step>
-
   <Step title="Intents">
+    
   </Step>
-
   <Step title="Variables">
+    
   </Step>
-
 </Steps>
 
 ### 1. Nodes
@@ -36,17 +36,18 @@ Nodes are fundamental building blocks within the studio.
 
 Each node typically corresponds to a specific action, prompt or response that the assistant will execute or present during the interaction with the user.
 
-<img 
-height="500"  
-src="/images/node-stack.png"
+<img
+  height="500"
+  src="/sequencestudionodes.png"
+  alt=""
+  title=""
 />
 
 Nodes can encompass a wide range of functionalities, such as asking a question, providing information, processing user input, making decisions based on context or triggering external actions.
 
-<Tip> 
-    **For example**, You could use a Text node to add specific input into the conversation, followed by a Listen node to wait for user input. 
+<Tip>
+  **For example**, You could use a Text node to add specific input into the conversation, followed by a Listen node to wait for user input.
 </Tip>
-
 
 ### 2. Node Identifiers
 
@@ -54,75 +55,82 @@ A node identifier, often referred to as a "slug," serves as a unique identifier 
 
 This identifier takes the form of `{nodeType}-{index}`, where `{nodeType}` represents the type of node (e.g., start, llm, etc.), and `{index}` denotes the position of the node within its category.
 
-<img 
-height="500"  
-src="/images/node-identifier.png"
+<img
+  height="500"
+  src="/node_identifier.png"
+  alt=""
+  title=""
 />
-
 
 ### 3. Connections
 
 Connections specify how nodes are linked together, allowing for branching, looping or other forms of interaction. They dictate the logical flow of the conversation based on user inputs and system responses.
 
-<img 
-height="500"  
-src="/images/connections.png"
+<img
+  height="500"
+  src="/connections.png"
+  alt=""
+  title=""
 />
 
 By defining connections between nodes, you can create complex conversational structures that adapt dynamically to user interactions and context. Some nodes have a single output while others may have multiple outputs, allowing for branching or conditional paths.
 
 In the example below, we are referencing both the start node and the listen node within the LLM node. The output of each of those nodes `{start-0}` and `{listen-0}` will be directly interpolated in the user prompt.
 
-<img 
-height="500"  
-src="/images/connection-example.png"
+<img
+  height="500"
+  src="/connection-example.png"
+  alt=""
+  title=""
 />
 
 <Tip>
   This is a common use case of passing user input to LLM Models like ChatGPT
 </Tip>
 
-
 ### 4. Conversation flow
 
 Conversation Flow outlines how the conversation progresses from one point to another, typically organized in a tree-like structure with nodes representing different states or steps in the conversation.
 
-<img 
-height="500"  
-src="/images/conversation-flow.png"
+<img
+  height="500"
+  src="/conversation-flow.png"
+  alt=""
+  title=""
 />
 
 A conversation flows from node to node via the connections that connect them. For more advanced use-cases, you may have multiple outputs for a given node. At the point where a flow diverges, you will have two separate workflows running simultaneously in an async manner.
-
 
 ### 5. Intents
 
 Intents represent the user's anticipated goals or actions within the conversation, essential for organizing and directing user inputs effectively. Each Intent is defined by a distinct name and multiple sample utterances, aiding in accurately recognizing and responding to user intents during the interaction flow.
 
-<img 
-height="500"  
-src="/images/intents.png"
+<img
+  height="500"
+  src="/intents.png"
+  alt=""
+  title="Intents"
 />
 
-<Tip> 
-  Intents are primarily used within the routing node to classify user input 
+<Tip>
+  Intents are primarily used within the routing node to classify user input
 </Tip>
-
 
 ### 6. Variables
 
 Variables serve as containers in which data can be stored for future use, enabling easy access and retrieval anywhere in the conversation flow.
 
-
-<img 
-height="500"  
-src="/images/variables.png"
+<img
+  height="500"
+  src="/variables.png"
+  alt=""
+  title=""
 />
 
-<Tip> 
+<Tip>
   Variables are commonly utilized for storing various types of information such as names, email addresses etc.
 </Tip>
 
-
 <br />
+
 Now, you can proceed to the next chapter, which explains the User Interface (UI) of the Sequence Studio in more detail.

@@ -18,7 +18,7 @@ paths:
           name: x-api-key
           schema:
             type: string
-          required: false
+          required: true
           description: The API key
         - in: path
           name: botstackId
@@ -36,9 +36,9 @@ paths:
               required:
                 - message
               properties:
-                apiKey:
-                  type: string
-                  description: If not in the header can be included in the body
+                #apiKey:
+                  #type: string
+                  #description: If not in the header can be included in the body
                 waitForResponse:
                   type: boolean
                   description: should the api wait for a response or return it later

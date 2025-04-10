@@ -30,6 +30,12 @@ paths:
               required:
                 - message
               properties:
+                apiKey:
+                  type: string
+                  description: If not in the header can be included in the body
+                waitForResponse:
+                  type: boolian
+                  description: should the api wait for a response or return it later
                 message:
                   type: string
                   description: The message to send to the assistant

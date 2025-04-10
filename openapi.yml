@@ -8,12 +8,18 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: header
-      name: X-API-KEY
+      name: x-api-key
 paths:
   /assistant/{botstackId}/message:
     post:
       description: Send a message to a botstack assistant
       parameters:
+        - in: header
+          name: x-api-key
+          schema:
+            type: string
+          required: true
+          description: The API key
         - in: path
           name: botstackId
           schema:

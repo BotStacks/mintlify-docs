@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.1.0
 info:
   version: 1.0.0
   title: BotStacks Assistant API
@@ -8,12 +8,18 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: header
-      name: X-API-KEY
+      name: x-api-key
 paths:
   /assistant/{botstackId}/message:
     post:
       description: Send a message to a botstack assistant
       parameters:
+        - in: header
+          name: x-api-key
+          schema:
+            type: string
+          required: true
+          description: The API key
         - in: path
           name: botstackId
           schema:
@@ -30,6 +36,12 @@ paths:
               required:
                 - message
               properties:
+                #apiKey:
+                  #type: string
+                  #description: If not in the header can be included in the body
+                waitForResponse:
+                  type: boolean
+                  description: should the api wait for a response or return it later
                 message:
                   type: string
                   description: The message to send to the assistant

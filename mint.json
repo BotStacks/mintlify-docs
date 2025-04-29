@@ -60,7 +60,7 @@
   },
   "openapi": ["/openapi.yml"],
   "api": {
-    "baseUrl": "https://chat.botstacks.ai/",
+    "baseUrl": "https://workflow.botstacks.ai/",
     "auth": {
       "method": "key",
       "name": "x-api-key"
